@@ -1,0 +1,7 @@
+{
+  "tasks": {
+    "start": "deno run -A --watch=tailwind.config.js,static/ dev.ts",
+    "component": "deno eval 'import \"$live/scripts/component.ts\"'"
+  },
+  "importMap": "./import_map.json"
+}
