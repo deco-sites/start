@@ -1,11 +1,19 @@
-# Deco Live Template
+# Deco Start — live template
 
 Welcome to your live site!
 
-First, create an `.env` file with the `SITE` variable with the name of this github repo.
+This repository was created for you when you created a new site. To edit the code of the components in this site, you may clone this repo and run the project locally.
+
+---
+
+NOTE: To edit or create new pages with existing components, you don't need to edit the code! Just go to any page and hit `Ctrl+E` (or `Cmd+E` on Mac) to open the editor of the current page you're seeing.
+
+---
+
+After cloning this repo, create an `.env` file with the `SITE` variable with the name of this github repo.
 
 ```sh
-site=mysitename
+SITE=mysitename
 ```
 
 **IMPORTANT:** Your site should match the repository name in [github.com/deco-pages](https://github.com/deco-pages).
