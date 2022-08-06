@@ -10,10 +10,13 @@ NOTE: To edit or create new pages with existing components, you don't need to ed
 
 ---
 
-After cloning this repo, create an `.env` file with the `SITE` variable with the name of this github repo.
+After cloning this repo, update the `live.ts` property "site" with the name of this github repo.
 
-```sh
-SITE=mysitename
+```ts
+await start(manifest, {
+  site: "my-site",
+  domains: ["mydomain.com"],
+});
 ```
 
 **IMPORTANT:** Your site should match the repository name in [github.com/deco-pages](https://github.com/deco-pages).

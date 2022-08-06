@@ -1,5 +1,7 @@
 import manifest from "./deco.gen.ts";
-import { start } from "$live/main.ts";
-import { DecoManifest } from "$live/types.ts";
+import { start } from "$live/server.ts";
 
-await start(manifest as DecoManifest);
+await start(manifest, {
+  site: "start",
+  domains: ["start.deco.cx"],
+});

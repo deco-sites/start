@@ -1,4 +1,7 @@
-import DynamicRoute from "$live/dynamic.tsx";
-export * from "$live/dynamic.tsx";
+/** @jsx h */
+import { h } from "preact";
+import { createLiveRoute } from "$live/live.tsx";
+import GetStarted from "../components/GetStarted.tsx";
 
-export default DynamicRoute;
+export const { handler, LiveRoute } = createLiveRoute(() => <GetStarted />);
+export default LiveRoute;

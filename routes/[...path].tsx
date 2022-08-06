@@ -1,4 +1,3 @@
-import DynamicRoute from "$live/dynamic.tsx";
-export * from "$live/dynamic.tsx";
-
-export default DynamicRoute;
+import LiveRoute from "./index.tsx";
+export * from "./index.tsx";
+export default LiveRoute;

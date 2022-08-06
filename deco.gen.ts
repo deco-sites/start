@@ -2,22 +2,19 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
+import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...path].tsx";
-import * as $1 from "./routes/_middleware.ts";
-import * as $2 from "./routes/index.tsx";
-import * as $3 from "./routes/inspect-vscode.ts";
-import * as $4 from "./routes/start.tsx";
+import * as $1 from "./routes/index.tsx";
+import * as $2 from "./routes/start.tsx";
 import * as $$0 from "./islands/InspectVSCode.tsx";
 import * as $$$0 from "./components/GetStarted.tsx";
 import * as $$$1 from "./components/Head.tsx";
 
-const manifest = {
+const manifest: DecoManifest = {
   routes: {
     "./routes/[...path].tsx": $0,
-    "./routes/_middleware.ts": $1,
-    "./routes/index.tsx": $2,
-    "./routes/inspect-vscode.ts": $3,
-    "./routes/start.tsx": $4,
+    "./routes/index.tsx": $1,
+    "./routes/start.tsx": $2,
   },
   islands: { "./islands/InspectVSCode.tsx": $$0 },
   components: {
