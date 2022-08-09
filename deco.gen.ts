@@ -10,6 +10,7 @@ import * as $3 from "./routes/start.tsx";
 import * as $$0 from "./islands/InspectVSCode.tsx";
 import * as $$$0 from "./components/GetStarted.tsx";
 import * as $$$1 from "./components/Head.tsx";
+import * as $$$2 from "./components/Layout.tsx";
 
 const manifest: DecoManifest = {
   routes: {
@@ -22,6 +23,7 @@ const manifest: DecoManifest = {
   components: {
     "./components/GetStarted.tsx": $$$0,
     "./components/Head.tsx": $$$1,
+    "./components/Layout.tsx": $$$2,
   },
   twind: {
     mode: "warn",
@@ -39,8 +41,9 @@ const manifest: DecoManifest = {
 
         black: "#000",
         white: "#fff",
-        decogreen: "#2bd281",
-        darkgreen: "#003232",
+        primary: "#2bd281",
+        "primary-dark": "#003232",
+        "primary-light": "#C5FFE9",
 
         gray: {
           50: "#f9fafb",

@@ -1,7 +1,7 @@
 /** @jsx h */
-/** @jsxFrag Fragment */
-import { Fragment, h } from "preact";
+import { h } from "preact";
 import { PageProps } from "$fresh/server.ts";
+import Layout from "../components/Layout.tsx";
 import Head from "../components/Head.tsx";
 import { createLivePage } from "$live/live.tsx";
 
@@ -18,10 +18,10 @@ export const { handler, LivePage } = createLivePage<MyAPIData>({
       .then((res) => res.json());
   },
   render: ({ url, data }: PageProps<MyAPIData>) => (
-    <>
+    <Layout>
       <Head url={url} title="Live loader example" />
       <span>{JSON.stringify(data)}</span>
-    </>
+    </Layout>
   ),
 });
 export default LivePage;
