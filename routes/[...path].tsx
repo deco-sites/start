@@ -1,3 +1,3 @@
-import LiveRoute from "./index.tsx";
+import LivePage from "./index.tsx";
 export * from "./index.tsx";
-export default LiveRoute;
+export default LivePage;

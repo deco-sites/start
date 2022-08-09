@@ -14,7 +14,7 @@ export interface HeadProps {
 
 export const props: HeadProps = {
   title: "Deco Live Template Site — edit this!",
-  description: "",
+  description: "A complete digital commerce experience platform.",
   url: new URL("https://deco.cx"),
   imageUrl: "https://via.placeholder.com/300",
   faviconUrl: "",
