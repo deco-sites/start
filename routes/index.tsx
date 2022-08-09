@@ -1,9 +1,16 @@
 /** @jsx h */
-import { h } from "preact";
+/** @jsxFrag Fragment */
+import { Fragment, h } from "preact";
 import { createLivePage } from "$live/live.tsx";
+import Head from "../components/Head.tsx";
 import GetStarted from "../components/GetStarted.tsx";
 
 export const { handler, LivePage } = createLivePage({
-  render: () => <GetStarted />,
+  render: () => (
+    <>
+      <Head />
+      <GetStarted />,
+    </>
+  ),
 });
 export default LivePage;
