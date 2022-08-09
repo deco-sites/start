@@ -5,7 +5,8 @@
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...path].tsx";
 import * as $1 from "./routes/index.tsx";
-import * as $2 from "./routes/start.tsx";
+import * as $2 from "./routes/loader.tsx";
+import * as $3 from "./routes/start.tsx";
 import * as $$0 from "./islands/InspectVSCode.tsx";
 import * as $$$0 from "./components/GetStarted.tsx";
 import * as $$$1 from "./components/Head.tsx";
@@ -14,7 +15,8 @@ const manifest: DecoManifest = {
   routes: {
     "./routes/[...path].tsx": $0,
     "./routes/index.tsx": $1,
-    "./routes/start.tsx": $2,
+    "./routes/loader.tsx": $2,
+    "./routes/start.tsx": $3,
   },
   islands: { "./islands/InspectVSCode.tsx": $$0 },
   components: {
