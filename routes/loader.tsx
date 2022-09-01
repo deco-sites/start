@@ -3,7 +3,7 @@ import { h } from "preact";
 import { PageProps } from "$fresh/server.ts";
 import Layout from "../components/Layout.tsx";
 import Head from "../components/Head.tsx";
-import { createLivePage } from "$live/live.tsx";
+import { createLiveHandler } from "$live/live.tsx";
 
 export interface MyAPIData {
   userId: number;
@@ -12,16 +12,17 @@ export interface MyAPIData {
   completed: boolean;
 }
 
-export const { handler, LivePage } = createLivePage<MyAPIData>({
+export const handler = createLiveHandler<MyAPIData>({
   loader: async () => {
     return await fetch("https://jsonplaceholder.typicode.com/todos/1")
       .then((res) => res.json());
   },
-  render: ({ url, data }: PageProps<MyAPIData>) => (
+});
+export default function Loader({ url, data }: PageProps<MyAPIData>) {
+  return (
     <Layout>
       <Head url={url} title="Live loader example" />
       <span>{JSON.stringify(data)}</span>
     </Layout>
-  ),
-});
-export default LivePage;
+  );
+}

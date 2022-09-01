@@ -1,7 +1,13 @@
 /** @jsx h */
 import { h } from "preact";
 
-export default function GetStarted() {
+const isDeployment = Deno.env.get("DENO_DEPLOYMENT_ID");
+
+interface Props {
+  enableInspectVSCode?: boolean;
+}
+
+export default function GetStarted({ enableInspectVSCode }: Props) {
   return (
     <section class="pt-20 pb-32">
       <div class="container mx-auto px-4">
@@ -23,13 +29,14 @@ export default function GetStarted() {
               <p class="mb-4 text-lg">
                 Create a new page by visiting it — try the root URL /
               </p>
-              <p class="mb-8 text-lg border border-dashed border-gray-300">
-                <span class="italic">PROTIP:</span>{" "}
-                Hit backtick (`) and click on any part of this page to navigate
-                to the code in VSCode automatically. Hit ESC to exit inspect
-                mode.
-              </p>
-
+              {enableInspectVSCode && !isDeployment && (
+                <p class="mb-8 text-lg border border-dashed border-gray-300">
+                  <span class="italic">PROTIP:</span>{" "}
+                  Hit backtick (`) and click on any part of this page to
+                  navigate to the code in VSCode automatically. Hit ESC to exit
+                  inspect mode.
+                </p>
+              )}
               <div class="group relative md:max-w-max mb-5 ">
                 <a
                   href="/"

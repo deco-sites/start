@@ -1,18 +1,19 @@
 /** @jsx h */
-
 import { h } from "preact";
-import { createLivePage } from "$live/live.tsx";
+import { createLiveHandler } from "$live/live.tsx";
 import Head from "../components/Head.tsx";
 import Layout from "../components/Layout.tsx";
 import GetStarted from "../components/GetStarted.tsx";
+import InspectVSCode from "../islands/InspectVSCode.tsx";
 
-export const { handler, LivePage } = createLivePage({
-  render: () => (
+export const handler = createLiveHandler();
+
+export default function Home() {
+  return (
     <Layout>
       <Head />
-      <GetStarted />
+      <GetStarted enableInspectVSCode={true} />
+      <InspectVSCode />
     </Layout>
-  ),
-});
-
-export default LivePage;
+  );
+}

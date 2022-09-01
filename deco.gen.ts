@@ -25,6 +25,7 @@ const manifest: DecoManifest = {
     "./components/Head.tsx": $$$1,
     "./components/Layout.tsx": $$$2,
   },
+  schemas: { GetStarted: null, Head: null, Layout: null },
   twind: {
     mode: "warn",
     theme: {
