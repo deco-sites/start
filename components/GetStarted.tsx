@@ -1,7 +1,20 @@
 /** @jsx h */
 import { h } from "preact";
+import { JSONSchema7 } from "https://esm.sh/v92/@types/json-schema@7.0.11/X-YS9yZWFjdDpwcmVhY3QvY29tcGF0CmQvcHJlYWN0QDEwLjEwLjY/index.d.ts";
 
 const isDeployment = Deno.env.get("DENO_DEPLOYMENT_ID");
+
+export const schema: JSONSchema7 = {
+  title: "Get Started",
+  type: "object",
+  properties: {
+    enableInspectVSCode: {
+      title: "Enable InspectVSCode",
+      type: "boolean",
+      default: false,
+    },
+  },
+};
 
 interface Props {
   enableInspectVSCode?: boolean;
