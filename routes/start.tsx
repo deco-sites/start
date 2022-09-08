@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import { PageProps } from "$fresh/server.ts";
 import { createLiveHandler } from "$live/live.tsx";
 import Head from "../components/Head.tsx";
