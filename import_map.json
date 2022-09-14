@@ -1,7 +1,7 @@
 {
   "imports": {
     "inspect_vscode/": "https://deno.land/x/inspect_vscode@0.0.6/",
-    "$live/": "https://raw.githubusercontent.com/deco-cx/live/main/",
+    "$live/": "https://deno.land/x/live@0.0.18/",
     "$fresh/": "https://deno.land/x/fresh@1.1.0/",
     "preact": "https://esm.sh/preact@10.10.6",
     "preact/": "https://esm.sh/preact@10.10.6/",
