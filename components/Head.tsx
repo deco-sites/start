@@ -1,4 +1,28 @@
 import { asset, Head } from "$fresh/runtime.ts";
+import { JSONSchema7 } from "https://esm.sh/v92/@types/json-schema@7.0.11/X-YS9yZWFjdDpwcmVhY3QvY29tcGF0CmQvcHJlYWN0QDEwLjEwLjY/index.d.ts";
+
+export const schema: JSONSchema7 = {
+  title: "SEO",
+  type: "object",
+  properties: {
+    title: {
+      title: "Title",
+      type: "string",
+    },
+    description: {
+      title: "Description",
+      type: "string",
+    },
+    url: {
+      title: "URL",
+      type: "string",
+    },
+    imageUrl: {
+      title: "Image URL",
+      type: "string",
+    },
+  },
+};
 
 export interface HeadProps {
   title?: string;

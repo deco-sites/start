@@ -28,7 +28,7 @@ const manifest: DecoManifest = {
     "./components/Layout.tsx": $$$2,
   },
   schemas: {
-    GetStarted: {
+    "GetStarted": {
       "title": "Get Started",
       "type": "object",
       "properties": {
@@ -39,8 +39,16 @@ const manifest: DecoManifest = {
         },
       },
     },
-    Head: null,
-    Layout: null,
+    "Head": {
+      "title": "SEO",
+      "type": "object",
+      "properties": {
+        "title": { "title": "Title", "type": "string" },
+        "description": { "title": "Description", "type": "string" },
+        "url": { "title": "URL", "type": "string" },
+        "imageUrl": { "title": "Image URL", "type": "string" },
+      },
+    },
   },
   baseUrl: import.meta.url,
   config,
