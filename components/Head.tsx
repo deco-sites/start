@@ -1,9 +1,14 @@
-import { asset, Head } from "$fresh/runtime.ts";
 import { JSONSchema7 } from "https://esm.sh/v92/@types/json-schema@7.0.11/X-YS9yZWFjdDpwcmVhY3QvY29tcGF0CmQvcHJlYWN0QDEwLjEwLjY/index.d.ts";
+import { NextSeo as NS } from "next-seo";
+import type { NextSeoProps } from "next-seo";
+import type { ComponentClass, h } from "preact";
+
+const NextSeo = NS as ComponentClass<NextSeoProps>;
 
 export const schema: JSONSchema7 = {
   title: "SEO",
   type: "object",
+  required: ["url", "themeColor"],
   properties: {
     title: {
       title: "Title",
@@ -16,70 +21,97 @@ export const schema: JSONSchema7 = {
     url: {
       title: "URL",
       type: "string",
+      format: "uri",
     },
     imageUrl: {
       title: "Image URL",
       type: "string",
+      format: "uri",
+    },
+    themeColor: {
+      title: "Theme color",
+      type: "string",
+      pattern: "#[a-zA-Z0-9]{3,8}",
+    },
+    twitter: {
+      title: "twitter",
+      type: "object",
+      properties: {
+        cardType: {
+          title: "Twitter Card type",
+          type: "string",
+        },
+      },
     },
   },
 };
 
-export interface HeadProps {
+export interface HeadProps extends NextSeoProps {
   title?: string;
   description?: string;
-  url?: URL;
+  url?: string;
   imageUrl?: string;
   faviconUrl?: string;
-  styleUrls?: string[];
   themeColor?: string;
 }
 
-export const defaultProps: HeadProps = {
-  title: "Deco Live Template Site — edit this!",
-  description: "A complete digital commerce experience platform.",
-  url: new URL("https://deco.cx"),
-  imageUrl: "https://via.placeholder.com/300",
-  faviconUrl: "",
-  styleUrls: [],
-  themeColor: "#003232",
-};
-
-export default function HeadComponent(props: HeadProps) {
-  const merged = { ...defaultProps, ...props };
+export default function HeadComponent(
+  {
+    title = "Deco Live Template Site - Edit this!",
+    description =
+      "A complete digital commerce experience platform. - Edit this!",
+    url = "https://start.deco.page",
+    imageUrl = "https://via.placeholder.com/300",
+    faviconUrl = "",
+    themeColor = "#003232",
+    ...otherProps
+  }: HeadProps,
+) {
   return (
-    <Head>
-      <title>{merged.title}</title>
-      <meta name="theme-color" content={merged.themeColor}></meta>
-      <meta name="description" content={merged.description} />
-      <meta property="og:title" content={merged.title} />
-      <meta property="og:description" content={merged.description} />
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={merged.url?.href} />
-      <meta
-        property="og:image"
-        content={merged.imageUrl}
-      />
-      <link
-        rel="shortcut icon"
-        href={merged.faviconUrl}
-        type="image/x-icon"
-      >
-      </link>
-
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      </link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      </link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-      </link>
-      <link rel="manifest" href="/site.webmanifest"></link>
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
-      </link>
-      <meta name="theme-color" content="#003232"></meta>
-      <meta name="msapplication-TileColor" content="#003232"></meta>
-      {merged.styleUrls?.map((styleUrl: string) => (
-        <link rel="stylesheet" href={asset(styleUrl)}></link>
-      ))}
-    </Head>
+    <NextSeo
+      title={title}
+      description={description}
+      openGraph={{
+        type: "website",
+        url: url,
+        images: [{ url: imageUrl }],
+        ...(otherProps.openGraph ?? {}),
+      }}
+      canonical={url}
+      additionalMetaTags={otherProps?.additionalMetaTags ?? [
+        {
+          name: "theme-color",
+          content: themeColor,
+        },
+        {
+          name: "msapplication-TileColor",
+          content: themeColor,
+        },
+      ]}
+      additionalLinkTags={otherProps?.additionalLinkTags ?? [{
+        rel: "shortcut icon",
+        href: faviconUrl,
+        type: "image/x-icon",
+      }, {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png",
+      }, {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png",
+      }, {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png",
+      }, {
+        rel: "mask-icon",
+        href: "/safari-pinned-tab.svg",
+        color: themeColor,
+      }]}
+      twitter={otherProps.twitter}
+    />
   );
 }
