@@ -3,6 +3,8 @@
   "deno.lint": true,
   "deno.unstable": true,
   "deno.importMap": "./import_map.json",
+  "[typescript]": { "editor.defaultFormatter": "denoland.vscode-deno" },
+  "[typescriptreact]": { "editor.defaultFormatter": "denoland.vscode-deno" },
   "tailwindCSS.includeLanguages": {
     "tsx": "html",
     "html": "html",
@@ -13,7 +15,7 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "editor.defaultFormatter": "denoland.vscode-deno",
+  "editor.formatOnSave": true,
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   }
