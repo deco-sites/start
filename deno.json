@@ -6,7 +6,7 @@
     "check": "deno fmt --check && deno lint"
   },
   "githooks": {
-    "pre-commit": ["check"]
+    "pre-commit": "check"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {
