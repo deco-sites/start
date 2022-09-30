@@ -1,7 +1,8 @@
 {
   "tasks": {
     "start": "deno run -A --watch=tailwind.config.js,static/ dev.ts",
-    "component": "deno eval 'import \"$live/scripts/component.ts\"'"
+    "component": "deno eval 'import \"$live/scripts/component.ts\"'",
+    "copyPartytown": "deno eval 'import \"$live/scripts/copyPartytownFiles.ts\"'"
   },
   "importMap": "./import_map.json",
   "compilerOptions": {
