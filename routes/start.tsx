@@ -6,7 +6,7 @@ import GetStarted from "../components/GetStarted.tsx";
 
 export const handler = createLiveHandler();
 
-export default function Start({ url }: PageProps<any>) {
+export default function Start({ url }: PageProps) {
   return (
     <Layout>
       <Head url={url} title="Welcome to Live" />
