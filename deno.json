@@ -9,7 +9,7 @@
   "githooks": {
     "pre-commit": "check"
   },
-  "importMap": "./import_map.json",
+  "importMap": "./import_map.local.json",
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
