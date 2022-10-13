@@ -13,7 +13,9 @@ import * as $$1 from "./islands/InspectVSCode.tsx";
 import * as $$$0 from "./components/FreshHead.tsx";
 import * as $$$1 from "./components/GetStarted.tsx";
 import * as $$$2 from "./components/Head.tsx";
-import * as $$$3 from "./components/Layout.tsx";
+import * as $$$3 from "./components/JsonPlaceholder.tsx";
+import * as $$$4 from "./components/Layout.tsx";
+import * as $$$$0 from "./loaders/jsonPlaceholder.ts";
 
 const manifest: DecoManifest = {
   routes: {
@@ -27,8 +29,10 @@ const manifest: DecoManifest = {
     "./components/FreshHead.tsx": $$$0,
     "./components/GetStarted.tsx": $$$1,
     "./components/Head.tsx": $$$2,
-    "./components/Layout.tsx": $$$3,
+    "./components/JsonPlaceholder.tsx": $$$3,
+    "./components/Layout.tsx": $$$4,
   },
+  loaders: { "./loaders/jsonPlaceholder.ts": $$$$0 },
   schemas: {
     "GetStarted": {
       "title": "Get Started",
@@ -63,6 +67,11 @@ const manifest: DecoManifest = {
           },
         },
       },
+    },
+    "JsonPlaceholder": {
+      "title": "JsonPlaceholder",
+      "type": "object",
+      "properties": { "data": { "$ref": "jsonplaceholder" } },
     },
   },
   baseUrl: import.meta.url,
