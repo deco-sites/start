@@ -9,7 +9,7 @@ locally.
 ---
 
 NOTE: To edit or create new pages with existing components, you don't need to
-edit the code! Just go to any page and hit `Ctrl+E` (or `Cmd+E` on Mac) to open
+edit the code! Just go to any page and hit `Ctrl+Shift+E` to open
 the editor of the current page you're seeing.
 
 ---
