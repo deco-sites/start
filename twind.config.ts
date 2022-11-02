@@ -1,8 +1,5 @@
-import { Options } from "$fresh/plugins/twind.ts";
-import * as colors from "twind/colors";
-
+/** @type {import('$fresh/plugins/twind').Options} */
 export default {
-  selfURL: import.meta.url,
   theme: {
     screens: {
       sm: "640px",
@@ -15,13 +12,11 @@ export default {
       primary: "#2FD180",
       "primary-dark": "#003232",
       "primary-light": "#C5FFE9",
-      blue: colors.blue,
-      black: colors.black,
-      gray: colors.gray,
-      green: colors.green,
-      white: colors.white,
-      yellow: colors.yellow,
       transparent: "transparent",
     },
+    fontFamily: {
+      sans: ["Albert Sans", "sans-serif"],
+      serif: ["serif"],
+    },
   },
-} as Options;
+};

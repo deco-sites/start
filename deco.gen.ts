@@ -5,11 +5,9 @@
 import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...catchall].tsx";
-import * as $1 from "./routes/index.tsx";
-import * as $2 from "./routes/loader.tsx";
-import * as $3 from "./routes/start.tsx";
-import * as $$0 from "./islands/Editor.tsx";
-import * as $$1 from "./islands/InspectVSCode.tsx";
+import * as $1 from "./routes/_app.tsx";
+import * as $2 from "./routes/index.tsx";
+import * as $$0 from "./islands/InjectLiveScripts.tsx";
 import * as $$$0 from "./components/FreshHead.tsx";
 import * as $$$1 from "./components/GetStarted.tsx";
 import * as $$$2 from "./components/Head.tsx";
@@ -20,11 +18,10 @@ import * as $$$$0 from "./loaders/jsonPlaceholder.ts";
 const manifest: DecoManifest = {
   routes: {
     "./routes/[...catchall].tsx": $0,
-    "./routes/index.tsx": $1,
-    "./routes/loader.tsx": $2,
-    "./routes/start.tsx": $3,
+    "./routes/_app.tsx": $1,
+    "./routes/index.tsx": $2,
   },
-  islands: { "./islands/Editor.tsx": $$0, "./islands/InspectVSCode.tsx": $$1 },
+  islands: { "./islands/InjectLiveScripts.tsx": $$0 },
   components: {
     "./components/FreshHead.tsx": $$$0,
     "./components/GetStarted.tsx": $$$1,
@@ -33,47 +30,6 @@ const manifest: DecoManifest = {
     "./components/Layout.tsx": $$$4,
   },
   loaders: { "./loaders/jsonPlaceholder.ts": $$$$0 },
-  schemas: {
-    "GetStarted": {
-      "title": "Get Started",
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "title": "Enable InspectVSCode",
-          "type": "boolean",
-          "default": false,
-        },
-      },
-    },
-    "Head": {
-      "title": "SEO",
-      "type": "object",
-      "required": ["url", "themeColor"],
-      "properties": {
-        "title": { "title": "Title", "type": "string" },
-        "description": { "title": "Description", "type": "string" },
-        "url": { "title": "URL", "type": "string", "format": "uri" },
-        "imageUrl": { "title": "Image URL", "type": "string", "format": "uri" },
-        "themeColor": {
-          "title": "Theme color",
-          "type": "string",
-          "pattern": "#[a-zA-Z0-9]{3,8}",
-        },
-        "twitter": {
-          "title": "twitter",
-          "type": "object",
-          "properties": {
-            "cardType": { "title": "Twitter Card type", "type": "string" },
-          },
-        },
-      },
-    },
-    "JsonPlaceholder": {
-      "title": "JsonPlaceholder",
-      "type": "object",
-      "properties": { "data": { "$ref": "jsonplaceholder" } },
-    },
-  },
   baseUrl: import.meta.url,
   config,
 };
