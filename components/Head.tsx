@@ -1,120 +1,93 @@
-import { JSONSchema7 } from "https://esm.sh/v92/@types/json-schema@7.0.11/X-YS9yZWFjdDpwcmVhY3QvY29tcGF0CmQvcHJlYWN0QDEwLjEwLjY/index.d.ts";
-import { NextSeo as NS } from "next-seo";
-import type { NextSeoProps } from "next-seo";
-import type { ComponentClass, h } from "preact";
+import { asset, Head } from "$fresh/runtime.ts";
 
-const NextSeo = NS as ComponentClass<NextSeoProps>;
+export interface HeadProps {
+  title: string;
+  description: string;
+  url: URL;
+  imageUrl: string;
+  faviconUrl: string;
+  styleUrls: string[];
+  themeColor: string;
+}
 
-export const schema: JSONSchema7 = {
-  title: "SEO",
+export const props: HeadProps = {
+  title: "deco.cx — starter site",
+  description: "Deliver complete commerce experiences — start here!",
+  url: new URL("https://start.deco.site"),
+  imageUrl: "https://deco.cx/images/deco-logo-light.png",
+  faviconUrl: "",
+  styleUrls: [],
+  themeColor: "#003232",
+};
+
+export const schema = {
   type: "object",
-  required: ["url", "themeColor"],
   properties: {
     title: {
-      title: "Title",
+      title: "Título da Página",
       type: "string",
     },
     description: {
-      title: "Description",
+      title: "Descrição",
+      type: "string",
+    },
+    faviconUrl: {
+      title: "Favicon URL",
       type: "string",
     },
     url: {
       title: "URL",
       type: "string",
-      format: "uri",
-    },
-    imageUrl: {
-      title: "Image URL",
-      type: "string",
-      format: "uri",
-    },
-    themeColor: {
-      title: "Theme color",
-      type: "string",
-      pattern: "#[a-zA-Z0-9]{3,8}",
-    },
-    twitter: {
-      title: "twitter",
-      type: "object",
-      properties: {
-        cardType: {
-          title: "Twitter Card type",
-          type: "string",
-        },
-      },
     },
   },
+  required: ["description", "faviconUrl", "title", "url"],
+  title: "HEAD",
 };
 
-export interface HeadProps extends NextSeoProps {
-  title?: string;
-  description?: string;
-  url?: string;
-  imageUrl?: string;
-  faviconUrl?: string;
-  themeColor?: string;
-}
-
-export default function HeadComponent(
-  {
-    title = "Deco Live Template Site - Edit this!",
-    description =
-      "A complete digital commerce experience platform. - Edit this!",
-    url = "https://start.deco.site",
-    imageUrl = "https://via.placeholder.com/300",
-    faviconUrl = "",
-    themeColor = "#003232",
-    ...otherProps
-  }: HeadProps,
-) {
+export default function HeadComponent() {
+  const {
+    title,
+    description,
+    url,
+    imageUrl,
+    faviconUrl,
+    styleUrls,
+    themeColor,
+  } = props;
   return (
-    <>
-      <NextSeo
-        title={title}
-        description={description}
-        openGraph={{
-          type: "website",
-          url: url,
-          images: [{ url: imageUrl }],
-          ...(otherProps.openGraph ?? {}),
-        }}
-        canonical={url}
-        additionalMetaTags={otherProps?.additionalMetaTags ?? [
-          {
-            name: "theme-color",
-            content: themeColor,
-          },
-          {
-            name: "msapplication-TileColor",
-            content: themeColor,
-          },
-        ]}
-        additionalLinkTags={otherProps?.additionalLinkTags ?? [{
-          rel: "shortcut icon",
-          href: faviconUrl,
-          type: "image/x-icon",
-        }, {
-          rel: "apple-touch-icon",
-          sizes: "180x180",
-          href: "/apple-touch-icon.png",
-        }, {
-          rel: "icon",
-          type: "image/png",
-          sizes: "32x32",
-          href: "/favicon-32x32.png",
-        }, {
-          rel: "icon",
-          type: "image/png",
-          sizes: "16x16",
-          href: "/favicon-16x16.png",
-        }, {
-          rel: "mask-icon",
-          href: "/safari-pinned-tab.svg",
-          color: themeColor,
-        }]}
-        twitter={otherProps.twitter}
+    <Head>
+      <title>{title}</title>
+      <meta name="theme-color" content={themeColor}></meta>
+      <meta name="description" content={description} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={url.href} />
+      <meta
+        property="og:image"
+        content={imageUrl}
       />
-      {/* from https://fonts.googleapis.com/css?family=Albert+Sans:400,700&display=swap */}
+      <link
+        rel="shortcut icon"
+        href={faviconUrl}
+        type="image/x-icon"
+      >
+      </link>
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      </link>
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      </link>
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      </link>
+      <link rel="manifest" href="/site.webmanifest"></link>
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
+      </link>
+      <meta name="theme-color" content="#003232"></meta>
+      <meta name="msapplication-TileColor" content="#003232"></meta>
+      {styleUrls?.map((styleUrl: string) => (
+        <link rel="stylesheet" href={asset(styleUrl)}></link>
+      ))}
       <style
         dangerouslySetInnerHTML={{
           __html: `
@@ -158,6 +131,8 @@ export default function HeadComponent(
         }}
       >
       </style>
+      {/* TODO: Procurar o script */}
+      {/* <script async id="quicklink" src="/scripts/quicklink.umd.js"></script> */}
       <script
         dangerouslySetInnerHTML={{
           __html:
@@ -165,6 +140,6 @@ export default function HeadComponent(
         }}
       >
       </script>
-    </>
+    </Head>
   );
 }

@@ -8,11 +8,9 @@ import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/index.tsx";
 import * as $$0 from "./islands/InjectLiveScripts.tsx";
-import * as $$$0 from "./components/FreshHead.tsx";
-import * as $$$1 from "./components/GetStarted.tsx";
-import * as $$$2 from "./components/Head.tsx";
-import * as $$$3 from "./components/JsonPlaceholder.tsx";
-import * as $$$4 from "./components/Layout.tsx";
+import * as $$$0 from "./components/GetStarted.tsx";
+import * as $$$1 from "./components/Head.tsx";
+import * as $$$2 from "./components/Layout.tsx";
 import * as $$$$0 from "./loaders/jsonPlaceholder.ts";
 
 const manifest: DecoManifest = {
@@ -23,11 +21,9 @@ const manifest: DecoManifest = {
   },
   islands: { "./islands/InjectLiveScripts.tsx": $$0 },
   components: {
-    "./components/FreshHead.tsx": $$$0,
-    "./components/GetStarted.tsx": $$$1,
-    "./components/Head.tsx": $$$2,
-    "./components/JsonPlaceholder.tsx": $$$3,
-    "./components/Layout.tsx": $$$4,
+    "./components/GetStarted.tsx": $$$0,
+    "./components/Head.tsx": $$$1,
+    "./components/Layout.tsx": $$$2,
   },
   loaders: { "./loaders/jsonPlaceholder.ts": $$$$0 },
   baseUrl: import.meta.url,

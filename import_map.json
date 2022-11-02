@@ -12,8 +12,6 @@
     "twind/": "https://esm.sh/twind@0.16.17/",
     "react-hook-form": "https://esm.sh/*react-hook-form@7.34.2?alias=react:preact/compat",
     "std/": "https://deno.land/std@0.147.0/",
-    "supabase": "https://esm.sh/@supabase/supabase-js@1.35.4",
-    "next/head": "./components/FreshHead.tsx",
-    "next-seo": "https://esm.sh/*next-seo@5.5.0?alias=react:preact/compat"
+    "supabase": "https://esm.sh/@supabase/supabase-js@1.35.4"
   }
 }
