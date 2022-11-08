@@ -1,3 +1,3 @@
-import InjectLiveScripts from "$live/islands/InjectLiveScripts.tsx";
+import LiveControls from "$live/components/LiveControls.tsx";
 
-export default InjectLiveScripts;
+export default LiveControls;
