@@ -1,4 +1,4 @@
-import { JSONSchema7 } from "https://esm.sh/v92/@types/json-schema@7.0.11/X-YS9yZWFjdDpwcmVhY3QvY29tcGF0CmQvcHJlYWN0QDEwLjEwLjY/index.d.ts";
+import { JSONSchema7 } from "json-schema";
 
 const isDeployment = Deno.env.get("DENO_DEPLOYMENT_ID");
 
