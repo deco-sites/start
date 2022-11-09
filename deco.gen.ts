@@ -7,7 +7,7 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
 import * as $2 from "./routes/index.tsx";
-import * as $$0 from "./islands/InjectLiveScripts.tsx";
+import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
 import * as $$$$0 from "./loaders/jsonPlaceholder.ts";
@@ -18,7 +18,7 @@ const manifest: DecoManifest = {
     "./routes/_app.tsx": $1,
     "./routes/index.tsx": $2,
   },
-  islands: { "./islands/InjectLiveScripts.tsx": $$0 },
+  islands: { "./islands/LiveControls.tsx": $$0 },
   sections: { "./sections/GetStarted.tsx": $$$0, "./sections/Head.tsx": $$$1 },
   loaders: { "./loaders/jsonPlaceholder.ts": $$$$0 },
   baseUrl: import.meta.url,
