@@ -1,5 +1,4 @@
 import { asset, Head } from "$fresh/runtime.ts";
-import { JSONSchema7 } from "json-schema";
 
 export interface HeadProps {
   title: string;
@@ -19,30 +18,6 @@ export const props: HeadProps = {
   faviconUrl: "",
   styleUrls: [],
   themeColor: "#003232",
-};
-
-export const schema: JSONSchema7 = {
-  type: "object",
-  properties: {
-    title: {
-      title: "Título da Página",
-      type: "string",
-    },
-    description: {
-      title: "Descrição",
-      type: "string",
-    },
-    faviconUrl: {
-      title: "Favicon URL",
-      type: "string",
-    },
-    url: {
-      title: "URL",
-      type: "string",
-    },
-  },
-  required: ["description", "faviconUrl", "title", "url"],
-  title: "HEAD",
 };
 
 export default function HeadComponent() {

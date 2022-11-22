@@ -6,23 +6,46 @@ import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./routes/[...catchall].tsx";
 import * as $1 from "./routes/_app.tsx";
-import * as $2 from "./routes/index.tsx";
+import * as $2 from "./routes/_middleware.ts";
+import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
-import * as $$$$0 from "./loaders/jsonPlaceholder.ts";
 
 const manifest: DecoManifest = {
   routes: {
     "./routes/[...catchall].tsx": $0,
     "./routes/_app.tsx": $1,
-    "./routes/index.tsx": $2,
+    "./routes/_middleware.ts": $2,
+    "./routes/index.tsx": $3,
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
   sections: { "./sections/GetStarted.tsx": $$$0, "./sections/Head.tsx": $$$1 },
-  loaders: { "./loaders/jsonPlaceholder.ts": $$$$0 },
+  functions: {},
+  schemas: {
+    "./sections/GetStarted.tsx": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "enableInspectVSCode": {
+            "type": "boolean",
+            "title": "Enable Inspect V S Code",
+          },
+        },
+        "required": [],
+      },
+      "outputSchema": null,
+    },
+    "./sections/Head.tsx": {
+      "inputSchema": null,
+      "outputSchema": null,
+    },
+  },
   baseUrl: import.meta.url,
   config,
 };
+
+// live — this exposes the manifest so the live server can render components dynamically
+globalThis.manifest = manifest;
 
 export default manifest;

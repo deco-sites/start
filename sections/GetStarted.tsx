@@ -1,20 +1,6 @@
-import { JSONSchema7 } from "json-schema";
+import { context } from "$live/live.ts";
 
-const isDeployment = Deno.env.get("DENO_DEPLOYMENT_ID");
-
-export const schema: JSONSchema7 = {
-  title: "Get Started",
-  type: "object",
-  properties: {
-    enableInspectVSCode: {
-      title: "Enable InspectVSCode tip",
-      type: "boolean",
-      default: false,
-    },
-  },
-};
-
-interface Props {
+export interface Props {
   enableInspectVSCode?: boolean;
 }
 
@@ -43,7 +29,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
               <p class="mb-4 text-lg">
                 Try any URL in the address bar 👆
               </p>
-              {enableInspectVSCode && !isDeployment && (
+              {enableInspectVSCode && !context.deploymentId && (
                 <p class="mb-8 text-lg border border-dashed border-primary-dark p-4">
                   <span class="italic">PROTIP:</span>{" "}
                   Hit backtick (`) and click on any part of this page to
