@@ -1,35 +1,24 @@
 import { asset, Head } from "$fresh/runtime.ts";
 
-export interface HeadProps {
+export interface Props {
   title: string;
   description: string;
-  url: URL;
+  url: string;
   imageUrl: string;
   faviconUrl: string;
   styleUrls: string[];
   themeColor: string;
 }
 
-export const props: HeadProps = {
-  title: "deco.cx — starter site",
-  description: "Deliver complete commerce experiences — start here!",
-  url: new URL("https://start.deco.site"),
-  imageUrl: "https://deco.cx/images/deco-logo-light.png",
-  faviconUrl: "",
-  styleUrls: [],
-  themeColor: "#003232",
-};
-
-export default function HeadComponent() {
-  const {
-    title,
-    description,
-    url,
-    imageUrl,
-    faviconUrl,
-    styleUrls,
-    themeColor,
-  } = props;
+export default function HeadComponent({
+  title = "deco.cx — starter site",
+  description = "Deliver complete commerce experiences — start here!",
+  url = "https://start.deco.site",
+  imageUrl = "https://deco.cx/images/deco-logo-light.png",
+  faviconUrl = "",
+  styleUrls = [],
+  themeColor = "#003232",
+}: Props) {
   return (
     <Head>
       <title>{title}</title>
@@ -38,7 +27,7 @@ export default function HeadComponent() {
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={url.href} />
+      <meta property="og:url" content={url} />
       <meta
         property="og:image"
         content={imageUrl}

@@ -37,7 +37,51 @@ const manifest: DecoManifest = {
       "outputSchema": null,
     },
     "./sections/Head.tsx": {
-      "inputSchema": null,
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+          },
+          "url": {
+            "type": "string",
+            "title": "Url",
+          },
+          "imageUrl": {
+            "type": "string",
+            "title": "Image Url",
+          },
+          "faviconUrl": {
+            "type": "string",
+            "title": "Favicon Url",
+          },
+          "styleUrls": {
+            "type": "array",
+            "items": {
+              "type": "string",
+            },
+            "title": "Style Urls",
+          },
+          "themeColor": {
+            "type": "string",
+            "title": "Theme Color",
+          },
+        },
+        "required": [
+          "title",
+          "description",
+          "url",
+          "imageUrl",
+          "faviconUrl",
+          "styleUrls",
+          "themeColor",
+        ],
+      },
       "outputSchema": null,
     },
   },
