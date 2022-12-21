@@ -25,6 +25,7 @@ const manifest: DecoManifest = {
   schemas: {
     "./sections/GetStarted.tsx": {
       "inputSchema": {
+        "title": " Get Started",
         "type": "object",
         "properties": {
           "enableInspectVSCode": {
@@ -38,6 +39,7 @@ const manifest: DecoManifest = {
     },
     "./sections/Head.tsx": {
       "inputSchema": {
+        "title": " Head",
         "type": "object",
         "properties": {
           "title": {
