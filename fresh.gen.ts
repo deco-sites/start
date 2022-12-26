@@ -29,7 +29,10 @@ const manifest: DecoManifest = {
         "type": "object",
         "properties": {
           "enableInspectVSCode": {
-            "type": "boolean",
+            "type": [
+              "boolean",
+              "null",
+            ],
             "title": "Enable Inspect V S Code",
           },
         },
