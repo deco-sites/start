@@ -25,10 +25,14 @@ const manifest: DecoManifest = {
   schemas: {
     "./sections/GetStarted.tsx": {
       "inputSchema": {
+        "title": " Get Started",
         "type": "object",
         "properties": {
           "enableInspectVSCode": {
-            "type": "boolean",
+            "type": [
+              "boolean",
+              "null",
+            ],
             "title": "Enable Inspect V S Code",
           },
         },
@@ -38,6 +42,7 @@ const manifest: DecoManifest = {
     },
     "./sections/Head.tsx": {
       "inputSchema": {
+        "title": " Head",
         "type": "object",
         "properties": {
           "title": {
