@@ -70,3 +70,4 @@ dist/
 server/
 
 import_map.local.json
+deno.lock
