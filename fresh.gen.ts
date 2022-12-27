@@ -11,6 +11,9 @@ import * as $3 from "./routes/index.tsx";
 import * as $$0 from "./islands/LiveControls.tsx";
 import * as $$$0 from "./sections/GetStarted.tsx";
 import * as $$$1 from "./sections/Head.tsx";
+import * as $$$2 from "./sections/Markdown.tsx";
+import * as $$$3 from "./sections/QuillText.tsx";
+import * as $$$$0 from "./functions/LoadGitHubRaw.ts";
 
 const manifest: DecoManifest = {
   routes: {
@@ -20,8 +23,13 @@ const manifest: DecoManifest = {
     "./routes/index.tsx": $3,
   },
   islands: { "./islands/LiveControls.tsx": $$0 },
-  sections: { "./sections/GetStarted.tsx": $$$0, "./sections/Head.tsx": $$$1 },
-  functions: {},
+  sections: {
+    "./sections/GetStarted.tsx": $$$0,
+    "./sections/Head.tsx": $$$1,
+    "./sections/Markdown.tsx": $$$2,
+    "./sections/QuillText.tsx": $$$3,
+  },
+  functions: { "./functions/LoadGitHubRaw.ts": $$$$0 },
   schemas: {
     "./sections/GetStarted.tsx": {
       "inputSchema": {
@@ -88,6 +96,79 @@ const manifest: DecoManifest = {
         ],
       },
       "outputSchema": null,
+    },
+    "./sections/Markdown.tsx": {
+      "inputSchema": {
+        "title": " Markdown",
+        "type": "object",
+        "properties": {
+          "text": {
+            "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
+            "format": "live-function",
+            "type": "string",
+            "title": "Text",
+          },
+        },
+        "required": [
+          "text",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./sections/QuillText.tsx": {
+      "inputSchema": {
+        "title": " Quill Text",
+        "type": "object",
+        "properties": {
+          "html": {
+            "format": "html",
+            "type": "string",
+            "title": "Html",
+          },
+        },
+        "required": [
+          "html",
+        ],
+      },
+      "outputSchema": null,
+    },
+    "./functions/LoadGitHubRaw.ts": {
+      "inputSchema": {
+        "title": " Load Git Hub Raw",
+        "type": "object",
+        "properties": {
+          "repo": {
+            "type": "string",
+            "title": "Repo",
+            "description": "Complete user/repo format",
+          },
+          "branch": {
+            "type": "string",
+            "title": "Branch",
+            "description": "Branch",
+          },
+          "path": {
+            "type": "string",
+            "title": "Path",
+            "description":
+              "Path to fetch, or leave blank and add :path route param.",
+          },
+        },
+        "required": [
+          "repo",
+          "branch",
+          "path",
+        ],
+      },
+      "outputSchema": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
+          },
+        },
+        "additionalProperties": true,
+      },
     },
   },
   baseUrl: import.meta.url,
