@@ -103,8 +103,6 @@ const manifest: DecoManifest = {
         "type": "object",
         "properties": {
           "text": {
-            "$id": "5b1cd5713a375e18bb93e9635b8a2dc5fc2672cf",
-            "format": "live-function",
             "type": "string",
             "title": "Text",
           },
