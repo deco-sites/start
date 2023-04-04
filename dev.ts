@@ -2,4 +2,4 @@
 import dev from "$live/dev.ts";
 import liveManifest from "$live/live.gen.ts";
 
-await dev(import.meta.url, "./main.ts", { siteId: 8, imports: [liveManifest] });
+await dev(import.meta.url, "./main.ts", { imports: [liveManifest] });
