@@ -300,6 +300,7 @@
               "const": "and"
             }
           ],
+          "type": "string",
           "title": "Op"
         },
         "matchers": {
@@ -340,6 +341,7 @@
               "const": "development"
             }
           ],
+          "type": "string",
           "title": "Environment"
         }
       },
