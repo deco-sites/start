@@ -15,6 +15,8 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
                 class="object-cover rounded-full"
                 src="/android-chrome-512x512.png"
                 alt=""
+                width={512}
+                height={512}
               />
             </div>
           </div>
