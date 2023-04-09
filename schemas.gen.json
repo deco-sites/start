@@ -18,18 +18,18 @@
       "properties": {
         "repo": {
           "type": "string",
-          "title": "Repo",
-          "description": "Complete user/repo format"
+          "description": "Complete user/repo format",
+          "title": "Repo"
         },
         "branch": {
           "type": "string",
-          "title": "Branch",
-          "description": "Branch"
+          "description": "Branch",
+          "title": "Branch"
         },
         "path": {
           "type": "string",
-          "title": "Path",
-          "description": "Path to fetch, or leave blank and add :path route param."
+          "description": "Path to fetch, or leave blank and add :path route param.",
+          "title": "Path"
         }
       },
       "required": [
@@ -40,13 +40,15 @@
       "title": "deco-sites/start/functions/LoadGitHubRaw.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
-      "$ref": "#/root/flags"
+      "$ref": "#/root/flags",
+      "title": "Flag"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
-      }
+      },
+      "title": "Flag[]"
     },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig": {
       "type": "object",
@@ -62,7 +64,8 @@
       "title": "deco-cx/live/handlers/routesSelection.ts@SelectionConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
-      "$ref": "#/root/handlers"
+      "$ref": "#/root/handlers",
+      "title": "Handler"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler@record": {
       "title": "Unknown record",
@@ -92,7 +95,8 @@
       "title": "deco-cx/live/handlers/router.ts@RouterConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
-      "$ref": "#/root/pages"
+      "$ref": "#/root/pages",
+      "title": "Page"
     },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
@@ -121,13 +125,30 @@
       "title": "deco-cx/live/handlers/fresh.ts@FreshConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section": {
-      "$ref": "#/root/sections"
+      "$ref": "#/root/sections",
+      "title": "Section"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]": {
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9pc2xhbmQudHM=@Island": {
+      "$ref": "#/root/islands",
+      "title": "Island"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9pc2xhbmQudHM=@Island"
+        }
+      ],
+      "title": "Island|Section"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section"
-      }
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section"
+      },
+      "title": "Island|Section[]"
     },
     "ZGVjby1jeC9saXZlL3BhZ2VzL0xpdmVQYWdlLnRzeA==@Props": {
       "type": "object",
@@ -137,7 +158,7 @@
           "title": "Name"
         },
         "sections": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Island|Section[]",
           "title": "Sections"
         }
       },
@@ -228,16 +249,16 @@
             "string",
             "null"
           ],
-          "title": "Start",
-          "format": "date-time"
+          "format": "date-time",
+          "title": "Start"
         },
         "end": {
           "type": [
             "string",
             "null"
           ],
-          "title": "End",
-          "format": "date-time"
+          "format": "date-time",
+          "title": "End"
         }
       },
       "required": [],
@@ -278,13 +299,15 @@
       "title": "deco-cx/live/matchers/MatchSite.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9tYXRjaGVyLnRz@Matcher": {
-      "$ref": "#/root/matchers"
+      "$ref": "#/root/matchers",
+      "title": "Matcher"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9tYXRjaGVyLnRz@Matcher[]": {
       "type": "array",
       "items": {
         "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9tYXRjaGVyLnRz@Matcher"
-      }
+      },
+      "title": "Matcher[]"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoTXVsdGkudHM=@Props": {
       "type": "object",
