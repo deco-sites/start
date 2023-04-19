@@ -39,29 +39,35 @@
       ],
       "title": "deco-sites/start/functions/LoadGitHubRaw.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
-      "$ref": "#/root/flags",
-      "title": "Flag"
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
+      "$ref": "#/root/pages",
+      "title": "Page"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
-      },
-      "title": "Flag[]"
-    },
-    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig": {
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
       "properties": {
-        "flags": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]",
-          "title": "Flags"
+        "page": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
+          "title": "Page"
         }
       },
       "required": [
-        "flags"
+        "page"
       ],
-      "title": "deco-cx/live/handlers/routesSelection.ts@SelectionConfig"
+      "title": "deco-cx/live/handlers/devPage.ts@DevConfig"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2ZyZXNoLnRz@FreshConfig": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
+          "title": "Page"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-cx/live/handlers/fresh.ts@FreshConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
       "$ref": "#/root/handlers",
@@ -94,35 +100,29 @@
       ],
       "title": "deco-cx/live/handlers/router.ts@RouterConfig"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
-      "$ref": "#/root/pages",
-      "title": "Page"
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
+      "$ref": "#/root/flags",
+      "title": "Flag"
     },
-    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
+      },
+      "title": "Flag[]"
+    },
+    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig": {
       "type": "object",
       "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Page"
+        "flags": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag[]",
+          "title": "Flags"
         }
       },
       "required": [
-        "page"
+        "flags"
       ],
-      "title": "deco-cx/live/handlers/devPage.ts@DevConfig"
-    },
-    "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2ZyZXNoLnRz@FreshConfig": {
-      "type": "object",
-      "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Page"
-        }
-      },
-      "required": [
-        "page"
-      ],
-      "title": "deco-cx/live/handlers/fresh.ts@FreshConfig"
+      "title": "deco-cx/live/handlers/routesSelection.ts@SelectionConfig"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section": {
       "$ref": "#/root/sections",
@@ -152,6 +152,33 @@
         "sections"
       ],
       "title": "deco-cx/live/pages/LivePage.tsx@Props"
+    },
+    "ZGVjby1jeC9saXZlL3NlY3Rpb25zL1BhZ2VJbmNsdWRlLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
+          "title": "Page"
+        }
+      },
+      "required": [
+        "page"
+      ],
+      "title": "deco-cx/live/sections/PageInclude.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "enableInspectVSCode": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Enable Inspect V S Code"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/start/sections/GetStarted.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
       "type": "object",
@@ -199,33 +226,6 @@
       ],
       "title": "deco-sites/start/sections/Head.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/start/sections/GetStarted.tsx@Props"
-    },
-    "ZGVjby1jeC9saXZlL3NlY3Rpb25zL1BhZ2VJbmNsdWRlLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Page"
-        }
-      },
-      "required": [
-        "page"
-      ],
-      "title": "deco-cx/live/sections/PageInclude.tsx@Props"
-    },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
       "properties": {
@@ -249,39 +249,28 @@
       "required": [],
       "title": "deco-cx/live/matchers/MatchDate.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoVXNlckFnZW50LnRz@Props": {
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props": {
       "type": "object",
       "properties": {
-        "includes": {
-          "type": [
-            "string",
-            "null"
+        "environment": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "production"
+            },
+            {
+              "type": "string",
+              "const": "development"
+            }
           ],
-          "title": "Includes"
-        },
-        "match": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Match"
-        }
-      },
-      "required": [],
-      "title": "deco-cx/live/matchers/MatchUserAgent.ts@Props"
-    },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props": {
-      "type": "object",
-      "properties": {
-        "siteId": {
-          "type": "number",
-          "title": "Site Id"
+          "type": "string",
+          "title": "Environment"
         }
       },
       "required": [
-        "siteId"
+        "environment"
       ],
-      "title": "deco-cx/live/matchers/MatchSite.ts@Props"
+      "title": "deco-cx/live/matchers/MatchEnvironment.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9tYXRjaGVyLnRz@Matcher": {
       "$ref": "#/root/matchers",
@@ -335,28 +324,39 @@
       ],
       "title": "deco-cx/live/matchers/MatchRandom.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props": {
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props": {
       "type": "object",
       "properties": {
-        "environment": {
-          "anyOf": [
-            {
-              "type": "string",
-              "const": "production"
-            },
-            {
-              "type": "string",
-              "const": "development"
-            }
-          ],
-          "type": "string",
-          "title": "Environment"
+        "siteId": {
+          "type": "number",
+          "title": "Site Id"
         }
       },
       "required": [
-        "environment"
+        "siteId"
       ],
-      "title": "deco-cx/live/matchers/MatchEnvironment.ts@Props"
+      "title": "deco-cx/live/matchers/MatchSite.ts@Props"
+    },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoVXNlckFnZW50LnRz@Props": {
+      "type": "object",
+      "properties": {
+        "includes": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Includes"
+        },
+        "match": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Match"
+        }
+      },
+      "required": [],
+      "title": "deco-cx/live/matchers/MatchUserAgent.ts@Props"
     },
     "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Audience": {
       "type": "object",
@@ -427,48 +427,6 @@
         }
       }
     },
-    "JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz": {
-      "title": "$live/handlers/routesSelection.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/handlers/routesSelection.ts"
-          ],
-          "default": "$live/handlers/routesSelection.ts"
-        }
-      }
-    },
-    "JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz": {
-      "title": "$live/handlers/router.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlci50cw==@RouterConfig"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/handlers/router.ts"
-          ],
-          "default": "$live/handlers/router.ts"
-        }
-      }
-    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "$live/handlers/devPage.ts",
       "type": "object",
@@ -511,6 +469,48 @@
         }
       }
     },
+    "JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz": {
+      "title": "$live/handlers/router.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlci50cw==@RouterConfig"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/router.ts"
+          ],
+          "default": "$live/handlers/router.ts"
+        }
+      }
+    },
+    "JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz": {
+      "title": "$live/handlers/routesSelection.ts",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/handlers/routesSelection.ts"
+          ],
+          "default": "$live/handlers/routesSelection.ts"
+        }
+      }
+    },
     "JGxpdmUvcGFnZXMvTGl2ZVBhZ2UudHN4": {
       "title": "$live/pages/LivePage.tsx",
       "type": "object",
@@ -529,48 +529,6 @@
             "$live/pages/LivePage.tsx"
           ],
           "default": "$live/pages/LivePage.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==": {
-      "title": "deco-sites/start/sections/Head.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/start/sections/Head.tsx"
-          ],
-          "default": "deco-sites/start/sections/Head.tsx"
-        }
-      }
-    },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
-      "title": "deco-sites/start/sections/GetStarted.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/start/sections/GetStarted.tsx"
-          ],
-          "default": "deco-sites/start/sections/GetStarted.tsx"
         }
       }
     },
@@ -595,6 +553,64 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
+      "title": "deco-sites/start/sections/GetStarted.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/start/sections/GetStarted.tsx"
+          ],
+          "default": "deco-sites/start/sections/GetStarted.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==": {
+      "title": "deco-sites/start/sections/Head.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/start/sections/Head.tsx"
+          ],
+          "default": "deco-sites/start/sections/Head.tsx"
+        }
+      }
+    },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM=": {
+      "title": "$live/matchers/MatchAlways.ts",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchAlways.ts"
+          ],
+          "default": "$live/matchers/MatchAlways.ts"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz": {
       "title": "$live/matchers/MatchDate.ts",
       "type": "object",
@@ -616,12 +632,12 @@
         }
       }
     },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hVc2VyQWdlbnQudHM=": {
-      "title": "$live/matchers/MatchUserAgent.ts",
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw==": {
+      "title": "$live/matchers/MatchEnvironment.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoVXNlckFnZW50LnRz@Props"
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props"
         }
       ],
       "required": [
@@ -631,30 +647,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "$live/matchers/MatchUserAgent.ts"
+            "$live/matchers/MatchEnvironment.ts"
           ],
-          "default": "$live/matchers/MatchUserAgent.ts"
-        }
-      }
-    },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz": {
-      "title": "$live/matchers/MatchSite.ts",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "$live/matchers/MatchSite.ts"
-          ],
-          "default": "$live/matchers/MatchSite.ts"
+          "default": "$live/matchers/MatchEnvironment.ts"
         }
       }
     },
@@ -700,12 +695,12 @@
         }
       }
     },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw==": {
-      "title": "$live/matchers/MatchEnvironment.ts",
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz": {
+      "title": "$live/matchers/MatchSite.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props"
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoU2l0ZS50cw==@Props"
         }
       ],
       "required": [
@@ -715,15 +710,20 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "$live/matchers/MatchEnvironment.ts"
+            "$live/matchers/MatchSite.ts"
           ],
-          "default": "$live/matchers/MatchEnvironment.ts"
+          "default": "$live/matchers/MatchSite.ts"
         }
       }
     },
-    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM=": {
-      "title": "$live/matchers/MatchAlways.ts",
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hVc2VyQWdlbnQudHM=": {
+      "title": "$live/matchers/MatchUserAgent.ts",
       "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoVXNlckFnZW50LnRz@Props"
+        }
+      ],
       "required": [
         "__resolveType"
       ],
@@ -731,9 +731,9 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "$live/matchers/MatchAlways.ts"
+            "$live/matchers/MatchUserAgent.ts"
           ],
-          "default": "$live/matchers/MatchAlways.ts"
+          "default": "$live/matchers/MatchUserAgent.ts"
         }
       }
     },
@@ -787,26 +787,30 @@
           "type": "object",
           "additionalProperties": {
             "$ref": "#/definitions/Resolvable"
-          }
+          },
+          "description": "Configure your loaders global state."
         }
       },
       "required": [
         "state"
       ],
-      "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig"
+      "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
+      "description": "Global configurations for ./routes/_middleware.ts route"
     },
     "ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint": {
       "type": "object",
       "properties": {
         "handler": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
+          "description": "configure how to handle requests.",
           "title": "Handler"
         }
       },
       "required": [
         "handler"
       ],
-      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint"
+      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint",
+      "description": "Site entrypoint, configure your audiences and routes."
     }
   },
   "root": {
@@ -828,16 +832,16 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz"
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw=="
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZnJlc2gudHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVyLnRz"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw=="
-        },
-        {
-          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvZnJlc2gudHM="
+          "$ref": "#/definitions/JGxpdmUvaGFuZGxlcnMvcm91dGVzU2VsZWN0aW9uLnRz"
         }
       ]
     },
@@ -859,13 +863,13 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA=="
+          "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvUGFnZUluY2x1ZGUudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
         },
         {
-          "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvUGFnZUluY2x1ZGUudHN4"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA=="
         }
       ]
     },
@@ -876,13 +880,13 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM="
+        },
+        {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hVc2VyQWdlbnQudHM="
-        },
-        {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz"
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw=="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hNdWx0aS50cw=="
@@ -891,10 +895,10 @@
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hSYW5kb20udHM="
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw=="
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hTaXRlLnRz"
         },
         {
-          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM="
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hVc2VyQWdlbnQudHM="
         }
       ]
     },
@@ -912,11 +916,12 @@
         }
       ]
     },
-    "state": {
+    "entrypoint": {
       "type": "object",
       "required": [
         "./routes/_middleware.ts",
-        "./routes/[...catchall].tsx"
+        "./routes/[...catchall].tsx",
+        "./routes/index.tsx"
       ],
       "properties": {
         "./routes/_middleware.ts": {
@@ -932,8 +937,22 @@
               "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
             }
           ]
+        },
+        "./routes/index.tsx": {
+          "anyOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+            }
+          ]
         }
-      },
+      }
+    },
+    "state": {
+      "allOf": [
+        {
+          "$ref": "#/root/entrypoint"
+        }
+      ],
       "additionalProperties": {
         "anyOf": [
           {
