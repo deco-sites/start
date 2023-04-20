@@ -22,6 +22,8 @@ import * as i1$2 from "$live/handlers/router.ts";
 import * as i1$3 from "$live/handlers/routesSelection.ts";
 import * as i1$$0 from "$live/pages/LivePage.tsx";
 import * as i1$$$0 from "$live/sections/PageInclude.tsx";
+import * as i1$$$1 from "$live/sections/Slot.tsx";
+import * as i1$$$2 from "$live/sections/UseSlot.tsx";
 import * as i1$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i1$$$$1 from "$live/matchers/MatchDate.ts";
 import * as i1$$$$2 from "$live/matchers/MatchEnvironment.ts";
@@ -50,6 +52,8 @@ const manifest = {
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,
+    "$live/sections/Slot.tsx": i1$$$1,
+    "$live/sections/UseSlot.tsx": i1$$$2,
     "deco-sites/start/sections/GetStarted.tsx": $$$$$$$$1,
     "deco-sites/start/sections/Head.tsx": $$$$$$$$0,
   },
