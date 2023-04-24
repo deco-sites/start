@@ -12,7 +12,7 @@ import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
-import * as $live_inspect from "$live/routes/live/inspect.ts";
+import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
@@ -45,7 +45,7 @@ const manifest = {
     "./routes/index.tsx": $live_catchall,
     "./routes/live/_meta.ts": $live_meta,
     "./routes/live/editorData.ts": $live_editorData,
-    "./routes/live/inspect.ts": $live_inspect,
+    "./routes/live/inspect/[...block].ts": $live_inspect,
     "./routes/live/invoke/index.ts": $live_invoke,
     "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/live/workbench.ts": $live_workbench,
