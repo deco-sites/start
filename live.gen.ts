@@ -18,8 +18,9 @@ import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
 import * as i1$0 from "$live/handlers/devPage.ts";
 import * as i1$1 from "$live/handlers/fresh.ts";
-import * as i1$2 from "$live/handlers/router.ts";
-import * as i1$3 from "$live/handlers/routesSelection.ts";
+import * as i1$2 from "$live/handlers/proxy.ts";
+import * as i1$3 from "$live/handlers/router.ts";
+import * as i1$4 from "$live/handlers/routesSelection.ts";
 import * as i1$$0 from "$live/pages/LivePage.tsx";
 import * as i1$$$0 from "$live/sections/PageInclude.tsx";
 import * as i1$$$1 from "$live/sections/Slot.tsx";
@@ -28,9 +29,10 @@ import * as i1$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i1$$$$1 from "$live/matchers/MatchDate.ts";
 import * as i1$$$$2 from "$live/matchers/MatchEnvironment.ts";
 import * as i1$$$$3 from "$live/matchers/MatchMulti.ts";
-import * as i1$$$$4 from "$live/matchers/MatchRandom.ts";
-import * as i1$$$$5 from "$live/matchers/MatchSite.ts";
-import * as i1$$$$6 from "$live/matchers/MatchUserAgent.ts";
+import * as i1$$$$4 from "$live/matchers/MatchOrigin.ts";
+import * as i1$$$$5 from "$live/matchers/MatchRandom.ts";
+import * as i1$$$$6 from "$live/matchers/MatchSite.ts";
+import * as i1$$$$7 from "$live/matchers/MatchUserAgent.ts";
 import * as i1$$$$$0 from "$live/flags/audience.ts";
 import * as i1$$$$$1 from "$live/flags/everyone.ts";
 
@@ -60,8 +62,9 @@ const manifest = {
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,
     "$live/handlers/fresh.ts": i1$1,
-    "$live/handlers/router.ts": i1$2,
-    "$live/handlers/routesSelection.ts": i1$3,
+    "$live/handlers/proxy.ts": i1$2,
+    "$live/handlers/router.ts": i1$3,
+    "$live/handlers/routesSelection.ts": i1$4,
   },
   "pages": {
     "$live/pages/LivePage.tsx": i1$$0,
@@ -71,9 +74,10 @@ const manifest = {
     "$live/matchers/MatchDate.ts": i1$$$$1,
     "$live/matchers/MatchEnvironment.ts": i1$$$$2,
     "$live/matchers/MatchMulti.ts": i1$$$$3,
-    "$live/matchers/MatchRandom.ts": i1$$$$4,
-    "$live/matchers/MatchSite.ts": i1$$$$5,
-    "$live/matchers/MatchUserAgent.ts": i1$$$$6,
+    "$live/matchers/MatchOrigin.ts": i1$$$$4,
+    "$live/matchers/MatchRandom.ts": i1$$$$5,
+    "$live/matchers/MatchSite.ts": i1$$$$6,
+    "$live/matchers/MatchUserAgent.ts": i1$$$$7,
   },
   "flags": {
     "$live/flags/audience.ts": i1$$$$$0,
