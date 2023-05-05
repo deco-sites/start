@@ -9,7 +9,31 @@
       "additionalProperties": false,
       "properties": {
         "__resolveType": {
-          "type": "string"
+          "type": "string",
+          "not": {
+            "enum": [
+              "deco-sites/start/functions/LoadGitHubRaw.ts",
+              "$live/handlers/devPage.ts",
+              "$live/handlers/fresh.ts",
+              "$live/handlers/router.ts",
+              "$live/handlers/routesSelection.ts",
+              "$live/pages/LivePage.tsx",
+              "$live/sections/PageInclude.tsx",
+              "$live/sections/Slot.tsx",
+              "$live/sections/UseSlot.tsx",
+              "deco-sites/start/sections/GetStarted.tsx",
+              "deco-sites/start/sections/Head.tsx",
+              "$live/matchers/MatchAlways.ts",
+              "$live/matchers/MatchDate.ts",
+              "$live/matchers/MatchEnvironment.ts",
+              "$live/matchers/MatchMulti.ts",
+              "$live/matchers/MatchRandom.ts",
+              "$live/matchers/MatchSite.ts",
+              "$live/matchers/MatchUserAgent.ts",
+              "$live/flags/audience.ts",
+              "$live/flags/everyone.ts"
+            ]
+          }
         }
       }
     },
@@ -517,7 +541,8 @@
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
     },
     "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==": {
-      "title": "deco-sites/start/functions/LoadGitHubRaw.ts",
+      "title": "GitHub Raw Loader",
+      "description": "Grabs data from a GitHub repo",
       "type": "object",
       "allOf": [
         {
