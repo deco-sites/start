@@ -1,4 +1,5 @@
 import { context } from "$live/live.ts";
+import Image from "deco-sites/std/components/Image.tsx";
 
 export interface Props {
   enableInspectVSCode?: boolean;
@@ -10,10 +11,10 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap items-center -m-6">
           <div class="w-full md:w-1/2 p-6">
-            <div class="bg-primary p-1 mx-auto max-w-max overflow-hidden rounded-full">
-              <img
+            <div class="bg-[#2FD180] p-1 mx-auto max-w-max overflow-hidden rounded-full">
+              <Image
                 class="object-cover rounded-full"
-                src="/android-chrome-512x512.png"
+                src="https://start.deco.site/android-chrome-512x512.png"
                 alt=""
                 width={512}
                 height={512}
