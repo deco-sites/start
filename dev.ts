@@ -2,16 +2,17 @@
 import dev from "$live/dev.ts";
 import liveManifest from "$live/live.gen.ts";
 import liveStdManifest from "deco-sites/std/live.gen.ts";
-import tailwindCSS from "deco-sites/std/tailwindv3.ts";
-import tailwindConfig from "./tailwind.config.ts";
+import tailwind from "deco-sites/std/tailwindv3.ts";
 import daisyui from "npm:daisyui@2.51.6";
+import tailwindConfig from "./tailwind.config.ts";
 
-// Generate tailwind CSS style sheet
-await tailwindCSS({
+// Start tailwind background process generation
+tailwind({
   ...tailwindConfig,
   plugins: [daisyui],
   daisyui: { themes: [], logs: false },
 });
+
 
 // Generate manifest and boot server
 await dev(import.meta.url, "./main.ts", {

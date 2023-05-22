@@ -5,7 +5,8 @@
 import config from "./deno.json" assert { type: "json" };
 import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
-import * as $$$$0 from "./routes/_app.tsx";
+import * as $$$$0 from "./routes/styles.css.ts";
+import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$$$$0 from "./sections/Head.tsx";
 import * as $$$$$$$$1 from "./sections/DesignSystem.tsx";
 import * as $$$$$$$$2 from "./sections/GetStarted.tsx";
@@ -148,7 +149,7 @@ const manifest = {
     "deco-sites/std/functions/vtexWishlist.ts": i2$26,
   },
   "routes": {
-    "./routes/_app.tsx": $$$$0,
+    "./routes/_app.tsx": $$$$1,
     "./routes/_middleware.ts": $live_middleware,
     "./routes/[...catchall].tsx": $live_catchall,
     "./routes/index.tsx": $live_catchall,
@@ -159,6 +160,7 @@ const manifest = {
     "./routes/live/invoke/index.ts": $live_invoke,
     "./routes/live/previews/[...block].tsx": $live_previews,
     "./routes/live/workbench.ts": $live_workbench,
+    "./routes/styles.css.ts": $$$$0,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i2$$$$0,
