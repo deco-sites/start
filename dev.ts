@@ -13,7 +13,6 @@ tailwind({
   daisyui: { themes: [], logs: false },
 });
 
-
 // Generate manifest and boot server
 await dev(import.meta.url, "./main.ts", {
   imports: {
