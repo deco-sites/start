@@ -23,7 +23,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
           </div>
           <div class="w-full md:w-1/2 p-6">
             <div class="md:max-w-lg">
-              <h2 class="mb-3 font-bold text-primary-dark text-4xl">
+              <h2 class="mb-3 font-bold text-base-content text-4xl">
                 Welcome to Live!
               </h2>
               <p class="text-lg">
@@ -33,7 +33,7 @@ export default function GetStarted({ enableInspectVSCode }: Props) {
                 Try any URL in the address bar 👆
               </p>
               {enableInspectVSCode && !context.deploymentId && (
-                <p class="mb-8 text-lg border border-dashed border-primary-dark p-4">
+                <p class="mb-8 text-lg border border-dashed border-base-content p-4">
                   <span class="italic">PROTIP:</span>{" "}
                   Hit backtick (`) and click on any part of this page to
                   navigate to the code in VSCode automatically. Hit ESC to exit
