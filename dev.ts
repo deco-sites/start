@@ -3,7 +3,7 @@ import dev from "$live/dev.ts";
 import liveManifest from "$live/live.gen.ts";
 import liveStdManifest from "deco-sites/std/live.gen.ts";
 import tailwindCSS from "deco-sites/std/tailwindv3.ts";
-import tailwindConfig from "deco-sites/start/tailwind.config.ts";
+import tailwindConfig from "./tailwind.config.ts";
 import daisyui from "npm:daisyui@2.51.6";
 
 // Generate tailwind CSS style sheet
