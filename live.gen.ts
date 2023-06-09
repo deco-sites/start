@@ -16,11 +16,13 @@ import * as $live_invoke from "$live/routes/live/invoke/index.ts";
 import * as $live_invoke_key from "$live/routes/live/invoke/[...key].ts";
 import * as $live_editorData from "$live/routes/live/editorData.ts";
 import * as $live_inspect from "$live/routes/live/inspect/[...block].ts";
+import * as $live_release from "$live/routes/live/release.ts";
 import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews from "$live/routes/live/previews/[...block].tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
-import * as i2$$$0 from "$live/loaders/workflows/events.ts";
-import * as i2$$$1 from "$live/loaders/workflows/get.ts";
+import * as i2$$$0 from "$live/loaders/state.ts";
+import * as i2$$$1 from "$live/loaders/workflows/events.ts";
+import * as i2$$$2 from "$live/loaders/workflows/get.ts";
 import * as i2$$$$$$0 from "$live/handlers/devPage.ts";
 import * as i2$$$$$$1 from "$live/handlers/fresh.ts";
 import * as i2$$$$$$2 from "$live/handlers/proxy.ts";
@@ -34,12 +36,13 @@ import * as i2$$$$1 from "$live/sections/Slot.tsx";
 import * as i2$$$$2 from "$live/sections/UseSlot.tsx";
 import * as i2$$$$$$$$0 from "$live/matchers/MatchAlways.ts";
 import * as i2$$$$$$$$1 from "$live/matchers/MatchDate.ts";
-import * as i2$$$$$$$$2 from "$live/matchers/MatchEnvironment.ts";
-import * as i2$$$$$$$$3 from "$live/matchers/MatchHost.ts";
-import * as i2$$$$$$$$4 from "$live/matchers/MatchMulti.ts";
-import * as i2$$$$$$$$5 from "$live/matchers/MatchRandom.ts";
-import * as i2$$$$$$$$6 from "$live/matchers/MatchSite.ts";
-import * as i2$$$$$$$$7 from "$live/matchers/MatchUserAgent.ts";
+import * as i2$$$$$$$$2 from "$live/matchers/MatchDevice.ts";
+import * as i2$$$$$$$$3 from "$live/matchers/MatchEnvironment.ts";
+import * as i2$$$$$$$$4 from "$live/matchers/MatchHost.ts";
+import * as i2$$$$$$$$5 from "$live/matchers/MatchMulti.ts";
+import * as i2$$$$$$$$6 from "$live/matchers/MatchRandom.ts";
+import * as i2$$$$$$$$7 from "$live/matchers/MatchSite.ts";
+import * as i2$$$$$$$$8 from "$live/matchers/MatchUserAgent.ts";
 import * as i2$$$$$$$$$0 from "$live/flags/audience.ts";
 import * as i2$$$$$$$$$1 from "$live/flags/everyone.ts";
 import * as i2$$$$$0 from "$live/actions/workflows/cancel.ts";
@@ -78,18 +81,19 @@ import * as i2$$1 from "deco-sites/std/accounts/shopify.ts";
 import * as i2$$2 from "deco-sites/std/accounts/vnda.ts";
 import * as i2$$3 from "deco-sites/std/accounts/vtex.ts";
 import * as i2$$4 from "deco-sites/std/accounts/yourViews.ts";
-import * as i2$$$2 from "deco-sites/std/loaders/vtex/cart.ts";
-import * as i2$$$3 from "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts";
-import * as i2$$$4 from "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts";
-import * as i2$$$5 from "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts";
-import * as i2$$$6 from "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts";
-import * as i2$$$7 from "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts";
-import * as i2$$$8 from "deco-sites/std/loaders/vtex/legacy/productList.ts";
-import * as i2$$$9 from "deco-sites/std/loaders/vtex/legacy/productListingPage.ts";
-import * as i2$$$10 from "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts";
-import * as i2$$$11 from "deco-sites/std/loaders/vtex/navbar.ts";
-import * as i2$$$12 from "deco-sites/std/loaders/vtex/user.ts";
-import * as i2$$$13 from "deco-sites/std/loaders/vtex/wishlist.ts";
+import * as i2$$$3 from "deco-sites/std/loaders/vtex/cart.ts";
+import * as i2$$$4 from "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts";
+import * as i2$$$5 from "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts";
+import * as i2$$$6 from "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts";
+import * as i2$$$7 from "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts";
+import * as i2$$$8 from "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts";
+import * as i2$$$9 from "deco-sites/std/loaders/vtex/legacy/productList.ts";
+import * as i2$$$10 from "deco-sites/std/loaders/vtex/legacy/productListingPage.ts";
+import * as i2$$$11 from "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts";
+import * as i2$$$12 from "deco-sites/std/loaders/vtex/navbar.ts";
+import * as i2$$$13 from "deco-sites/std/loaders/vtex/proxy.ts";
+import * as i2$$$14 from "deco-sites/std/loaders/vtex/user.ts";
+import * as i2$$$15 from "deco-sites/std/loaders/vtex/wishlist.ts";
 import * as i2$$$$3 from "deco-sites/std/sections/Analytics.tsx";
 import * as i2$$$$4 from "deco-sites/std/sections/configButterCMS.global.tsx";
 import * as i2$$$$5 from "deco-sites/std/sections/configOCC.global.tsx";
@@ -100,6 +104,7 @@ import * as i2$$$$9 from "deco-sites/std/sections/configYourViews.global.tsx";
 import * as i2$$$$10 from "deco-sites/std/sections/SEO.tsx";
 import * as i2$$$$11 from "deco-sites/std/sections/SEOPDP.tsx";
 import * as i2$$$$12 from "deco-sites/std/sections/SEOPLP.tsx";
+import * as i2$$$$13 from "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx";
 import * as i2$$$$$4 from "deco-sites/std/actions/vtex/cart/addItems.ts";
 import * as i2$$$$$5 from "deco-sites/std/actions/vtex/cart/getInstallment.ts";
 import * as i2$$$$$6 from "deco-sites/std/actions/vtex/cart/removeItemAttachment.ts";
@@ -159,6 +164,7 @@ const manifest = {
     "./routes/live/invoke/[...key].ts": $live_invoke_key,
     "./routes/live/invoke/index.ts": $live_invoke,
     "./routes/live/previews/[...block].tsx": $live_previews,
+    "./routes/live/release.ts": $live_release,
     "./routes/live/workbench.ts": $live_workbench,
     "./routes/styles.css.ts": $$$$0,
   },
@@ -179,24 +185,27 @@ const manifest = {
     "deco-sites/std/sections/SEO.tsx": i2$$$$10,
     "deco-sites/std/sections/SEOPDP.tsx": i2$$$$11,
     "deco-sites/std/sections/SEOPLP.tsx": i2$$$$12,
+    "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx": i2$$$$13,
   },
   "loaders": {
-    "$live/loaders/workflows/events.ts": i2$$$0,
-    "$live/loaders/workflows/get.ts": i2$$$1,
-    "deco-sites/std/loaders/vtex/cart.ts": i2$$$2,
+    "$live/loaders/state.ts": i2$$$0,
+    "$live/loaders/workflows/events.ts": i2$$$1,
+    "$live/loaders/workflows/get.ts": i2$$$2,
+    "deco-sites/std/loaders/vtex/cart.ts": i2$$$3,
     "deco-sites/std/loaders/vtex/intelligentSearch/productDetailsPage.ts":
-      i2$$$3,
-    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$4,
+      i2$$$4,
+    "deco-sites/std/loaders/vtex/intelligentSearch/productList.ts": i2$$$5,
     "deco-sites/std/loaders/vtex/intelligentSearch/productListingPage.ts":
-      i2$$$5,
-    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$6,
-    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$7,
-    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$8,
-    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$9,
-    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$10,
-    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$11,
-    "deco-sites/std/loaders/vtex/user.ts": i2$$$12,
-    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$13,
+      i2$$$6,
+    "deco-sites/std/loaders/vtex/intelligentSearch/suggestions.ts": i2$$$7,
+    "deco-sites/std/loaders/vtex/legacy/productDetailsPage.ts": i2$$$8,
+    "deco-sites/std/loaders/vtex/legacy/productList.ts": i2$$$9,
+    "deco-sites/std/loaders/vtex/legacy/productListingPage.ts": i2$$$10,
+    "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts": i2$$$11,
+    "deco-sites/std/loaders/vtex/navbar.ts": i2$$$12,
+    "deco-sites/std/loaders/vtex/proxy.ts": i2$$$13,
+    "deco-sites/std/loaders/vtex/user.ts": i2$$$14,
+    "deco-sites/std/loaders/vtex/wishlist.ts": i2$$$15,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i2$$$$$$0,
@@ -213,12 +222,13 @@ const manifest = {
   "matchers": {
     "$live/matchers/MatchAlways.ts": i2$$$$$$$$0,
     "$live/matchers/MatchDate.ts": i2$$$$$$$$1,
-    "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$2,
-    "$live/matchers/MatchHost.ts": i2$$$$$$$$3,
-    "$live/matchers/MatchMulti.ts": i2$$$$$$$$4,
-    "$live/matchers/MatchRandom.ts": i2$$$$$$$$5,
-    "$live/matchers/MatchSite.ts": i2$$$$$$$$6,
-    "$live/matchers/MatchUserAgent.ts": i2$$$$$$$$7,
+    "$live/matchers/MatchDevice.ts": i2$$$$$$$$2,
+    "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$3,
+    "$live/matchers/MatchHost.ts": i2$$$$$$$$4,
+    "$live/matchers/MatchMulti.ts": i2$$$$$$$$5,
+    "$live/matchers/MatchRandom.ts": i2$$$$$$$$6,
+    "$live/matchers/MatchSite.ts": i2$$$$$$$$7,
+    "$live/matchers/MatchUserAgent.ts": i2$$$$$$$$8,
   },
   "flags": {
     "$live/flags/audience.ts": i2$$$$$$$$$0,
