@@ -1,8 +1,8 @@
 {
   "definitions": {
     "Resolvable": {
-      "$id": "Resolvable",
       "title": "Select from saved",
+      "type": "object",
       "required": [
         "__resolveType"
       ],
@@ -45,6 +45,7 @@
               "deco-sites/std/accounts/vnda.ts",
               "deco-sites/std/accounts/vtex.ts",
               "deco-sites/std/accounts/yourViews.ts",
+              "$live/loaders/state.ts",
               "$live/loaders/workflows/events.ts",
               "$live/loaders/workflows/get.ts",
               "deco-sites/std/loaders/vtex/cart.ts",
@@ -57,6 +58,7 @@
               "deco-sites/std/loaders/vtex/legacy/productListingPage.ts",
               "deco-sites/std/loaders/vtex/legacy/relatedProductsLoader.ts",
               "deco-sites/std/loaders/vtex/navbar.ts",
+              "deco-sites/std/loaders/vtex/proxy.ts",
               "deco-sites/std/loaders/vtex/user.ts",
               "deco-sites/std/loaders/vtex/wishlist.ts",
               "$live/handlers/devPage.ts",
@@ -83,8 +85,10 @@
               "deco-sites/std/sections/SEO.tsx",
               "deco-sites/std/sections/SEOPDP.tsx",
               "deco-sites/std/sections/SEOPLP.tsx",
+              "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
+              "$live/matchers/MatchDevice.ts",
               "$live/matchers/MatchEnvironment.ts",
               "$live/matchers/MatchHost.ts",
               "$live/matchers/MatchMulti.ts",
@@ -264,7 +268,7 @@
         },
         {
           "title": "Butter CMS Featured Ads Loader",
-          "description": "Usefull for shelves and static galleries.",
+          "description": "Useful for shelves and static galleries.",
           "type": "object",
           "required": [
             "__resolveType"
@@ -281,7 +285,7 @@
         },
         {
           "title": "Butter CMS Featured Posts Loader",
-          "description": "Usefull for shelves and static galleries.",
+          "description": "Useful for shelves and static galleries.",
           "type": "object",
           "required": [
             "__resolveType"
@@ -348,7 +352,7 @@
         },
         {
           "title": "Butter CMS Featured Brands Loader",
-          "description": "Usefull for list featured blog's brands.",
+          "description": "Useful for list featured blog's brands.",
           "type": "object",
           "required": [
             "__resolveType"
@@ -365,7 +369,7 @@
         },
         {
           "title": "Butter CMS Featured Places Loader",
-          "description": "Usefull for listing places",
+          "description": "Useful for listing places",
           "type": "object",
           "required": [
             "__resolveType"
@@ -396,7 +400,7 @@
         },
         {
           "title": "Butter CMS Categories Loader",
-          "description": "Usefull for list blog's categories",
+          "description": "Useful for list blog's categories",
           "type": "object",
           "required": [
             "__resolveType"
@@ -634,7 +638,7 @@
         },
         {
           "title": "Butter CMS Posts Loader",
-          "description": "Usefull for paginated galleries.",
+          "description": "Useful for paginated galleries.",
           "type": "object",
           "allOf": [
             {
@@ -656,7 +660,7 @@
         },
         {
           "title": "Butter CMS Related Posts Loader",
-          "description": "Usefull for paginated or not galleries. Works on routes of type /blog/:slug",
+          "description": "Useful for paginated or not galleries. Works on routes of type /blog/:slug",
           "type": "object",
           "allOf": [
             {
@@ -1551,6 +1555,40 @@
       ],
       "title": "Product"
     },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Seo": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        },
+        "canonical": {
+          "type": "string",
+          "title": "Canonical"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "canonical"
+      ],
+      "title": "Seo"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Seo|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Seo"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Seo|null"
+    },
     "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage": {
       "type": "object",
       "properties": {
@@ -1566,6 +1604,10 @@
         "product": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Product",
           "title": "Product"
+        },
+        "seo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Seo|null",
+          "title": "Seo"
         }
       },
       "required": [
@@ -1787,7 +1829,7 @@
         },
         {
           "title": "Shopify - Search Products",
-          "description": "Usefull for shelves and static galleries.",
+          "description": "Useful for shelves and static galleries.",
           "type": "object",
           "allOf": [
             {
@@ -1831,7 +1873,7 @@
         },
         {
           "title": "VTEX - Search Products - legacy (deprecated)",
-          "description": "Usefull for shelves and static galleries.",
+          "description": "Useful for shelves and static galleries.",
           "deprecated": true,
           "type": "object",
           "allOf": [
@@ -1900,7 +1942,7 @@
         },
         {
           "title": "VTEX product list - Intelligent Search",
-          "description": "Usefull for shelves and galleries.",
+          "description": "Useful for shelves and galleries.",
           "type": "object",
           "allOf": [
             {
@@ -2240,6 +2282,10 @@
         "sortOptions": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@SortOption[]",
           "title": "Sort Options"
+        },
+        "seo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@Seo|null",
+          "title": "Seo"
         }
       },
       "required": [
@@ -2588,6 +2634,7 @@
             "null"
           ],
           "description": "FullText term",
+          "$comment": "https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search",
           "title": "Ft"
         },
         "fq": {
@@ -2595,6 +2642,7 @@
             "string",
             "null"
           ],
+          "$comment": "https://developers.vtex.com/docs/api-reference/search-api#get-/api/catalog_system/pub/products/search",
           "title": "Fq"
         },
         "map": {
@@ -3290,6 +3338,14 @@
           "description": "VTEX Account name. For more info, read here: https://help.vtex.com/en/tutorial/o-que-e-account-name--i0mIGLcg3QyEy8OCicEoC.",
           "title": "Account"
         },
+        "publicUrl": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Public store URL",
+          "description": "Domain that is registered on License Manager (e.g: www.mystore.com.br)"
+        },
         "defaultLocale": {
           "type": "string",
           "description": "Locale used for VTEX Intelligent Search client.",
@@ -3346,6 +3402,130 @@
         "appId"
       ],
       "title": "deco-sites/std/commerce/yourViews/client.ts@ConfigYourViews"
+    },
+    "ZGVjby1jeC9saXZlL3JvdXRlcy9fbWlkZGxld2FyZS50cw==@MiddlewareConfig": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "state": {
+              "title": "State",
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/Resolvable"
+              },
+              "description": "Configure your loaders global state."
+            }
+          },
+          "required": [
+            "state"
+          ],
+          "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
+          "description": "Global configurations for ./routes/_middleware.ts route"
+        },
+        {
+          "title": "Shared application State Loader.",
+          "description": "Set the application state using resolvables.",
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@Props"
+            }
+          ],
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "$live/loaders/state.ts"
+              ],
+              "default": "$live/loaders/state.ts"
+            }
+          }
+        }
+      ]
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9sb2FkZXIudHM=@Loader": {
+      "$ref": "#/root/loaders",
+      "title": "Loader"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag": {
+      "$ref": "#/root/flags",
+      "title": "Flag"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section": {
+      "$ref": "#/root/sections",
+      "title": "Section"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
+      "$ref": "#/root/pages",
+      "title": "Page"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9sb2FkZXIudHM=@4dc8c2f895a6513848bc8f3f1319d3f2|Account|Flag|Loader|Page|Section": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9sb2FkZXIudHM=@Loader"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9hY2NvdW50LnRz@Account"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page"
+        }
+      ],
+      "title": "4dc8c2f895a6513848bc8f3f1319d3f2|Account|Flag|Loader|Page|Section"
+    },
+    "ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@StateProp": {
+      "type": "object",
+      "properties": {
+        "key": {
+          "type": "string",
+          "title": "Key"
+        },
+        "value": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9sb2FkZXIudHM=@4dc8c2f895a6513848bc8f3f1319d3f2|Account|Flag|Loader|Page|Section",
+          "title": "Value"
+        }
+      },
+      "required": [
+        "key",
+        "value"
+      ],
+      "title": "StateProp"
+    },
+    "ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@StateProp[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@StateProp"
+      },
+      "title": "StateProp[]"
+    },
+    "ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@Props": {
+      "type": "object",
+      "properties": {
+        "state": {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@StateProp[]",
+          "title": "State"
+        }
+      },
+      "required": [
+        "state"
+      ],
+      "title": "deco-cx/live/loaders/state.ts@Props"
     },
     "ZGVjby1jeC9kdXJhYmxlL2JhY2tlbmRzL2JhY2tlbmQudHM=@WorkflowExecution": {
       "anyOf": [
@@ -6081,7 +6261,7 @@
         },
         "count": {
           "type": "number",
-          "description": "total number of items to display",
+          "description": "total number of items to display. Required for collection",
           "title": "Count"
         }
       },
@@ -6142,7 +6322,7 @@
         },
         "count": {
           "type": "number",
-          "description": "total number of items to display",
+          "description": "total number of items to display. Required for query",
           "title": "Count"
         }
       },
@@ -6443,6 +6623,14 @@
           ],
           "description": "ProductGroup ID",
           "title": "Id"
+        },
+        "hideUnavailableItems": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "remove unavailable items from result",
+          "title": "Hide Unavailable Items"
         }
       },
       "required": [
@@ -6466,15 +6654,89 @@
       "required": [],
       "title": "deco-sites/std/packs/vtex/loaders/navbar.ts@Props"
     },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
+      "$ref": "#/root/handlers",
+      "title": "Handler"
+    },
+    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route": {
+      "type": "object",
+      "properties": {
+        "pathTemplate": {
+          "type": "string",
+          "title": "Path Template"
+        },
+        "isHref": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "if true so the path will be checked agaisnt the coming from request instead of using urlpattern.",
+          "title": "Is Href"
+        },
+        "handler": {
+          "type": "object",
+          "properties": {
+            "value": {
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
+              "title": "Value"
+            }
+          },
+          "required": [
+            "value"
+          ],
+          "title": "Handler"
+        }
+      },
+      "required": [
+        "pathTemplate",
+        "handler"
+      ],
+      "title": "Route"
+    },
+    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route"
+          },
+          "title": "deco-cx/live/flags/audience.ts@Route[]"
+        },
+        {
+          "title": "VTEX Proxy Routes",
+          "type": "object",
+          "required": [
+            "__resolveType"
+          ],
+          "properties": {
+            "__resolveType": {
+              "type": "string",
+              "enum": [
+                "deco-sites/std/loaders/vtex/proxy.ts"
+              ],
+              "default": "deco-sites/std/loaders/vtex/proxy.ts"
+            }
+          }
+        }
+      ]
+    },
     "ZGVjby1zaXRlcy9zdGQvcGFja3MvdnRleC9sb2FkZXJzL3VzZXIudHM=@User": {
       "type": "object",
       "properties": {
+        "id": {
+          "type": "string",
+          "title": "Id"
+        },
         "email": {
           "type": "string",
           "title": "Email"
         }
       },
       "required": [
+        "id",
         "email"
       ],
       "title": "User"
@@ -6586,10 +6848,6 @@
       ],
       "title": "deco-sites/std/packs/vtex/loaders/wishlist.ts@Props"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
-      "$ref": "#/root/pages",
-      "title": "Page"
-    },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL2RldlBhZ2UudHM=@DevConfig": {
       "type": "object",
       "properties": {
@@ -6631,6 +6889,14 @@
           ],
           "description": "the base path of the url.",
           "title": "Base Path"
+        },
+        "host": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Host that should be used when proxying the request",
+          "title": "Host"
         }
       },
       "required": [
@@ -6644,41 +6910,26 @@
         "to": {
           "type": "string",
           "title": "To"
+        },
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "permanent"
+            },
+            {
+              "type": "string",
+              "const": "temporary"
+            }
+          ],
+          "type": "string",
+          "title": "Type"
         }
       },
       "required": [
         "to"
       ],
       "title": "deco-cx/live/handlers/redirect.ts@RedirectConfig"
-    },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler": {
-      "$ref": "#/root/handlers",
-      "title": "Handler"
-    },
-    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route": {
-      "type": "object",
-      "properties": {
-        "pathTemplate": {
-          "type": "string",
-          "title": "Path Template"
-        },
-        "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
-          "title": "Handler"
-        }
-      },
-      "required": [
-        "pathTemplate",
-        "handler"
-      ],
-      "title": "Route"
-    },
-    "ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route"
-      },
-      "title": "Route[]"
     },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlci50cw==@RouterConfig": {
       "type": "object",
@@ -6700,21 +6951,32 @@
       ],
       "title": "deco-cx/live/handlers/router.ts@RouterConfig"
     },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@15b1ddc7b4bb6e032bd22948a3dc02c4|9cc5443ad72a10e9797a691a19b4ce81|Flag": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@Flag"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvZmxhZ3MvYXVkaWVuY2UudHM="
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvZmxhZ3MvZXZlcnlvbmUudHM="
+        }
+      ],
+      "title": "Audiences"
+    },
+    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@15b1ddc7b4bb6e032bd22948a3dc02c4|9cc5443ad72a10e9797a691a19b4ce81|Flag[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@15b1ddc7b4bb6e032bd22948a3dc02c4|9cc5443ad72a10e9797a691a19b4ce81|Flag"
+      },
+      "title": "15b1ddc7b4bb6e032bd22948a3dc02c4|9cc5443ad72a10e9797a691a19b4ce81|Flag[]"
+    },
     "ZGVjby1jeC9saXZlL2hhbmRsZXJzL3JvdXRlc1NlbGVjdGlvbi50cw==@SelectionConfig": {
       "type": "object",
       "properties": {
         "audiences": {
-          "type": "array",
-          "items": {
-            "anyOf": [
-              {
-                "$ref": "#/definitions/JGxpdmUvZmxhZ3MvYXVkaWVuY2UudHM="
-              },
-              {
-                "$ref": "#/definitions/JGxpdmUvZmxhZ3MvZXZlcnlvbmUudHM="
-              }
-            ]
-          },
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9mbGFnLnRz@15b1ddc7b4bb6e032bd22948a3dc02c4|9cc5443ad72a10e9797a691a19b4ce81|Flag[]",
           "title": "Audiences"
         }
       },
@@ -6740,10 +7002,6 @@
       ],
       "title": "deco-cx/live/handlers/workflowRunner.ts@Config"
     },
-    "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section": {
-      "$ref": "#/root/sections",
-      "title": "Section"
-    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]": {
       "type": "array",
       "items": {
@@ -6758,9 +7016,12 @@
           "type": "string",
           "title": "Name"
         },
-        "layout": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page",
-          "title": "Layout"
+        "path": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Path"
         },
         "sections": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9zZWN0aW9uLnRz@Section[]",
@@ -7277,6 +7538,22 @@
           },
           "description": "google tag manager container id. For more info: https://developers.google.com/tag-platform/tag-manager/web#standard_web_page_installation .",
           "title": "Tracking Ids"
+        },
+        "src": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "custom url for serving google tag manager. Set either this url or the tracking id",
+          "title": "Src"
+        },
+        "dangerouslyRunOnMainThread": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "description": "run GTM directly on the main thread, without Partytown. This is useful for debugging purposes. Default: false",
+          "title": "Dangerously Run On Main Thread"
         }
       },
       "required": [],
@@ -7341,7 +7618,23 @@
       ],
       "title": "deco-sites/std/commerce/butterCMS/client.ts@ConfigButterCMS"
     },
-    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPQmFzZS50c3g=@Props": {
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null": {
+      "anyOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductListingPage|null"
+        }
+      ],
+      "title": "ProductDetailsPage|null|ProductListingPage|null"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vdHlwZXMudHM=@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -7351,6 +7644,15 @@
           ],
           "title": "Title"
         },
+        "titleTemplate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title template",
+          "description": "add a %s whenever you want it to be replaced with the category name or search term",
+          "default": "%s | Deco.cx"
+        },
         "description": {
           "type": [
             "string",
@@ -7358,64 +7660,95 @@
           ],
           "title": "Description"
         },
-        "canonical": {
-          "type": [
-            "string",
-            "null"
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "website"
+            },
+            {
+              "type": "string",
+              "const": "article"
+            }
           ],
-          "title": "Canonical URL",
-          "default": "https://example.com"
+          "type": "string",
+          "default": "website",
+          "title": "Type"
         },
-        "imageUrl": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Image Url"
+        "image": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "Recommended: 1200 x 630 px (up to 5MB)",
+          "title": "Image"
+        },
+        "favicon": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "description": "Recommended: 16 x 16 px",
+          "title": "Favicon"
         },
         "themeColor": {
           "type": [
             "string",
             "null"
           ],
+          "description": "Suggested color that browsers should use to customize the display of the page or of the surrounding user interface",
           "title": "Theme Color"
+        },
+        "canonical": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Canonical URL"
+        },
+        "noIndexNoFollow": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Disable indexing",
+          "description": "In testing, you can use this to prevent search engines from indexing your site"
+        },
+        "context": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null|ProductListingPage|null",
+          "title": "Context"
         }
       },
       "required": [],
-      "title": "deco-sites/std/components/seo/SEOBase.tsx@Props"
+      "title": "deco-sites/std/components/seo/types.ts@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPUERQLnRzeA==@Props": {
       "type": "object",
       "properties": {
-        "page": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null",
-          "title": "Page"
-        },
         "titleTemplate": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Title template",
           "description": "add a %s whenever you want it to be replaced with the product name",
-          "default": "%s | Fashion Store"
+          "default": "%s | Deco.cx"
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Page title override"
         },
         "description": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Meta tag description",
-          "description": "If not set, the product description will be used instead"
+          "title": "Meta tag description override"
         },
-        "themeColor": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Theme Color"
+        "page": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductDetailsPage|null",
+          "title": "Page"
         }
       },
       "required": [
-        "page",
-        "titleTemplate"
+        "page"
       ],
       "title": "deco-sites/std/components/seo/SEOPDP.tsx@Props"
     },
@@ -7426,46 +7759,47 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tbWVyY2UvdHlwZXMudHM=@ProductListingPage|null",
           "title": "Page"
         },
+        "titleTemplate": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Title template",
+          "description": "add a %s whenever you want it to be replaced with the product name",
+          "default": "%s | Deco.cx"
+        },
         "title": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Title"
+          "title": "Page title override"
         },
         "description": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Description"
-        },
-        "url": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Url"
-        },
-        "imageUrl": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Image Url"
-        },
-        "themeColor": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Theme Color"
+          "title": "Meta tag description override"
         }
       },
       "required": [
         "page"
       ],
       "title": "deco-sites/std/components/seo/SEOPLP.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4@LoaderProps": {
+      "type": "object",
+      "properties": {
+        "slug": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3JlcXVlc3RUb1BhcmFtLnRz@RequestURLParam",
+          "title": "Slug"
+        }
+      },
+      "required": [
+        "slug"
+      ],
+      "title": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx@LoaderProps"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
@@ -7489,6 +7823,36 @@
       },
       "required": [],
       "title": "deco-cx/live/matchers/MatchDate.ts@Props"
+    },
+    "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGV2aWNlLnRz@Props": {
+      "type": "object",
+      "properties": {
+        "devices": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string",
+                "const": "mobile"
+              },
+              {
+                "type": "string",
+                "const": "tablet"
+              },
+              {
+                "type": "string",
+                "const": "desktop"
+              }
+            ],
+            "type": "string"
+          },
+          "title": "Devices"
+        }
+      },
+      "required": [
+        "devices"
+      ],
+      "title": "deco-cx/live/matchers/MatchDevice.ts@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRW52aXJvbm1lbnQudHM=@Props": {
       "type": "object",
@@ -7656,9 +8020,8 @@
           "type": "string",
           "title": "The audience name (will be used on cookies).",
           "description": "Add a meaningful short word for the audience name.",
-          "maxLength": 22,
           "minLength": 3,
-          "pattern": "^[A-Za-z0-9_]+$"
+          "pattern": "^[A-Za-z0-9_-]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -7774,7 +8137,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ca50b4e15b5ad4151e0537d103e64a3a": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -7792,13 +8155,13 @@
           ]
         }
       ],
-      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
+      "title": "WorkflowRef|ca50b4e15b5ad4151e0537d103e64a3a"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ca50b4e15b5ad4151e0537d103e64a3a",
           "title": "Workflow"
         },
         "id": {
@@ -8272,7 +8635,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0Fkcy50cw==": {
       "title": "Butter CMS Featured Ads Loader",
-      "description": "Usefull for shelves and static galleries.",
+      "description": "Useful for shelves and static galleries.",
       "type": "object",
       "required": [
         "__resolveType"
@@ -8289,7 +8652,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0JyYW5kcy50cw==": {
       "title": "Butter CMS Featured Brands Loader",
-      "description": "Usefull for list featured blog's brands.",
+      "description": "Useful for list featured blog's brands.",
       "type": "object",
       "required": [
         "__resolveType"
@@ -8306,7 +8669,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0NhdGVnb3JpZXMudHM=": {
       "title": "Butter CMS Categories Loader",
-      "description": "Usefull for list blog's categories",
+      "description": "Useful for list blog's categories",
       "type": "object",
       "required": [
         "__resolveType"
@@ -8323,7 +8686,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU0ZlYXR1cmVkUG9zdHMudHM=": {
       "title": "Butter CMS Featured Posts Loader",
-      "description": "Usefull for shelves and static galleries.",
+      "description": "Useful for shelves and static galleries.",
       "type": "object",
       "required": [
         "__resolveType"
@@ -8357,7 +8720,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1BsYWNlcy50cw==": {
       "title": "Butter CMS Featured Places Loader",
-      "description": "Usefull for listing places",
+      "description": "Useful for listing places",
       "type": "object",
       "required": [
         "__resolveType"
@@ -8391,7 +8754,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1Bvc3RzLnRz": {
       "title": "Butter CMS Posts Loader",
-      "description": "Usefull for paginated galleries.",
+      "description": "Useful for paginated galleries.",
       "type": "object",
       "allOf": [
         {
@@ -8413,7 +8776,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL2J1dHRlckNNU1JlbGF0ZWRQb3N0cy50cw==": {
       "title": "Butter CMS Related Posts Loader",
-      "description": "Usefull for paginated or not galleries. Works on routes of type /blog/:slug",
+      "description": "Useful for paginated or not galleries. Works on routes of type /blog/:slug",
       "type": "object",
       "allOf": [
         {
@@ -8491,7 +8854,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Nob3BpZnlQcm9kdWN0TGlzdC50cw==": {
       "title": "Shopify - Search Products",
-      "description": "Usefull for shelves and static galleries.",
+      "description": "Useful for shelves and static galleries.",
       "type": "object",
       "allOf": [
         {
@@ -8614,7 +8977,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvZnVuY3Rpb25zL3Z0ZXhMZWdhY3lQcm9kdWN0TGlzdC50cw==": {
       "title": "VTEX - Search Products - legacy (deprecated)",
-      "description": "Usefull for shelves and static galleries.",
+      "description": "Useful for shelves and static galleries.",
       "deprecated": true,
       "type": "object",
       "allOf": [
@@ -8917,6 +9280,28 @@
         }
       }
     },
+    "JGxpdmUvbG9hZGVycy9zdGF0ZS50cw==": {
+      "title": "Shared application State Loader.",
+      "description": "Set the application state using resolvables.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2xvYWRlcnMvc3RhdGUudHM=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/loaders/state.ts"
+          ],
+          "default": "$live/loaders/state.ts"
+        }
+      }
+    },
     "JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZXZlbnRzLnRz": {
       "title": "$live/loaders/workflows/events.ts",
       "description": "Get the workflow execution events.",
@@ -9002,7 +9387,7 @@
     },
     "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L2ludGVsbGlnZW50U2VhcmNoL3Byb2R1Y3RMaXN0LnRz": {
       "title": "VTEX product list - Intelligent Search",
-      "description": "Usefull for shelves and galleries.",
+      "description": "Useful for shelves and galleries.",
       "type": "object",
       "allOf": [
         {
@@ -9171,6 +9556,22 @@
             "deco-sites/std/loaders/vtex/navbar.ts"
           ],
           "default": "deco-sites/std/loaders/vtex/navbar.ts"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L3Byb3h5LnRz": {
+      "title": "VTEX Proxy Routes",
+      "type": "object",
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/loaders/vtex/proxy.ts"
+          ],
+          "default": "deco-sites/std/loaders/vtex/proxy.ts"
         }
       }
     },
@@ -9661,7 +10062,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vU0VPQmFzZS50c3g=@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9zZW8vdHlwZXMudHM=@Props"
         }
       ],
       "required": [
@@ -9719,6 +10120,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4": {
+      "title": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4@LoaderProps"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx"
+          ],
+          "default": "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM=": {
       "title": "$live/matchers/MatchAlways.ts",
       "type": "object",
@@ -9753,6 +10175,28 @@
             "$live/matchers/MatchDate.ts"
           ],
           "default": "$live/matchers/MatchDate.ts"
+        }
+      }
+    },
+    "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEZXZpY2UudHM=": {
+      "title": "Device Matcher",
+      "description": "Matches the user based on the used device, options are: mobile, desktop or tablet.",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGV2aWNlLnRz@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "$live/matchers/MatchDevice.ts"
+          ],
+          "default": "$live/matchers/MatchDevice.ts"
         }
       }
     },
@@ -10350,24 +10794,6 @@
           "default": "deco-sites/std/actions/vtex/wishlist/removeItem.ts"
         }
       }
-    },
-    "ZGVjby1jeC9saXZlL3JvdXRlcy9fbWlkZGxld2FyZS50cw==@MiddlewareConfig": {
-      "type": "object",
-      "properties": {
-        "state": {
-          "title": "State",
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/Resolvable"
-          },
-          "description": "Configure your loaders global state."
-        }
-      },
-      "required": [
-        "state"
-      ],
-      "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
-      "description": "Global configurations for ./routes/_middleware.ts route"
     }
   },
   "root": {
@@ -10493,6 +10919,9 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
+          "$ref": "#/definitions/JGxpdmUvbG9hZGVycy9zdGF0ZS50cw=="
+        },
+        {
           "$ref": "#/definitions/JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZXZlbnRzLnRz"
         },
         {
@@ -10527,6 +10956,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L25hdmJhci50cw=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L3Byb3h5LnRz"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvbG9hZGVycy92dGV4L3VzZXIudHM="
@@ -10637,6 +11069,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvU0VPUExQLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvVlRFWFBvcnRhbERhdGFMYXllckNvbXBhdGliaWxpdHkudHN4"
         }
       ]
     },
@@ -10651,6 +11086,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEYXRlLnRz"
+        },
+        {
+          "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hEZXZpY2UudHM="
         },
         {
           "$ref": "#/definitions/JGxpdmUvbWF0Y2hlcnMvTWF0Y2hFbnZpcm9ubWVudC50cw=="
