@@ -7,16 +7,11 @@
   "githooks": {
     "pre-commit": "check"
   },
-  "lint": {
-    "exclude": [
-      "static/"
-    ]
-  },
-  "fmt": {
-    "exclude": [
-      "static/"
-    ]
-  },
+  "exclude": [
+    "node_modules",
+    "static/",
+    "README.md"
+  ],
   "importMap": "./import_map.json",
   "compilerOptions": {
     "jsx": "react-jsx",
