@@ -27,7 +27,11 @@ export default function Intro({
     <header class="pt-20 pb-32 flex justify-center items-center">
       <div class="flex flex-col gap-2 text-3xl">
         <h1 class="font-bold text-4xl">{headline}</h1>
-        <img class="object-cover w-24 h-24 rounded-full" src={picture} alt={headline} />
+        <img
+          class="object-cover w-24 h-24 rounded-full"
+          src={picture}
+          alt={headline}
+        />
         <HTMLRenderer html={introduction} />
         {!!links?.length && (
           <ul>
