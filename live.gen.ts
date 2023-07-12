@@ -3,7 +3,6 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import { DecoManifest } from "$live/types.ts";
-import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$$$$0 from "./sections/Projects.tsx";
@@ -135,36 +134,6 @@ import * as i2$$$$$$18 from "deco-sites/std/actions/vtex/wishlist/addItem.ts";
 import * as i2$$$$$$19 from "deco-sites/std/actions/vtex/wishlist/removeItem.ts";
 
 const manifest = {
-  "functions": {
-    "deco-sites/start/functions/LoadGitHubRaw.ts": $0,
-    "deco-sites/std/functions/butterCMSAds.ts": i2$0,
-    "deco-sites/std/functions/butterCMSBrands.ts": i2$1,
-    "deco-sites/std/functions/butterCMSCategories.ts": i2$2,
-    "deco-sites/std/functions/butterCMSFeaturedPosts.ts": i2$3,
-    "deco-sites/std/functions/butterCMSPage.ts": i2$4,
-    "deco-sites/std/functions/butterCMSPlaces.ts": i2$5,
-    "deco-sites/std/functions/butterCMSPostDetail.ts": i2$6,
-    "deco-sites/std/functions/butterCMSPosts.ts": i2$7,
-    "deco-sites/std/functions/butterCMSRelatedPosts.ts": i2$8,
-    "deco-sites/std/functions/occProductDetailsPage.ts": i2$9,
-    "deco-sites/std/functions/requestToParam.ts": i2$10,
-    "deco-sites/std/functions/shopifyProductDetailsPage.ts": i2$11,
-    "deco-sites/std/functions/shopifyProductList.ts": i2$12,
-    "deco-sites/std/functions/shopifyProductListingPage.ts": i2$13,
-    "deco-sites/std/functions/vndaProductDetailsPage.ts": i2$14,
-    "deco-sites/std/functions/vndaProductList.ts": i2$15,
-    "deco-sites/std/functions/vndaProductListingPage.ts": i2$16,
-    "deco-sites/std/functions/vtexLegacyProductDetailsPage.ts": i2$17,
-    "deco-sites/std/functions/vtexLegacyProductList.ts": i2$18,
-    "deco-sites/std/functions/vtexLegacyProductListingPage.ts": i2$19,
-    "deco-sites/std/functions/vtexLegacyRelatedProductsLoader.ts": i2$20,
-    "deco-sites/std/functions/vtexNavbar.ts": i2$21,
-    "deco-sites/std/functions/vtexProductDetailsPage.ts": i2$22,
-    "deco-sites/std/functions/vtexProductList.ts": i2$23,
-    "deco-sites/std/functions/vtexProductListingPage.ts": i2$24,
-    "deco-sites/std/functions/vtexSuggestions.ts": i2$25,
-    "deco-sites/std/functions/vtexWishlist.ts": i2$26,
-  },
   "routes": {
     "./routes/_app.tsx": $$$$1,
     "./routes/_middleware.ts": $live_middleware,
@@ -279,6 +248,35 @@ const manifest = {
     "deco-sites/std/actions/vtex/notifyme.ts": i2$$$$$$17,
     "deco-sites/std/actions/vtex/wishlist/addItem.ts": i2$$$$$$18,
     "deco-sites/std/actions/vtex/wishlist/removeItem.ts": i2$$$$$$19,
+  },
+  "functions": {
+    "deco-sites/std/functions/butterCMSAds.ts": i2$0,
+    "deco-sites/std/functions/butterCMSBrands.ts": i2$1,
+    "deco-sites/std/functions/butterCMSCategories.ts": i2$2,
+    "deco-sites/std/functions/butterCMSFeaturedPosts.ts": i2$3,
+    "deco-sites/std/functions/butterCMSPage.ts": i2$4,
+    "deco-sites/std/functions/butterCMSPlaces.ts": i2$5,
+    "deco-sites/std/functions/butterCMSPostDetail.ts": i2$6,
+    "deco-sites/std/functions/butterCMSPosts.ts": i2$7,
+    "deco-sites/std/functions/butterCMSRelatedPosts.ts": i2$8,
+    "deco-sites/std/functions/occProductDetailsPage.ts": i2$9,
+    "deco-sites/std/functions/requestToParam.ts": i2$10,
+    "deco-sites/std/functions/shopifyProductDetailsPage.ts": i2$11,
+    "deco-sites/std/functions/shopifyProductList.ts": i2$12,
+    "deco-sites/std/functions/shopifyProductListingPage.ts": i2$13,
+    "deco-sites/std/functions/vndaProductDetailsPage.ts": i2$14,
+    "deco-sites/std/functions/vndaProductList.ts": i2$15,
+    "deco-sites/std/functions/vndaProductListingPage.ts": i2$16,
+    "deco-sites/std/functions/vtexLegacyProductDetailsPage.ts": i2$17,
+    "deco-sites/std/functions/vtexLegacyProductList.ts": i2$18,
+    "deco-sites/std/functions/vtexLegacyProductListingPage.ts": i2$19,
+    "deco-sites/std/functions/vtexLegacyRelatedProductsLoader.ts": i2$20,
+    "deco-sites/std/functions/vtexNavbar.ts": i2$21,
+    "deco-sites/std/functions/vtexProductDetailsPage.ts": i2$22,
+    "deco-sites/std/functions/vtexProductList.ts": i2$23,
+    "deco-sites/std/functions/vtexProductListingPage.ts": i2$24,
+    "deco-sites/std/functions/vtexSuggestions.ts": i2$25,
+    "deco-sites/std/functions/vtexWishlist.ts": i2$26,
   },
   "accounts": {
     "deco-sites/std/accounts/nuvemShop.ts": i2$$0,
