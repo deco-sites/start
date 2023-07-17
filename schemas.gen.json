@@ -81,7 +81,6 @@
               "$live/sections/UseSlot.tsx",
               "deco-sites/start/sections/Hero.tsx",
               "deco-sites/start/sections/ParagraphList.tsx",
-              "deco-sites/start/sections/Projects.tsx",
               "deco-sites/start/sections/SimpleTextList.tsx",
               "deco-sites/start/sections/Theme.tsx",
               "deco-sites/std/sections/Analytics.tsx",
@@ -7799,52 +7798,6 @@
       "required": [],
       "title": "deco-sites/start/sections/ParagraphList.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g=@Project": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "title": "Title"
-        },
-        "description": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Description"
-        },
-        "href": {
-          "type": "string",
-          "title": "Href"
-        }
-      },
-      "required": [
-        "title",
-        "href"
-      ],
-      "title": "{{{title}}}"
-    },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "title": {
-          "type": "string",
-          "title": "Title"
-        },
-        "projects": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g=@Project"
-          },
-          "title": "Projects"
-        }
-      },
-      "required": [
-        "title",
-        "projects"
-      ],
-      "title": "deco-sites/start/sections/Projects.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=@Item": {
       "type": "object",
       "properties": {
@@ -11088,27 +11041,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g=": {
-      "title": "deco-sites/start/sections/Projects.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/start/sections/Projects.tsx"
-          ],
-          "default": "deco-sites/start/sections/Projects.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g=": {
       "title": "deco-sites/start/sections/SimpleTextList.tsx",
       "type": "object",
@@ -12357,9 +12289,6 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9QYXJhZ3JhcGhMaXN0LnRzeA=="
-        },
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9Qcm9qZWN0cy50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9TaW1wbGVUZXh0TGlzdC50c3g="
