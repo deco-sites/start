@@ -38,7 +38,7 @@ export default function Hero({
                 <ul class="mt-8 flex flex-col md:flex-row gap-2 md:gap-4">
                 {links.map(({ href, title }) => (
                     <li>
-                        <a href={href} aria-label={title} class="link">{title}</a>
+                        <a target="_blank" href={href} aria-label={title} class="link">{title}</a>
                     </li>
                 ))}
                 </ul>
