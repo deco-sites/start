@@ -20,8 +20,8 @@ export default function Hero({
     headline = "The digital experience platform that combines performance and personalization for the ultimate sales results.",
     links = [
         { title: "Official website", "href": "https://deco.cx/", },
-        { title: "Linkedin", "href": "https://deco.cx/discord", },
-        { title: "Discord", "href": "https://www.linkedin.com/company/deco-cx/", },
+        { title: "Linkedin", "href": "https://www.linkedin.com/company/deco-cx/", },
+        { title: "Discord", "href": "https://deco.cx/discord", },
     ]
 }: Props) {
     return (
