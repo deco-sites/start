@@ -2,7 +2,6 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import { DecoManifest } from "$live/types.ts";
 import * as $$$$0 from "./routes/styles.css.ts";
 import * as $$$$1 from "./routes/_app.tsx";
 import * as $$$$$$$$0 from "./sections/Hero.tsx";
@@ -21,6 +20,8 @@ import * as $live_meta from "$live/routes/live/_meta.ts";
 import * as $live_previews_block from "$live/routes/live/previews/[...block].tsx";
 import * as $live_previews_index from "$live/routes/live/previews/index.tsx";
 import * as $live_catchall from "$live/routes/[...catchall].tsx";
+import { DecoManifest } from "$live/types.ts";
+import * as i1$0 from "$live/loaders/secret.ts";
 import * as i2$$$0 from "$live/loaders/state.ts";
 import * as i2$$$1 from "$live/loaders/workflows/events.ts";
 import * as i2$$$2 from "$live/loaders/workflows/get.ts";
@@ -43,6 +44,7 @@ import * as i2$$$$$$$$2 from "$live/matchers/MatchDate.ts";
 import * as i2$$$$$$$$3 from "$live/matchers/MatchDevice.ts";
 import * as i2$$$$$$$$4 from "$live/matchers/MatchEnvironment.ts";
 import * as i2$$$$$$$$5 from "$live/matchers/MatchHost.ts";
+import * as i1$$$$$6 from "$live/matchers/MatchLocation.ts";
 import * as i2$$$$$$$$6 from "$live/matchers/MatchMulti.ts";
 import * as i2$$$$$$$$7 from "$live/matchers/MatchRandom.ts";
 import * as i2$$$$$$$$8 from "$live/matchers/MatchSite.ts";
@@ -51,6 +53,7 @@ import * as i2$$$$$$$$$0 from "$live/flags/audience.ts";
 import * as i2$$$$$$$$$1 from "$live/flags/everyone.ts";
 import * as i2$$$$$$$$$2 from "$live/flags/flag.ts";
 import * as i2$$$$$$$$$3 from "$live/flags/multivariate.ts";
+import * as i1$$$$$$$0 from "$live/actions/secrets/encrypt.ts";
 import * as i2$$$$$$0 from "$live/actions/workflows/cancel.ts";
 import * as i2$$$$$$1 from "$live/actions/workflows/signal.ts";
 import * as i2$$$$$$2 from "$live/actions/workflows/start.ts";
@@ -174,7 +177,9 @@ const manifest = {
     "deco-sites/std/sections/SEOPLP.tsx": i2$$$$$14,
     "deco-sites/std/sections/VTEXPortalDataLayerCompatibility.tsx": i2$$$$$15,
   },
+  "name": "deco-sites/start",
   "loaders": {
+    "$live/loaders/secret.ts": i1$0,
     "$live/loaders/state.ts": i2$$$0,
     "$live/loaders/workflows/events.ts": i2$$$1,
     "$live/loaders/workflows/get.ts": i2$$$2,
@@ -218,6 +223,7 @@ const manifest = {
     "$live/matchers/MatchDevice.ts": i2$$$$$$$$3,
     "$live/matchers/MatchEnvironment.ts": i2$$$$$$$$4,
     "$live/matchers/MatchHost.ts": i2$$$$$$$$5,
+    "$live/matchers/MatchLocation.ts": i1$$$$$6,
     "$live/matchers/MatchMulti.ts": i2$$$$$$$$6,
     "$live/matchers/MatchRandom.ts": i2$$$$$$$$7,
     "$live/matchers/MatchSite.ts": i2$$$$$$$$8,
@@ -230,6 +236,7 @@ const manifest = {
     "$live/flags/multivariate.ts": i2$$$$$$$$$3,
   },
   "actions": {
+    "$live/actions/secrets/encrypt.ts": i1$$$$$$$0,
     "$live/actions/workflows/cancel.ts": i2$$$$$$0,
     "$live/actions/workflows/signal.ts": i2$$$$$$1,
     "$live/actions/workflows/start.ts": i2$$$$$$2,

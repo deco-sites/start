@@ -3,8 +3,8 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="esnext" />
 
-import manifest from "./live.gen.ts";
 import { $live } from "$live/mod.ts";
+import manifest from "./live.gen.ts";
 import { start } from "$fresh/server.ts";
 import partytownPlugin from "partytown/mod.ts";
 import site from "./site.json" assert { type: "json" };
