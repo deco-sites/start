@@ -3,14 +3,19 @@
 /// <reference lib="deno.ns" />
 /// <reference lib="esnext" />
 
-import { $live } from "$live/mod.ts";
-import manifest from "./live.gen.ts";
 import { start } from "$fresh/server.ts";
+import plugins from "deco-sites/std/plugins/mod.ts";
 import partytownPlugin from "partytown/mod.ts";
-import site from "./site.json" assert { type: "json" };
+import manifest from "./fresh.gen.ts";
+import decoManifest from "./manifest.gen.ts";
 
-await start($live(manifest, site), {
+await start(manifest, {
   plugins: [
+    ...plugins(
+      {
+        manifest: decoManifest,
+      },
+    ),
     partytownPlugin(),
   ],
 });
