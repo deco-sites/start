@@ -4,9 +4,8 @@
  * License: MIT (https://github.com/saadeghi/daisyui/blob/37bca23444bc9e4d304362c14b7088f9a08f1c74/LICENSE)
  * https://github.com/saadeghi/daisyui/blob/37bca23444bc9e4d304362c14b7088f9a08f1c74/src/docs/src/routes/theme-generator.svelte
  */
+import SiteTheme, { Font } from "apps/website/components/Theme.tsx";
 import { Color } from "https://deno.land/x/color@v0.3.0/mod.ts";
-import { useId } from "preact/hooks";
-import { Head } from "$fresh/runtime.ts";
 
 export interface MainColors {
   /**
@@ -228,72 +227,12 @@ export interface Miscellaneous {
   "--tab-radius": string;
 }
 
-export interface Font {
-  /**
-   * @title Font family
-   */
-  fontFamily?:
-    | "None"
-    | "Alegreya"
-    | "Alegreya Sans"
-    | "Archivo Narrow"
-    | "BioRhyme"
-    | "Cardo"
-    | "Chivo"
-    | "Cormorant"
-    | "DM Sans"
-    | "Eczar"
-    | "Fira Sans"
-    | "Inconsolata"
-    | "Inknut Antiqua"
-    | "Inter"
-    | "IBM Plex Sans"
-    | "Karla"
-    | "Lato"
-    | "Libre Baskerville"
-    | "Libre Franklin"
-    | "Lora"
-    | "Manrope"
-    | "Merriweather"
-    | "Montserrat"
-    | "Neuton"
-    | "Open Sans"
-    | "Poppins"
-    | "Playfair Display"
-    | "Proza Libre"
-    | "PT Sans"
-    | "PT Serif"
-    | "Raleway"
-    | "Roboto"
-    | "Roboto Slab"
-    | "Rubik"
-    | "Space Grotesk"
-    | "Space Mono"
-    | "Spectral"
-    | "Source Sans Pro"
-    | "Source Serif Pro"
-    | "Syne"
-    | "Work Sans";
-  /** @title Other */
-  other?: string;
-}
-
-export interface CustomFont {
-  fontFamily?: string;
-  /**
-   * @format css
-   */
-  styleInnerHtml?: string;
-}
-
 export interface Props {
   mainColors?: MainColors;
   /** These colors are automatically generated with darker tons of their originals */
   complementaryColors?: ComplementaryColors;
   buttonStyle?: Button;
-  /** @title Google font */
   font?: Font;
-  customFont?: CustomFont;
 }
 
 type Theme =
@@ -415,9 +354,7 @@ function Section({
   complementaryColors,
   buttonStyle,
   font,
-  customFont,
 }: Props) {
-  const id = useId();
   const theme = {
     ...defaultTheme,
     ...mainColors,
@@ -426,59 +363,22 @@ function Section({
     ...complementaryColors?.secondary,
     ...complementaryColors?.tertiary,
     ...buttonStyle,
-    ...font,
-    ...customFont,
   };
-
-  const selectedFont = customFont?.fontFamily ||
-    font?.other ||
-    (font?.fontFamily !== "None" && font?.fontFamily);
 
   const variables = [
     ...toVariables(theme),
     [
       "--font-family",
-      selectedFont ||
+      font?.family ||
       "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
     ],
   ]
-    .map(([cssVar, value]) => `${cssVar}: ${value}`)
-    .join(";");
+    .map(([name, value]) => ({ name, value }));
 
-  return (
-    <Head>
-      <meta name="theme-color" content={theme["primary"]} />
-      <meta name="msapplication-TileColor" content={theme["primary"]} />
-      {selectedFont && !customFont?.fontFamily && (
-        <link
-          href={`https://fonts.googleapis.com/css?family=${selectedFont}:300,400,600,700`}
-          rel="stylesheet"
-          type="text/css"
-        />
-      )}
-      {customFont?.fontFamily && customFont?.styleInnerHtml && (
-        <style
-          type="text/css"
-          id={`__DESIGN_SYSTEM_FONT-${id}`}
-          dangerouslySetInnerHTML={{ __html: customFont.styleInnerHtml ?? "" }}
-        />
-      )}
-      <style
-        type="text/css"
-        id={`__DESIGN_SYSTEM_VARS-${id}`}
-        dangerouslySetInnerHTML={{
-          __html: `:root {${variables}}`,
-        }}
-      />
-    </Head>
-  );
+  return <SiteTheme fonts={font ? [font] : undefined} variables={variables} />;
 }
 
 export function Preview(props: Props) {
-  const selectedFont = props.customFont?.fontFamily ||
-    props.font?.other ||
-    (props.font?.fontFamily !== "None" && props.font?.fontFamily);
-
   return (
     <>
       <Section {...props} />
@@ -655,9 +555,9 @@ export function Preview(props: Props) {
         </div>
         {" "}
       </div>
-      {selectedFont && (
+      {props.font?.family && (
         <div class="text-center py-2">
-          Font: {selectedFont}
+          Font: {props.font.family}
         </div>
       )}
     </>

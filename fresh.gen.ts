@@ -3,12 +3,10 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/_app.tsx";
-import * as $1 from "./routes/styles.css.ts";
 
 const manifest = {
   routes: {
     "./routes/_app.tsx": $0,
-    "./routes/styles.css.ts": $1,
   },
   islands: {},
   baseUrl: import.meta.url,

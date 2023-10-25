@@ -18,6 +18,6 @@ export default function Site(
   };
 }
 
-export type Storefront = ReturnType<typeof Site>;
-export type AppContext = AC<Storefront>;
-export { onBeforeResolveProps } from "apps/compat/$live/mod.ts";
+export type SiteApp = ReturnType<typeof Site>;
+export type AppContext = AC<SiteApp>;
+export { onBeforeResolveProps } from "apps/website/mod.ts";
