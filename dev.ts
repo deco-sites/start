@@ -1,16 +1,12 @@
 #!/usr/bin/env -S deno run -A --watch
-import dev from "$live/dev.ts";
-import tailwind from "deco-sites/std/tailwindv3.ts";
-import daisyui from "npm:daisyui@2.51.6";
-import tailwindConfig from "./tailwind.config.ts";
-import site from "./site.json" assert { type: "json" };
+import "https://deno.land/x/dotenv@v3.2.2/load.ts";
 
-// Start tailwind background process generation
-tailwind({
-  ...tailwindConfig,
-  plugins: [daisyui],
-  daisyui: { themes: [], logs: false },
-});
+import dev from "$fresh/dev.ts";
+import config from "./fresh.config.ts";
 
 // Generate manifest and boot server
-await dev(import.meta.url, "./main.ts", site);
+await dev(import.meta.url, "./main.ts", config);
+
+if (Deno.args.includes("build")) {
+  Deno.exit(0);
+}
