@@ -1,14 +1,15 @@
-export const theme = {
-  "primary": "hsl(180 100% 10%)",
-  "secondary": "hsl(0 39% 39%)",
-  "accent": "hsl(150 100% 50%)",
-  "neutral": "hsl(0 0% 20%)",
-  "base-100": "hsl(0 0% 100%)",
-  "success": "hsl(150 62% 95%)",
-  "warning": "hsl(43 100% 95%)",
-  "error": "hsl(9 100% 95%)",
-  "info": "hsl(220 100% 97%)",
-
+const theme = {
+  colors: {
+    "primary": "hsl(var(--pf))",
+    "secondary": "hsl(var(--sf))",
+    "accent": "hsl(var(--af))",
+    "neutral": "hsl(var(--n))",
+    "base-100": "hsl(var(--b1))",
+    "success": "hsl(var(--su))",
+    "warning": "hsl(var(--wa))",
+    "error": "hsl(var(--er))",
+    "info": "hsl(var(--in))",
+  },
   "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
   "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
   "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
@@ -22,5 +23,6 @@ export const theme = {
 };
 
 export default {
+  theme,
   content: ["./**/*.tsx"],
 };
