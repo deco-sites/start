@@ -13,7 +13,6 @@ edit the code! Just go to any page and hit `.` to open the editor of
 the current page you're seeing.
 
 ---
-
 ## Usage
 
 Start the project:
