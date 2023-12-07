@@ -1,6 +1,6 @@
 import { AppProps } from "$fresh/server.ts";
 import GlobalTags from "$store/components/GlobalTags.tsx";
-import Theme from "../sections/Theme.tsx";
+import Theme from "../sections/Theme/Theme.tsx";
 
 const sw = () =>
   addEventListener("load", () =>
