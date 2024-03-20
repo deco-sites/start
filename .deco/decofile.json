@@ -1,7 +1,4 @@
 {
-<<<<<<< HEAD
-    "site": {"__resolveType": "deco-sites/start/apps/site.ts"}
-=======
   "site": {
     "seo": {
       "type": "website",
@@ -32,5 +29,4 @@
   "decohub": {
     "__resolveType": "deco-sites/start/apps/decohub.ts"
   }
->>>>>>> a3de109 (Making start work with spaces)
 }
