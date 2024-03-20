@@ -1,3 +1,36 @@
 {
+<<<<<<< HEAD
     "site": {"__resolveType": "deco-sites/start/apps/site.ts"}
+=======
+  "site": {
+    "seo": {
+      "type": "website",
+      "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/a5d890ba-e5b8-471e-8b77-7412c1d4fa56",
+      "title": "Storefront",
+      "jsonLDs": [],
+      "canonical": "https://fashion.deco.site",
+      "noIndexing": false,
+      "description": "Improve your page performance with deco.cx",
+      "titleTemplate": "%s | deco.cx",
+      "descriptionTemplate": "%s | Deco.cx"
+    },
+    "global": [],
+    "routes": [
+      {
+        "__resolveType": "website/loaders/pages.ts"
+      },
+      {
+        "__resolveType": "website/loaders/redirects.ts"
+      }
+    ],
+    "caching": {
+      "directives": []
+    },
+    "__resolveType": "deco-sites/start/apps/site.ts",
+    "firstByteThresholdMS": false
+  },
+  "decohub": {
+    "__resolveType": "deco-sites/start/apps/decohub.ts"
+  }
+>>>>>>> a3de109 (Making start work with spaces)
 }
