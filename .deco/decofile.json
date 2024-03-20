@@ -26,16 +26,21 @@
     "caching": {
       "directives": []
     },
-    "__resolveType": "deco-sites/start/apps/site.ts"
+    "__resolveType": "deco-sites/start/apps/site.ts",
+    "firstByteThresholdMS": false
   },
   "pages-Home-459196": {
     "sections": [
       {
-        "__resolveType": "deco-sites/start/sections/Hero.tsx"
+        "__resolveType": "Preview Sections MyHero"
       }
     ],
     "__resolveType": "website/pages/Page.tsx",
     "name": "Start here",
     "path": "/"
+  },
+  "Preview Sections MyHero": {
+    "__resolveType": "deco-sites/start/sections/myHero.tsx",
+    "name": "works!"
   }
 }
