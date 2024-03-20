@@ -1,0 +1,3 @@
+{
+    "site": {"__resolveType": "deco-sites/start/apps/site.ts"}
+}
