@@ -9,50 +9,54 @@ import Color from "npm:colorjs.io";
 
 export interface ThemeColors {
   /**
-   * @format color
+   * @format color-input
    * @title Base
    */
   "base-100"?: string;
-  /** @format color */
+  /** @format color-input */
   "primary"?: string;
-  /** @format color */
+  /** @format color-input */
   "secondary"?: string;
-  /** @format color */
-  "accent"?: string;
-  /** @format color */
+  /**
+   * @title Accent
+   * @format color-input */
+  "tertiary"?: string;
+  /** @format color-input */
   "neutral"?: string;
-  /** @format color */
+  /** @format color-input */
   "success"?: string;
-  /** @format color */
+  /** @format color-input */
   "warning"?: string;
-  /** @format color */
+  /** @format color-input */
   "error"?: string;
-  /** @format color */
+  /** @format color-input */
   "info"?: string;
 }
 
 export interface ComplementaryColors {
-  /** @format color */
+  /** @format color-input */
   "base-200"?: string;
-  /** @format color */
+  /** @format color-input */
   "base-300"?: string;
-  /** @format color */
+  /** @format color-input */
   "base-content"?: string;
-  /** @format color */
+  /** @format color-input */
   "primary-content"?: string;
-  /** @format color */
+  /** @format color-input */
   "secondary-content"?: string;
-  /** @format color */
-  "accent-content"?: string;
-  /** @format color */
+  /**
+   * @title Accent Content
+   * @format color-input */
+  "tertiary-content"?: string;
+  /** @format color-input */
   "neutral-content"?: string;
-  /** @format color */
+  /** @format color-input */
   "success-content"?: string;
-  /** @format color */
+  /** @format color-input */
   "warning-content"?: string;
-  /** @format color */
+  /** @format color-input */
   "error-content"?: string;
-  /** @format color */
+  /** @format color-input */
   "info-content"?: string;
 }
 
@@ -117,10 +121,10 @@ export interface Miscellaneous {
 export interface Props {
   /**
    * @description Set the prefers-color-scheme media query. To support dark mode, create two instances of this block and set this option to light/dark in each instance
-   * @default light
+   
    */
   colorScheme?: "light" | "dark";
-  colors?: ThemeColors;
+  mainColors?: ThemeColors;
   /** @description These will be auto-generated to a readable color if not set */
   complementaryColors?: ComplementaryColors;
   buttonStyle?: Button;
@@ -162,8 +166,8 @@ const toVariables = (
     "--s": t["secondary"],
     "--sc": t["secondary-content"] ?? contrasted(t["secondary"]),
 
-    "--a": t["accent"],
-    "--ac": t["accent-content"] ?? contrasted(t["accent"]),
+    "--a": t["tertiary"],
+    "--ac": t["tertiary-content"] ?? contrasted(t["tertiary"]),
 
     "--n": t["neutral"],
     "--nc": t["neutral-content"] ?? contrasted(t["neutral"]),
@@ -204,7 +208,7 @@ const toVariables = (
 const defaultTheme = {
   "primary": "oklch(1 0 0)",
   "secondary": "oklch(1 0 0)",
-  "accent": "oklch(1 0 0)",
+  "tertiary": "oklch(1 0 0)",
   "neutral": "oklch(1 0 0)",
   "base-100": "oklch(1 0 0)",
   "info": "oklch(1 0 0)",
@@ -233,7 +237,7 @@ const defaultTheme = {
  * }
  */
 function Section({
-  colors,
+  mainColors,
   complementaryColors,
   buttonStyle,
   otherStyles,
@@ -242,8 +246,8 @@ function Section({
 }: Props) {
   const theme = {
     ...defaultTheme,
-    ...colors,
     ...complementaryColors,
+    ...mainColors,
     ...buttonStyle,
     ...otherStyles,
   };
