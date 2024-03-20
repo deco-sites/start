@@ -37,5 +37,15 @@
     "__resolveType": "website/pages/Page.tsx",
     "name": "Start here",
     "path": "/"
+  },
+  "pages-StartHere-152392": {
+    "sections": [
+      {
+        "__resolveType": "deco-sites/start/sections/Hero.tsx"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx",
+    "name": "Start here",
+    "path": "/"
   }
 }
