@@ -2,8 +2,10 @@ name: Deploy
 
 concurrency:
   group: environment-${{ github.head_ref || github.ref }}
+  cancel-in-progress: true
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
@@ -31,7 +33,6 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     timeout-minutes: 15  # Set your desired timeout for this job
-
 
     permissions:
       id-token: write # Needed for auth with Deno Deploy
