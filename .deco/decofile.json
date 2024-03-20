@@ -1,4 +1,18 @@
 {
+  "decohub": {
+    "__resolveType": "deco-sites/start/apps/decohub.ts",
+    "apps": []
+  },
+  "pages-Hello%20World-606540": {
+    "sections": [
+      {
+        "__resolveType": "deco-sites/start/sections/Hero.tsx"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx",
+    "name": "Hello",
+    "path": "/"
+  },
   "site": {
     "seo": {
       "type": "website",
@@ -25,17 +39,5 @@
     },
     "__resolveType": "deco-sites/start/apps/site.ts",
     "firstByteThresholdMS": false
-  },
-  "decohub": {
-    "__resolveType": "deco-sites/start/apps/decohub.ts",
-    "apps": []
-  },
-  "pages-Hello%20World-606540": {
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/Hero.tsx"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx"
   }
 }
