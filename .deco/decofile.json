@@ -1,17 +1,6 @@
 {
   "decohub": {
-    "__resolveType": "deco-sites/start/apps/decohub.ts",
-    "apps": []
-  },
-  "pages-Hello%20World-606540": {
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/Hero.tsx"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx",
-    "name": "Hello",
-    "path": "/"
+    "__resolveType": "deco-sites/start/apps/decohub.ts"
   },
   "site": {
     "seo": {
@@ -37,7 +26,16 @@
     "caching": {
       "directives": []
     },
-    "__resolveType": "deco-sites/start/apps/site.ts",
-    "firstByteThresholdMS": false
+    "__resolveType": "deco-sites/start/apps/site.ts"
+  },
+  "pages-Home-459196": {
+    "sections": [
+      {
+        "__resolveType": "deco-sites/start/sections/Hero.tsx"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx",
+    "name": "Start here",
+    "path": "/"
   }
 }
