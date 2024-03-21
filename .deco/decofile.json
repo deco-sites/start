@@ -1,15 +1,43 @@
 {
+  "Preview Sections ItWorks": {
+    "__resolveType": "deco-sites/start/sections/ItWorks.tsx",
+    "name": "It works!"
+  },
+  "decohub": {
+    "__resolveType": "deco-sites/start/apps/decohub.ts"
+  },
+  "pages-Home-617289": {
+    "sections": [
+      {
+        "__resolveType": "Preview Sections ItWorks"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx",
+    "name": "Home",
+    "path": "/"
+  },
+  "pages-Start%20Here-742045": {
+    "sections": [
+      {
+        "__resolveType": "deco-sites/start/sections/Hero.tsx"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx",
+    "name": "Start here",
+    "path": "/"
+  },
   "site": {
     "seo": {
       "type": "website",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/a5d890ba-e5b8-471e-8b77-7412c1d4fa56",
-      "title": "Storefront",
+      "title": "Start",
       "jsonLDs": [],
       "canonical": "https://fashion.deco.site",
       "noIndexing": false,
       "description": "Improve your page performance with deco.cx",
       "titleTemplate": "%s | deco.cx",
-      "descriptionTemplate": "%s | Deco.cx"
+      "descriptionTemplate": "%s | Deco.cx",
+      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/91ac9541-f71e-401f-82cc-c3b7f7856d44"
     },
     "global": [],
     "routes": [
@@ -24,28 +52,5 @@
       "directives": []
     },
     "__resolveType": "deco-sites/start/apps/site.ts"
-  },
-  "decohub": {
-    "__resolveType": "deco-sites/start/apps/decohub.ts"
-  },
-  "pages-Start%20Here-742045": {
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/Hero.tsx"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx",
-    "name": "Start here",
-    "path": "/"
-  },
-  "pages-StartHere-152392": {
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/Hero.tsx"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx",
-    "name": "Start here",
-    "path": "/"
   }
 }
