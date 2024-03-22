@@ -3,7 +3,11 @@
     "__resolveType": "deco-sites/start/apps/decohub.ts"
   },
   "pages-Home-617289": {
-    "sections": [],
+    "sections": [
+      {
+        "__resolveType": "deco-sites/start/sections/Hero.tsx"
+      }
+    ],
     "__resolveType": "website/pages/Page.tsx",
     "name": "Home",
     "path": "/"
@@ -12,14 +16,13 @@
     "seo": {
       "type": "website",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/2177/a5d890ba-e5b8-471e-8b77-7412c1d4fa56",
-      "title": "Start",
+      "title": "Storefront",
       "jsonLDs": [],
       "canonical": "https://fashion.deco.site",
       "noIndexing": false,
       "description": "Improve your page performance with deco.cx",
       "titleTemplate": "%s | deco.cx",
-      "descriptionTemplate": "%s | Deco.cx",
-      "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/91ac9541-f71e-401f-82cc-c3b7f7856d44"
+      "descriptionTemplate": "%s | Deco.cx"
     },
     "global": [],
     "routes": [
