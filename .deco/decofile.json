@@ -16,16 +16,6 @@
     "name": "Home",
     "path": "/"
   },
-  "pages-Start%20Here-742045": {
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/Hero.tsx"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx",
-    "name": "Start here",
-    "path": "/"
-  },
   "site": {
     "seo": {
       "type": "website",
