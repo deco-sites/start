@@ -1,17 +1,9 @@
 {
-  "Preview Sections ItWorks": {
-    "__resolveType": "deco-sites/start/sections/ItWorks.tsx",
-    "name": "It works!"
-  },
   "decohub": {
     "__resolveType": "deco-sites/start/apps/decohub.ts"
   },
   "pages-Home-617289": {
-    "sections": [
-      {
-        "__resolveType": "Preview Sections ItWorks"
-      }
-    ],
+    "sections": [],
     "__resolveType": "website/pages/Page.tsx",
     "name": "Home",
     "path": "/"
