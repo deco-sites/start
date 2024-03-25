@@ -33,9 +33,20 @@
     "caching": {
       "directives": []
     },
-    "__resolveType": "deco-sites/start/apps/site.ts"
+    "__resolveType": "deco-sites/start/apps/site.ts",
+    "firstByteThresholdMS": true
   },
   "decohub": {
     "__resolveType": "deco-sites/start/apps/decohub.ts"
+  },
+  "pages-Home%20-672636": {
+    "name": "Home ",
+    "path": "/",
+    "sections": [
+      {
+        "__resolveType": "deco-sites/start/sections/ItWorks.tsx"
+      }
+    ],
+    "__resolveType": "website/pages/Page.tsx"
   }
 }
