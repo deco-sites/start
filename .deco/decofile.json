@@ -1,10 +1,10 @@
 {
-  "pages-Home-893899": {
+  "pages-Home-429751": {
     "name": "Home",
     "path": "/",
     "sections": [
       {
-        "__resolveType": "deco-sites/start/sections/ItWorks.tsx"
+        "__resolveType": "deco-sites/start/sections/IrWorks.tsx"
       }
     ],
     "__resolveType": "website/pages/Page.tsx"
