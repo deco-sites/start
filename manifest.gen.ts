@@ -9,14 +9,14 @@ import * as $$$$$$1 from "./sections/Theme/Theme.tsx";
 
 const manifest = {
   "sections": {
-    "deco-sites/start/sections/ItWorks.tsx": $$$$$$0,
-    "deco-sites/start/sections/Theme/Theme.tsx": $$$$$$1,
+    "deco-sites/sawfish-selected-86/sections/ItWorks.tsx": $$$$$$0,
+    "deco-sites/sawfish-selected-86/sections/Theme/Theme.tsx": $$$$$$1,
   },
   "apps": {
-    "deco-sites/start/apps/decohub.ts": $$$$$$$$$$$0,
-    "deco-sites/start/apps/site.ts": $$$$$$$$$$$1,
+    "deco-sites/sawfish-selected-86/apps/decohub.ts": $$$$$$$$$$$0,
+    "deco-sites/sawfish-selected-86/apps/site.ts": $$$$$$$$$$$1,
   },
-  "name": "deco-sites/start",
+  "name": "deco-sites/sawfish-selected-86",
   "baseUrl": import.meta.url,
 };
 
