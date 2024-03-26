@@ -121,7 +121,6 @@ export interface Miscellaneous {
 export interface Props {
   /**
    * @description Set the prefers-color-scheme media query. To support dark mode, create two instances of this block and set this option to light/dark in each instance
-   
    */
   colorScheme?: "light" | "dark";
   mainColors?: ThemeColors;

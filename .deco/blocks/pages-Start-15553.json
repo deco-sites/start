@@ -1,1 +1,6 @@
-{"name":"Start","path":"/","sections":[{"__resolveType":"deco-sites/start/sections/sections/ItWorks.tsx"}],"__resolveType":"website/pages/Page.tsx"}
+{
+  "name": "Start",
+  "path": "/",
+  "sections": [{ "__resolveType": "site/sections/ItWorks.tsx" }],
+  "__resolveType": "website/pages/Page.tsx"
+}

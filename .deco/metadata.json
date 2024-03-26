@@ -1,1 +1,16 @@
-{"/.deco/blocks/site.json":{"blockType":"apps","__resolveType":"deco-sites/start/apps/site.ts"},"/.deco/blocks/decohub.json":{"blockType":"apps","__resolveType":"deco-sites/start/apps/decohub.ts"},"/.deco/blocks/pages-Home%2520-672636.json":{"name":"Home ","path":"/","blockType":"pages","__resolveType":"website/pages/Page.tsx"}}
+{
+  "/.deco/blocks/site.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/site.ts"
+  },
+  "/.deco/blocks/decohub.json": {
+    "blockType": "apps",
+    "__resolveType": "site/apps/decohub.ts"
+  },
+  "/.deco/blocks/pages-Start-15553.json": {
+    "name": "Start",
+    "path": "/",
+    "blockType": "pages",
+    "__resolveType": "website/pages/Page.tsx"
+  }
+}

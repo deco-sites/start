@@ -1,1 +1,497 @@
-{"list":[{"id":"dashboard","name":"Dashboard","pinned":true,"icon":"home","layout":[{"i":"dashboard::seo:undefined:searchseo{}","w":8,"h":12,"x":0,"y":0,"moved":false,"static":false},{"i":"dashboard::analytics:undefined:layout-gridanalytics{}","w":8,"h":12,"x":8,"y":0,"moved":false,"static":false},{"i":"dashboard::List:undefined:pencilList{\"spaceId\":\"pages\"}","w":8,"h":12,"x":16,"y":0,"moved":false,"static":false},{"i":"dashboard::Page Speed:undefined:layout-gridPage Speed{}","w":8,"h":12,"x":0,"y":12,"moved":false,"static":false},{"i":"dashboard::releases-summary:undefined:rocketreleases-summary{}","w":8,"h":12,"x":8,"y":12,"moved":false,"static":false},{"i":"dashboard::Report Issues:undefined:layout-gridReport Issues{}","w":8,"h":12,"x":16,"y":12,"moved":false,"static":false}],"tabs":{"dashboard::seo:undefined:searchseo{}":{"name":"seo","icon":"search","render":"function","viewId":"seo","id":"dashboard::seo:undefined:searchseo{}","state":{"__signal":null}},"dashboard::analytics:undefined:layout-gridanalytics{}":{"name":"analytics","icon":"layout-grid","render":"function","viewId":"analytics","id":"dashboard::analytics:undefined:layout-gridanalytics{}","state":{"__signal":null}},"dashboard::List:undefined:pencilList{\"spaceId\":\"pages\"}":{"name":"List","icon":"pencil","render":"function","viewId":"List","viewProps":{"spaceId":"pages"},"id":"dashboard::List:undefined:pencilList{\"spaceId\":\"pages\"}","state":{"__signal":null}},"dashboard::Page Speed:undefined:layout-gridPage Speed{}":{"name":"Page Speed","icon":"layout-grid","render":"function","viewId":"Page Speed","id":"dashboard::Page Speed:undefined:layout-gridPage Speed{}","state":{"__signal":null}},"dashboard::releases-summary:undefined:rocketreleases-summary{}":{"name":"releases-summary","icon":"rocket","render":"function","viewId":"releases-summary","id":"dashboard::releases-summary:undefined:rocketreleases-summary{}","state":{"__signal":null}},"dashboard::Report Issues:undefined:layout-gridReport Issues{}":{"name":"Report Issues","icon":"layout-grid","render":"function","viewId":"Report Issues","id":"dashboard::Report Issues:undefined:layout-gridReport Issues{}","state":{"__signal":null}}}},{"id":"pages","name":"Pages","pinned":true,"icon":"files","layout":[{"i":"pages::List:undefined:pencilList{}","w":24,"h":24,"x":0,"y":0,"moved":false,"static":false}],"tabs":{"pages::List:undefined:pencilList{}":{"name":"List","icon":"pencil","render":"function","viewId":"List","id":"pages::List:undefined:pencilList{}","state":{"__signal":null}}}},{"id":"redirects","name":"Redirects","pinned":true,"icon":"redirect","layout":[],"tabs":{}},{"id":"sections","name":"Sections","pinned":true,"icon":"block","layout":[{"i":"sections::List:undefined:pencilList{}","w":24,"h":24,"x":0,"y":0}],"tabs":{"sections::List:undefined:pencilList{}":{"name":"List","icon":"pencil","render":"function","viewId":"List","id":"sections::List:undefined:pencilList{}","state":{"__signal":null}}}},{"id":"loaders","name":"Loaders","pinned":true,"icon":"block","layout":[{"i":"loaders::List:undefined:pencilList{}","w":24,"h":24,"x":0,"y":0}],"tabs":{"loaders::List:undefined:pencilList{}":{"name":"List","icon":"pencil","render":"function","viewId":"List","id":"loaders::List:undefined:pencilList{}","state":{"__signal":null}}}},{"id":"actions","name":"Actions","pinned":true,"icon":"block","layout":[{"i":"actions::List:undefined:pencilList{}","w":24,"h":24,"x":0,"y":0}],"tabs":{"actions::List:undefined:pencilList{}":{"name":"List","icon":"pencil","render":"function","viewId":"List","id":"actions::List:undefined:pencilList{}","state":{"__signal":null}}}},{"id":"apps","name":"Apps","pinned":true,"icon":"apps","layout":[{"i":"apps::List:undefined:pencilList{}","w":24,"h":24,"x":0,"y":0,"moved":false,"static":false}],"tabs":{"apps::List:undefined:pencilList{}":{"name":"List","icon":"pencil","render":"function","viewId":"List","id":"apps::List:undefined:pencilList{}","state":{"__signal":null}}}},{"id":"themes","name":"Themes","pinned":true,"icon":"palette","layout":[{"i":"themes::Theme Selector:undefined:paletteTheme Selector{}","w":6,"h":24,"x":0,"y":0},{"i":"themes::Theme Viewer:undefined:paletteTheme Viewer{}","w":9,"h":24,"x":6,"y":0},{"i":"themes::Theme Preview:undefined:paletteTheme Preview{}","w":9,"h":24,"x":15,"y":0}],"tabs":{"themes::Theme Selector:undefined:paletteTheme Selector{}":{"name":"Theme Selector","icon":"palette","render":"function","viewId":"Theme Selector","id":"themes::Theme Selector:undefined:paletteTheme Selector{}","state":{"__signal":null}},"themes::Theme Viewer:undefined:paletteTheme Viewer{}":{"name":"Theme Viewer","icon":"palette","accepts":"function","render":"function","viewId":"Theme Viewer","id":"themes::Theme Viewer:undefined:paletteTheme Viewer{}","state":{"__signal":null}},"themes::Theme Preview:undefined:paletteTheme Preview{}":{"name":"Theme Preview","icon":"palette","accepts":"function","render":"function","viewId":"Theme Preview","id":"themes::Theme Preview:undefined:paletteTheme Preview{}","state":{"__signal":null}}}},{"id":"site-seo","name":"SEO","pinned":true,"icon":"search","layout":[{"i":"site-seo::Partial Form:undefined:pencilPartial Form{\"spaceId\":\"{\\\"path\\\":[\\\"seo\\\"],\\\"filepath\\\":\\\"/.deco/blocks/site.json\\\"}\"}","w":6,"h":24,"x":0,"y":0},{"i":"site-seo::preview:undefined:worldpreview{\"spaceId\":\"/.deco/blocks/site.json\"}","w":18,"h":24,"x":6,"y":0}],"tabs":{"site-seo::Partial Form:undefined:pencilPartial Form{\"spaceId\":\"{\\\"path\\\":[\\\"seo\\\"],\\\"filepath\\\":\\\"/.deco/blocks/site.json\\\"}\"}":{"name":"Partial Form","icon":"pencil","render":"function","viewId":"Partial Form","viewProps":{"spaceId":"{\"path\":[\"seo\"],\"filepath\":\"/.deco/blocks/site.json\"}"},"id":"site-seo::Partial Form:undefined:pencilPartial Form{\"spaceId\":\"{\\\"path\\\":[\\\"seo\\\"],\\\"filepath\\\":\\\"/.deco/blocks/site.json\\\"}\"}","state":{"__signal":null}},"site-seo::preview:undefined:worldpreview{\"spaceId\":\"/.deco/blocks/site.json\"}":{"name":"preview","icon":"world","accepts":"function","render":"function","viewId":"preview","viewProps":{"spaceId":"/.deco/blocks/site.json"},"id":"site-seo::preview:undefined:worldpreview{\"spaceId\":\"/.deco/blocks/site.json\"}","state":{"__signal":null}}}},{"id":"experiments","name":"Experiments","pinned":true,"icon":"experiment","layout":[],"tabs":{}},{"id":"analytics","name":"Analytics","pinned":true,"icon":"chart-bar","layout":[{"i":"analytics::analytics:undefined:layout-gridanalytics{}","w":24,"h":24,"x":0,"y":0}],"tabs":{"analytics::analytics:undefined:layout-gridanalytics{}":{"name":"analytics","icon":"layout-grid","render":"function","viewId":"analytics","id":"analytics::analytics:undefined:layout-gridanalytics{}","state":{"__signal":null}}}},{"id":"releases","name":"Releases","pinned":true,"icon":"rocket","layout":[{"i":"releases::releases:undefined:rocketreleases{}","w":24,"h":24,"x":0,"y":0,"moved":false,"static":false}],"tabs":{"releases::releases:undefined:rocketreleases{}":{"name":"releases","icon":"rocket","render":"function","viewId":"releases","id":"releases::releases:undefined:rocketreleases{}","state":{"__signal":null}}}},{"id":"domains","name":"Domains","pinned":true,"icon":"adjustments-horizontal","layout":[],"tabs":{}},{"id":"/.deco/blocks/pages-Home%2520-672636.json","name":"Home ","pinned":false,"icon":"files","layout":[{"i":"/.deco/blocks/pages-Home%2520-672636.json::form:undefined:pencilform{}","w":6,"h":24,"x":0,"y":0,"moved":false,"static":false},{"i":"/.deco/blocks/pages-Home%2520-672636.json::preview:undefined:worldpreview{}","w":18,"h":24,"x":6,"y":0,"moved":false,"static":false}],"tabs":{"/.deco/blocks/pages-Home%2520-672636.json::form:undefined:pencilform{}":{"name":"form","icon":"pencil","accepts":"function","render":"function","viewId":"form","id":"/.deco/blocks/pages-Home%2520-672636.json::form:undefined:pencilform{}","state":{"__signal":null}},"/.deco/blocks/pages-Home%2520-672636.json::preview:undefined:worldpreview{}":{"name":"preview","icon":"world","accepts":"function","render":"function","viewId":"preview","id":"/.deco/blocks/pages-Home%2520-672636.json::preview:undefined:worldpreview{}","state":{"__signal":null}}}},{"id":"Staging","name":"Staging","pinned":false,"icon":"rocket","layout":[{"i":"Staging::environment:undefined:rocketenvironment{}","w":24,"h":24,"x":0,"y":0,"moved":false,"static":false}],"tabs":{"Staging::environment:undefined:rocketenvironment{}":{"name":"environment","icon":"rocket","render":"function","viewId":"environment","id":"Staging::environment:undefined:rocketenvironment{}","state":{"__signal":null}}}}]}
+{
+  "list": [
+    {
+      "id": "dashboard",
+      "name": "Dashboard",
+      "pinned": true,
+      "icon": "home",
+      "layout": [
+        {
+          "i": "dashboard::seo:undefined:searchseo{}",
+          "w": 8,
+          "h": 12,
+          "x": 0,
+          "y": 0,
+          "moved": false,
+          "static": false
+        },
+        {
+          "i": "dashboard::analytics:undefined:layout-gridanalytics{}",
+          "w": 8,
+          "h": 12,
+          "x": 8,
+          "y": 0,
+          "moved": false,
+          "static": false
+        },
+        {
+          "i": "dashboard::List:undefined:pencilList{\"spaceId\":\"pages\"}",
+          "w": 8,
+          "h": 12,
+          "x": 16,
+          "y": 0,
+          "moved": false,
+          "static": false
+        },
+        {
+          "i": "dashboard::Page Speed:undefined:layout-gridPage Speed{}",
+          "w": 8,
+          "h": 12,
+          "x": 0,
+          "y": 12,
+          "moved": false,
+          "static": false
+        },
+        {
+          "i": "dashboard::releases-summary:undefined:rocketreleases-summary{}",
+          "w": 8,
+          "h": 12,
+          "x": 8,
+          "y": 12,
+          "moved": false,
+          "static": false
+        },
+        {
+          "i": "dashboard::Report Issues:undefined:layout-gridReport Issues{}",
+          "w": 8,
+          "h": 12,
+          "x": 16,
+          "y": 12,
+          "moved": false,
+          "static": false
+        }
+      ],
+      "tabs": {
+        "dashboard::seo:undefined:searchseo{}": {
+          "name": "seo",
+          "icon": "search",
+          "render": "function",
+          "viewId": "seo",
+          "id": "dashboard::seo:undefined:searchseo{}",
+          "state": { "__signal": null }
+        },
+        "dashboard::analytics:undefined:layout-gridanalytics{}": {
+          "name": "analytics",
+          "icon": "layout-grid",
+          "render": "function",
+          "viewId": "analytics",
+          "id": "dashboard::analytics:undefined:layout-gridanalytics{}",
+          "state": { "__signal": null }
+        },
+        "dashboard::List:undefined:pencilList{\"spaceId\":\"pages\"}": {
+          "name": "List",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "List",
+          "viewProps": { "spaceId": "pages" },
+          "id": "dashboard::List:undefined:pencilList{\"spaceId\":\"pages\"}",
+          "state": { "__signal": null }
+        },
+        "dashboard::Page Speed:undefined:layout-gridPage Speed{}": {
+          "name": "Page Speed",
+          "icon": "layout-grid",
+          "render": "function",
+          "viewId": "Page Speed",
+          "id": "dashboard::Page Speed:undefined:layout-gridPage Speed{}",
+          "state": { "__signal": null }
+        },
+        "dashboard::releases-summary:undefined:rocketreleases-summary{}": {
+          "name": "releases-summary",
+          "icon": "rocket",
+          "render": "function",
+          "viewId": "releases-summary",
+          "id": "dashboard::releases-summary:undefined:rocketreleases-summary{}",
+          "state": { "__signal": null }
+        },
+        "dashboard::Report Issues:undefined:layout-gridReport Issues{}": {
+          "name": "Report Issues",
+          "icon": "layout-grid",
+          "render": "function",
+          "viewId": "Report Issues",
+          "id": "dashboard::Report Issues:undefined:layout-gridReport Issues{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "pages",
+      "name": "Pages",
+      "pinned": true,
+      "icon": "files",
+      "layout": [
+        {
+          "i": "pages::List:undefined:pencilList{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0,
+          "moved": false,
+          "static": false
+        }
+      ],
+      "tabs": {
+        "pages::List:undefined:pencilList{}": {
+          "name": "List",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "List",
+          "id": "pages::List:undefined:pencilList{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "redirects",
+      "name": "Redirects",
+      "pinned": true,
+      "icon": "redirect",
+      "layout": [],
+      "tabs": {}
+    },
+    {
+      "id": "sections",
+      "name": "Sections",
+      "pinned": true,
+      "icon": "block",
+      "layout": [
+        {
+          "i": "sections::List:undefined:pencilList{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "tabs": {
+        "sections::List:undefined:pencilList{}": {
+          "name": "List",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "List",
+          "id": "sections::List:undefined:pencilList{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "loaders",
+      "name": "Loaders",
+      "pinned": true,
+      "icon": "block",
+      "layout": [
+        {
+          "i": "loaders::List:undefined:pencilList{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "tabs": {
+        "loaders::List:undefined:pencilList{}": {
+          "name": "List",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "List",
+          "id": "loaders::List:undefined:pencilList{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "actions",
+      "name": "Actions",
+      "pinned": true,
+      "icon": "block",
+      "layout": [
+        {
+          "i": "actions::List:undefined:pencilList{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "tabs": {
+        "actions::List:undefined:pencilList{}": {
+          "name": "List",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "List",
+          "id": "actions::List:undefined:pencilList{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "apps",
+      "name": "Apps",
+      "pinned": true,
+      "icon": "apps",
+      "layout": [
+        {
+          "i": "apps::List:undefined:pencilList{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0,
+          "moved": false,
+          "static": false
+        }
+      ],
+      "tabs": {
+        "apps::List:undefined:pencilList{}": {
+          "name": "List",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "List",
+          "id": "apps::List:undefined:pencilList{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "themes",
+      "name": "Themes",
+      "pinned": true,
+      "icon": "palette",
+      "layout": [
+        {
+          "i": "themes::Theme Selector:undefined:paletteTheme Selector{}",
+          "w": 6,
+          "h": 24,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "i": "themes::Theme Viewer:undefined:paletteTheme Viewer{}",
+          "w": 9,
+          "h": 24,
+          "x": 6,
+          "y": 0
+        },
+        {
+          "i": "themes::Theme Preview:undefined:paletteTheme Preview{}",
+          "w": 9,
+          "h": 24,
+          "x": 15,
+          "y": 0
+        }
+      ],
+      "tabs": {
+        "themes::Theme Selector:undefined:paletteTheme Selector{}": {
+          "name": "Theme Selector",
+          "icon": "palette",
+          "render": "function",
+          "viewId": "Theme Selector",
+          "id": "themes::Theme Selector:undefined:paletteTheme Selector{}",
+          "state": { "__signal": null }
+        },
+        "themes::Theme Viewer:undefined:paletteTheme Viewer{}": {
+          "name": "Theme Viewer",
+          "icon": "palette",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "Theme Viewer",
+          "id": "themes::Theme Viewer:undefined:paletteTheme Viewer{}",
+          "state": { "__signal": null }
+        },
+        "themes::Theme Preview:undefined:paletteTheme Preview{}": {
+          "name": "Theme Preview",
+          "icon": "palette",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "Theme Preview",
+          "id": "themes::Theme Preview:undefined:paletteTheme Preview{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "site-seo",
+      "name": "SEO",
+      "pinned": true,
+      "icon": "search",
+      "layout": [
+        {
+          "i": "site-seo::Partial Form:undefined:pencilPartial Form{\"spaceId\":\"{\\\"path\\\":[\\\"seo\\\"],\\\"filepath\\\":\\\"/.deco/blocks/site.json\\\"}\"}",
+          "w": 6,
+          "h": 24,
+          "x": 0,
+          "y": 0
+        },
+        {
+          "i": "site-seo::preview:undefined:worldpreview{\"spaceId\":\"/.deco/blocks/site.json\"}",
+          "w": 18,
+          "h": 24,
+          "x": 6,
+          "y": 0
+        }
+      ],
+      "tabs": {
+        "site-seo::Partial Form:undefined:pencilPartial Form{\"spaceId\":\"{\\\"path\\\":[\\\"seo\\\"],\\\"filepath\\\":\\\"/.deco/blocks/site.json\\\"}\"}": {
+          "name": "Partial Form",
+          "icon": "pencil",
+          "render": "function",
+          "viewId": "Partial Form",
+          "viewProps": {
+            "spaceId": "{\"path\":[\"seo\"],\"filepath\":\"/.deco/blocks/site.json\"}"
+          },
+          "id": "site-seo::Partial Form:undefined:pencilPartial Form{\"spaceId\":\"{\\\"path\\\":[\\\"seo\\\"],\\\"filepath\\\":\\\"/.deco/blocks/site.json\\\"}\"}",
+          "state": { "__signal": null }
+        },
+        "site-seo::preview:undefined:worldpreview{\"spaceId\":\"/.deco/blocks/site.json\"}": {
+          "name": "preview",
+          "icon": "world",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "preview",
+          "viewProps": { "spaceId": "/.deco/blocks/site.json" },
+          "id": "site-seo::preview:undefined:worldpreview{\"spaceId\":\"/.deco/blocks/site.json\"}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "experiments",
+      "name": "Experiments",
+      "pinned": true,
+      "icon": "experiment",
+      "layout": [],
+      "tabs": {}
+    },
+    {
+      "id": "analytics",
+      "name": "Analytics",
+      "pinned": true,
+      "icon": "chart-bar",
+      "layout": [
+        {
+          "i": "analytics::analytics:undefined:layout-gridanalytics{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "tabs": {
+        "analytics::analytics:undefined:layout-gridanalytics{}": {
+          "name": "analytics",
+          "icon": "layout-grid",
+          "render": "function",
+          "viewId": "analytics",
+          "id": "analytics::analytics:undefined:layout-gridanalytics{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "releases",
+      "name": "Releases",
+      "pinned": true,
+      "icon": "rocket",
+      "layout": [
+        {
+          "i": "releases::releases:undefined:rocketreleases{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0,
+          "moved": false,
+          "static": false
+        }
+      ],
+      "tabs": {
+        "releases::releases:undefined:rocketreleases{}": {
+          "name": "releases",
+          "icon": "rocket",
+          "render": "function",
+          "viewId": "releases",
+          "id": "releases::releases:undefined:rocketreleases{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "domains",
+      "name": "Domains",
+      "pinned": true,
+      "icon": "adjustments-horizontal",
+      "layout": [],
+      "tabs": {}
+    },
+    {
+      "id": "/.deco/blocks/pages-Home%2520-672636.json",
+      "name": "Home ",
+      "pinned": false,
+      "icon": "files",
+      "layout": [
+        {
+          "i": "/.deco/blocks/pages-Home%2520-672636.json::form:undefined:pencilform{}",
+          "w": 6,
+          "h": 24,
+          "x": 0,
+          "y": 0,
+          "moved": false,
+          "static": false
+        },
+        {
+          "i": "/.deco/blocks/pages-Home%2520-672636.json::preview:undefined:worldpreview{}",
+          "w": 18,
+          "h": 24,
+          "x": 6,
+          "y": 0,
+          "moved": false,
+          "static": false
+        }
+      ],
+      "tabs": {
+        "/.deco/blocks/pages-Home%2520-672636.json::form:undefined:pencilform{}": {
+          "name": "form",
+          "icon": "pencil",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "form",
+          "id": "/.deco/blocks/pages-Home%2520-672636.json::form:undefined:pencilform{}",
+          "state": { "__signal": null }
+        },
+        "/.deco/blocks/pages-Home%2520-672636.json::preview:undefined:worldpreview{}": {
+          "name": "preview",
+          "icon": "world",
+          "accepts": "function",
+          "render": "function",
+          "viewId": "preview",
+          "id": "/.deco/blocks/pages-Home%2520-672636.json::preview:undefined:worldpreview{}",
+          "state": { "__signal": null }
+        }
+      }
+    },
+    {
+      "id": "Staging",
+      "name": "Staging",
+      "pinned": false,
+      "icon": "rocket",
+      "layout": [
+        {
+          "i": "Staging::environment:undefined:rocketenvironment{}",
+          "w": 24,
+          "h": 24,
+          "x": 0,
+          "y": 0,
+          "moved": false,
+          "static": false
+        }
+      ],
+      "tabs": {
+        "Staging::environment:undefined:rocketenvironment{}": {
+          "name": "environment",
+          "icon": "rocket",
+          "render": "function",
+          "viewId": "environment",
+          "id": "Staging::environment:undefined:rocketenvironment{}",
+          "state": { "__signal": null }
+        }
+      }
+    }
+  ]
+}

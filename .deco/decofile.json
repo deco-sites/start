@@ -1,14 +1,4 @@
 {
-  "pages-Home-429751": {
-    "name": "Home",
-    "path": "/",
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/IrWorks.tsx"
-      }
-    ],
-    "__resolveType": "website/pages/Page.tsx"
-  },
   "site": {
     "seo": {
       "type": "website",
@@ -33,20 +23,16 @@
     "caching": {
       "directives": []
     },
-    "__resolveType": "deco-sites/start/apps/site.ts",
+    "__resolveType": "site/apps/site.ts",
     "firstByteThresholdMS": true
   },
   "decohub": {
-    "__resolveType": "deco-sites/start/apps/decohub.ts"
+    "__resolveType": "site/apps/decohub.ts"
   },
-  "pages-Home%20-672636": {
-    "name": "Home ",
+  "pages-Start-15553":{
+    "name": "Start",
     "path": "/",
-    "sections": [
-      {
-        "__resolveType": "deco-sites/start/sections/ItWorks.tsx"
-      }
-    ],
+    "sections": [{ "__resolveType": "site/sections/ItWorks.tsx" }],
     "__resolveType": "website/pages/Page.tsx"
   }
 }

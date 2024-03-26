@@ -1,6 +1,6 @@
 {
   "imports": {
-    "deco-sites/start/": "./",
+    "site/": "./",
     "$store/": "./",
     "deco/": "https://denopkg.com/deco-cx/deco@1.57.27/",
     "apps/": "https://denopkg.com/deco-cx/apps@0.35.14/",
@@ -24,7 +24,7 @@
     "check": "deno fmt && deno lint && deno check dev.ts main.ts",
     "install": "deno eval 'import \"deco/scripts/apps/install.ts\"'",
     "uninstall": "deno eval 'import \"deco/scripts/apps/uninstall.ts\"'",
-    "bundle": "deno eval 'import \"deco/scripts/apps/bundle.ts\"' deco-sites/start",
+    "bundle": "deno eval 'import \"deco/scripts/apps/bundle.ts\"' site",
     "cache_clean": "rm deno.lock; deno cache -r main.ts",
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts"
