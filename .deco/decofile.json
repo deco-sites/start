@@ -29,10 +29,14 @@
   "decohub": {
     "__resolveType": "site/apps/decohub.ts"
   },
-  "pages-Start-15553":{
+  "pages-Start-15553": {
     "name": "Start",
     "path": "/",
-    "sections": [{ "__resolveType": "site/sections/ItWorks.tsx" }],
+    "sections": [
+      {
+        "__resolveType": "site/sections/ItWorks.tsx"
+      }
+    ],
     "__resolveType": "website/pages/Page.tsx"
   }
 }
