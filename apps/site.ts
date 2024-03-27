@@ -20,4 +20,4 @@ export default function Site(
 
 export type SiteApp = ReturnType<typeof Site>;
 export type AppContext = AC<SiteApp>;
-export { onBeforeResolveProps } from "apps/website/mod.ts";
+export { onBeforeResolveProps, Preview } from "apps/website/mod.ts";
