@@ -1,4 +1,6 @@
-import { forApp } from "$live/clients/withManifest.ts";
-import type { SiteApp } from "./apps/site.ts";
+import { proxy } from "deco/clients/withManifest.ts";
+import type { Manifest } from "./manifest.gen.ts";
 
-export const Runtime = forApp<SiteApp>();
+export const invoke = proxy<
+  Manifest
+>();
