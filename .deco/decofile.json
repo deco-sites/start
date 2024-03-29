@@ -41,7 +41,6 @@
   },
   "Groovy Vibes": {
     "__resolveType": "site/sections/Theme/Theme.tsx",
-    "colorScheme": "light",
     "buttonStyle": {
       "--border-btn": "1px",
       "--rounded-btn": "0.2rem",
@@ -61,6 +60,82 @@
       "secondary": "#EAF47F",
       "tertiary": "#E2DAF2",
       "neutral": "#FFF5EB"
+    }
+  },
+  "Preview ": {
+    "sections": {
+      "ItWorks.tsx": {
+        "__resolveType": "site/sections/ItWorks.tsx"
+      }
+    }
+  },
+  "Urban Chic": {
+    "__resolveType": "site/sections/Theme/Theme.tsx",
+    "buttonStyle": {
+      "--border-btn": "1px",
+      "--rounded-btn": "0.2rem",
+      "--btn-focus-scale": 0.95,
+      "--animation-btn": "0.25s"
+    },
+    "otherStyles": {
+      "--rounded-box": "1rem",
+      "--rounded-badge": "1.9rem",
+      "--animation-input": "0.2s",
+      "--tab-border": "1px",
+      "--tab-radius": "0.5rem"
+    },
+    "mainColors": {
+      "base-100": "#003232",
+      "primary": "#3141AC",
+      "secondary": "#BADFED",
+      "tertiary": "#DECD8F",
+      "neutral": "#FBF5F1"
+    }
+  },
+  "Serene Coastline": {
+    "__resolveType": "site/sections/Theme/Theme.tsx",
+    "buttonStyle": {
+      "--border-btn": "1px",
+      "--rounded-btn": "0.2rem",
+      "--btn-focus-scale": 0.95,
+      "--animation-btn": "0.25s"
+    },
+    "otherStyles": {
+      "--rounded-box": "1rem",
+      "--rounded-badge": "1.9rem",
+      "--animation-input": "0.2s",
+      "--tab-border": "1px",
+      "--tab-radius": "0.5rem"
+    },
+    "mainColors": {
+      "base-100": "#004247",
+      "primary": "#00767F",
+      "secondary": "#9BD8E7",
+      "tertiary": "#CCEAE3",
+      "neutral": "#E2E2E2"
+    }
+  },
+  "Sunset Glow": {
+    "__resolveType": "site/sections/Theme/Theme.tsx",
+    "buttonStyle": {
+      "--border-btn": "1px",
+      "--rounded-btn": "0.2rem",
+      "--btn-focus-scale": 0.95,
+      "--animation-btn": "0.25s"
+    },
+    "otherStyles": {
+      "--rounded-box": "1rem",
+      "--rounded-badge": "1.9rem",
+      "--animation-input": "0.2s",
+      "--tab-border": "1px",
+      "--tab-radius": "0.5rem"
+    },
+    "mainColors": {
+      "base-100": "#4F3000",
+      "primary": "#FF9900",
+      "secondary": "#FFBC55",
+      "tertiary": "#D49679",
+      "neutral": "#FFE7D4"
     }
   }
 }
