@@ -265,7 +265,7 @@ function Section({
     <SiteTheme
       fonts={font ? [font] : undefined}
       variables={variables}
-      colorScheme={colorScheme === 'any' ? undefined : colorScheme}
+      colorScheme={colorScheme === "any" ? undefined : colorScheme}
     />
   );
 }
