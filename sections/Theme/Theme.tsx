@@ -122,7 +122,7 @@ export interface Props {
   /**
    * @description Set the prefers-color-scheme media query. To support dark mode, create two instances of this block and set this option to light/dark in each instance
    */
-  colorScheme?: "light" | "dark";
+  colorScheme: "any" | "light" | "dark";
   mainColors?: ThemeColors;
   /** @description These will be auto-generated to a readable color if not set */
   complementaryColors?: ComplementaryColors;
@@ -265,7 +265,7 @@ function Section({
     <SiteTheme
       fonts={font ? [font] : undefined}
       variables={variables}
-      colorScheme={colorScheme}
+      colorScheme={colorScheme === 'any' ? undefined : colorScheme}
     />
   );
 }
