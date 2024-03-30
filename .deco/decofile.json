@@ -23,13 +23,6 @@
     },
     "colorScheme": "any"
   },
-  "Preview ": {
-    "sections": {
-      "ItWorks.tsx": {
-        "__resolveType": "site/sections/ItWorks.tsx"
-      }
-    }
-  },
   "Serene Coastline": {
     "__resolveType": "site/sections/Theme/Theme.tsx",
     "buttonStyle": {
