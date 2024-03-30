@@ -24,17 +24,17 @@ export default defineApp(async (_req, ctx) => {
 
         {/* Web Manifest */}
         <link rel="manifest" href={asset("/site.webmanifest")} />
+        
+        {/* Install HTMX */}
+        <script
+          async
+          src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.11"
+          crossorigin="anonymous"
+        />
       </Head>
 
       {/* Rest of Preact tree */}
       <ctx.Component />
-
-      {/* Install HTMX */}
-      <script
-        async
-        src="https://cdn.jsdelivr.net/npm/htmx.org@1.9.11"
-        crossorigin="anonymous"
-      />
     </>
   );
 });
