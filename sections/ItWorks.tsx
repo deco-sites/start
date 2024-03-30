@@ -30,7 +30,7 @@ export default function Section({ name = "It Works!", count = 0 }: Props) {
             hx-target="#it-works"
             hx-swap="outerHTML"
             hx-get={downLink["f-partial"]} // htmx link for this section with the down vote props
-            class="btn btn-circle btn-outline no-animation"
+            class="btn btn-sm btn-circle btn-outline no-animation"
           >
             <span class="inline [.htmx-request_&]:hidden">
               -
@@ -42,7 +42,7 @@ export default function Section({ name = "It Works!", count = 0 }: Props) {
             hx-target="#it-works"
             hx-swap="outerHTML"
             hx-get={upLink["f-partial"]} // htmx link for this section with the up vote props
-            class="btn btn-circle btn-outline no-animation"
+            class="btn btn-sm btn-circle btn-outline no-animation"
           >
             <span class="inline [.htmx-request_&]:hidden">
               +
