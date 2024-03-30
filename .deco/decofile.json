@@ -31,7 +31,7 @@
       "fonts": [
         {
           "variations": [],
-          "family": "Monoton"
+          "family": "Lobster"
         }
       ]
     }
@@ -52,10 +52,10 @@
       "--tab-radius": "0.5rem"
     },
     "mainColors": {
-      "base-100": "#004247",
+      "base-100": "#CCEAE3",
       "primary": "#00767F",
       "secondary": "#9BD8E7",
-      "tertiary": "#CCEAE3",
+      "tertiary": "#004247",
       "neutral": "#E2E2E2",
       "success": "#008060",
       "warning": "#ffc453",
@@ -105,7 +105,7 @@
       "fonts": [
         {
           "variations": [],
-          "family": "Protest Revolution"
+          "family": "Josefin Slab"
         }
       ]
     }
