@@ -3,8 +3,8 @@
     "__resolveType": "site/sections/Theme/Theme.tsx",
     "buttonStyle": {
       "--border-btn": "1px",
-      "--rounded-btn": "0.2rem",
-      "--btn-focus-scale": "0.9",
+      "--rounded-btn": "2rem",
+      "--btn-focus-scale": "0.95",
       "--animation-btn": "0.25s"
     },
     "otherStyles": {
@@ -40,7 +40,7 @@
     "__resolveType": "site/sections/Theme/Theme.tsx",
     "buttonStyle": {
       "--border-btn": "1px",
-      "--rounded-btn": "0.2rem",
+      "--rounded-btn": "0.8rem",
       "--btn-focus-scale": "0.95",
       "--animation-btn": "0.25s"
     },
@@ -52,17 +52,16 @@
       "--tab-radius": "0.5rem"
     },
     "mainColors": {
-      "base-100": "#CCEAE3",
-      "primary": "#004247",
-      "secondary": "#00767F",
-      "tertiary": "#9BD8E7",
+      "base-100": "#cceae3",
+      "primary": "#00767F",
+      "secondary": "#9BD8E7",
+      "tertiary": "#004247",
       "neutral": "#E2E2E2",
       "success": "#008060",
       "warning": "#ffc453",
       "error": "#d82c0d",
       "info": "#2e72d2"
     },
-    "colorScheme": "any",
     "font": {
       "__resolveType": "website/loaders/fonts/googleFonts.ts",
       "fonts": [
@@ -71,7 +70,8 @@
           "family": "Reenie Beanie"
         }
       ]
-    }
+    },
+    "colorScheme": "any"
   },
   "Sunset Glow": {
     "__resolveType": "site/sections/Theme/Theme.tsx",
@@ -89,8 +89,8 @@
       "--tab-radius": "0.5rem"
     },
     "mainColors": {
-      "base-100": "#FFE7D4",
-      "primary": "#D49679",
+      "base-100": "#FFF7D2",
+      "primary": "#A73C5A",
       "secondary": "#FFBC55",
       "tertiary": "#FF9900",
       "neutral": "#4F3000",
@@ -99,22 +99,22 @@
       "error": "#D82C0D",
       "info": "#2E72D2"
     },
-    "colorScheme": "any",
     "font": {
       "__resolveType": "website/loaders/fonts/googleFonts.ts",
       "fonts": [
         {
           "variations": [],
-          "family": "Josefin Slab"
+          "family": "Special Elite"
         }
       ]
-    }
+    },
+    "colorScheme": "any"
   },
   "Urban Chic": {
     "__resolveType": "site/sections/Theme/Theme.tsx",
     "buttonStyle": {
       "--border-btn": "1px",
-      "--rounded-btn": "0.2rem",
+      "--rounded-btn": "0",
       "--btn-focus-scale": "0.95",
       "--animation-btn": "0.25s"
     },
@@ -126,7 +126,7 @@
       "--tab-radius": "0.5rem"
     },
     "mainColors": {
-      "base-100": "#003232",
+      "base-100": "#F8F9FD",
       "primary": "#3141AC",
       "secondary": "#BADFED",
       "tertiary": "#DECD8F",
@@ -195,7 +195,7 @@
     "buttonStyle": {
       "--border-btn": "1px",
       "--rounded-btn": "0.2rem",
-      "--btn-focus-scale": "0.95",
+      "--btn-focus-scale": 0.95,
       "--animation-btn": "0.25s"
     },
     "mainColors": {
@@ -208,15 +208,6 @@
       "warning": "#ffc453",
       "error": "#d82c0d",
       "info": "#2e72d2"
-    },
-    "font": {
-      "__resolveType": "website/loaders/fonts/googleFonts.ts",
-      "fonts": [
-        {
-          "variations": [],
-          "family": "Roboto"
-        }
-      ]
     },
     "colorScheme": "any",
     "otherStyles": {
