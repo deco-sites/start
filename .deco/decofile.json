@@ -41,7 +41,7 @@
     "buttonStyle": {
       "--border-btn": "1px",
       "--rounded-btn": "0.2rem",
-      "--btn-focus-scale": 0.95,
+      "--btn-focus-scale": "0.95",
       "--animation-btn": "0.25s"
     },
     "mainColors": {
@@ -62,6 +62,15 @@
       "--animation-input": "0.2s",
       "--tab-border": "1px",
       "--tab-radius": "0.5rem"
+    },
+    "font": {
+      "__resolveType": "website/loaders/fonts/googleFonts.ts",
+      "fonts": [
+        {
+          "variations": [],
+          "family": "Albert Sans"
+        }
+      ]
     }
   },
   "Preview /sections/ItWorks.tsx": {
