@@ -187,6 +187,10 @@
       ]
     }
   },
+  "app-decohub%2Fapps%2Fhtmx.ts": {
+    "__resolveType": "decohub/apps/htmx.ts",
+    "version": "1.9.11"
+  },
   "decohub": {
     "__resolveType": "site/apps/decohub.ts"
   },
@@ -213,7 +217,11 @@
       "favicon": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/d8489214-aa22-44ce-a9aa-7c1b9f8e5177",
       "image": "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/8/07fd7c67-11d2-43a2-a322-6ffd0fbcdee1"
     },
-    "global": [],
+    "global": [
+      {
+        "__resolveType": "htmx/sections/htmx.tsx"
+      }
+    ],
     "routes": [
       {
         "__resolveType": "website/loaders/pages.ts"
@@ -230,9 +238,5 @@
     "theme": {
       "__resolveType": "Neutral"
     }
-  },
-  "app-decohub%2Fapps%2Fhtmx.ts": {
-    "__resolveType": "decohub/apps/htmx.ts",
-    "version": "1.9.11"
   }
 }
