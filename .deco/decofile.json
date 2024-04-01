@@ -230,5 +230,9 @@
     "theme": {
       "__resolveType": "Neutral"
     }
+  },
+  "app-decohub%2Fapps%2Fhtmx.ts": {
+    "__resolveType": "decohub/apps/htmx.ts",
+    "version": "1.9.11"
   }
 }
