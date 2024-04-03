@@ -20,7 +20,7 @@ export default function Section({ name = "It Works!", count = 0 }: Props) {
   return (
     <div
       id="it-works"
-      class="container py-10 flex flex-col h-full w-full items-center justify-center gap-16"
+      class="container py-10 flex flex-col h-screen w-full items-center justify-center gap-16"
     >
       <p class="leading-10 text-6xl">{name}</p>
 
