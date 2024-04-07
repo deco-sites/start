@@ -74,7 +74,8 @@
     }
   },
   "Preview /sections/ItWorks.tsx": {
-    "__resolveType": "site/sections/ItWorks.tsx"
+    "__resolveType": "site/sections/ItWorks.tsx",
+    "name": "<p>It Works!</p>"
   },
   "Serene Coastline": {
     "__resolveType": "site/sections/Theme/Theme.tsx",
@@ -199,7 +200,8 @@
     "path": "/",
     "sections": [
       {
-        "__resolveType": "site/sections/ItWorks.tsx"
+        "__resolveType": "site/sections/ItWorks.tsx",
+        "name": "It Works!"
       },
       {
         "__resolveType": "site/sections/Footer.tsx"
