@@ -213,7 +213,6 @@
     "seo": {
       "type": "website",
       "jsonLDs": [],
-      "canonical": "https://fashion.deco.site",
       "noIndexing": false,
       "description": "Improve your page performance with deco.cx",
       "titleTemplate": "%s | deco.cx",
