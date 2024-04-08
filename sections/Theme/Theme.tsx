@@ -447,17 +447,19 @@ const ButtonSizesPreview = () => {
 const ButtonColorsPreview = () => {
   const buttonTypesClasses = ["btn", "btn-outline", "btn-ghost", "btn-link"];
   const buttonColorsClasses = [
-    "text-[initial]",
-    "btn-primary",
-    "btn-secondary",
-    "btn-accent",
+    { class: "", label: "Button" },
+    { class: "btn-primary", label: "Primary" },
+    { class: "btn-secondary", label: "Secondary" },
+    { class: "btn-accent", label: "Accent" }
   ];
 
-  const renderButtonRow = (type: string) => (
+  const renderButtonRow = (type) => (
     <div className="flex flex-row gap-2">
-      {buttonColorsClasses.map((color, index) => (
-        <button className={`btn btn-xs md:btn-sm capitalize ${color} ${type}`}>
-          {index === 0 ? "Button" : color.split("-")[1]}
+      {buttonColorsClasses.map(({ class: colorClass, label }) => (
+        <button
+          className={`btn btn-xs md:btn-sm capitalize ${colorClass} ${type} ${type === 'btn-ghost' ? 'text-[initial]' : ''}`}
+        >
+          {label}
         </button>
       ))}
     </div>
@@ -465,19 +467,24 @@ const ButtonColorsPreview = () => {
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-col p-2 gap-2">
-      {buttonTypesClasses.map((type) => renderButtonRow(type))}
+      {buttonTypesClasses.map(type => renderButtonRow(type))}
     </div>
   );
 };
 
 const ButtonStylesPreview = () => {
-  const buttonStylesClasses = ["text-[initial]", "btn-outline", "btn-ghost", "btn-link"];
+  const buttons = [
+    { class: "btn", label: "Button" },
+    { class: "btn-outline", label: "Outline" },
+    { class: "btn-ghost text-[initial]", label: "Ghost" },
+    { class: "btn-link", label: "Link" }
+  ];
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2">
-      {buttonStylesClasses.map((style, index) => (
-        <button className={`btn btn-xs md:btn-sm capitalize ${style}`}>
-          {index === 0 ? "Button" : style.split("-")[1]}
+      {buttons.map(button => (
+        <button className={`btn btn-xs md:btn-sm capitalize ${button.class}`}>
+          {button.label}
         </button>
       ))}
     </div>
