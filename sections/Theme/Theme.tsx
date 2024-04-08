@@ -302,6 +302,10 @@ export function Preview(props: Props) {
             --admin-font-family: 'Albert Sans', sans-serif;
           }
 
+          .admin-font-family {
+            font-family: var(--admin-font-family);
+          }
+
           .dark {
             background-color: var(--admin-color-dark-bg);
             color: var(--admin-text-color-dark);
@@ -364,7 +368,7 @@ export function Preview(props: Props) {
       </style>
       <Section {...props} />
       <div className={`flex flex-col gap-4 text-base w-full ${adminColorMode}`}>
-        <div className="font-[var(--admin-font-family)]">
+        <div className="admin-font-family">
           Components and styles
         </div>
         <div className="flex flex-col w-full gap-2">
@@ -548,7 +552,7 @@ const PreviewContainer = (
       <div
         className={`border p-4 flex flex-col gap-2 grow relative ${borderClass} rounded-lg`}
       >
-        <div className="font-[var(--admin-font-family)]">
+        <div className="admin-font-family">
           <div className="my-1">{title}</div>
           <div>
             <input type="checkbox" id={checkboxId} className="sr-only" />
