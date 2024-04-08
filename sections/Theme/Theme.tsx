@@ -447,7 +447,7 @@ const ButtonSizesPreview = () => {
 const ButtonColorsPreview = () => {
   const buttonTypesClasses = ["btn", "btn-outline", "btn-ghost", "btn-link"];
   const buttonColorsClasses = [
-    "",
+    "text-[initial]",
     "btn-primary",
     "btn-secondary",
     "btn-accent",
@@ -455,9 +455,9 @@ const ButtonColorsPreview = () => {
 
   const renderButtonRow = (type: string) => (
     <div className="flex flex-row gap-2">
-      {buttonColorsClasses.map((color) => (
+      {buttonColorsClasses.map((color, index) => (
         <button className={`btn btn-xs md:btn-sm capitalize ${color} ${type}`}>
-          {color ? color.split("-")[1] : "Button"}
+          {index === 0 ? "Button" : color.split("-")[1]}
         </button>
       ))}
     </div>
@@ -471,13 +471,13 @@ const ButtonColorsPreview = () => {
 };
 
 const ButtonStylesPreview = () => {
-  const buttonStylesClasses = ["", "btn-outline", "btn-ghost", "btn-link"];
+  const buttonStylesClasses = ["text-[initial]", "btn-outline", "btn-ghost", "btn-link"];
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2">
-      {buttonStylesClasses.map((style) => (
+      {buttonStylesClasses.map((style, index) => (
         <button className={`btn btn-xs md:btn-sm capitalize ${style}`}>
-          {style ? style.split("-")[1] : "Button"}
+          {index === 0 ? "Button" : style.split("-")[1]}
         </button>
       ))}
     </div>
@@ -486,7 +486,7 @@ const ButtonStylesPreview = () => {
 
 const TextColorsPreview = () => {
   const textColorsClasses = [
-    "",
+    "text-[initial]",
     "text-primary",
     "text-secondary",
     "text-accent",
@@ -494,9 +494,9 @@ const TextColorsPreview = () => {
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2 text-sm md:text-base">
-      {textColorsClasses.map((color) => (
+      {textColorsClasses.map((color, index) => (
         <div className={`${color} capitalize`}>
-          {color ? color.split("-")[1] : "Content"}
+          {index === 0 ? "Content" : color.split("-")[1]}
         </div>
       ))}
     </div>
