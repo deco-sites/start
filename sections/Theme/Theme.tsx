@@ -453,7 +453,7 @@ const ButtonColorsPreview = () => {
     { class: "btn-accent", label: "Accent" }
   ];
 
-  const renderButtonRow = (type) => (
+  const renderButtonRow = (type: string) => (
     <div className="flex flex-row gap-2">
       {buttonColorsClasses.map(({ class: colorClass, label }) => (
         <button
@@ -467,7 +467,7 @@ const ButtonColorsPreview = () => {
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-col p-2 gap-2">
-      {buttonTypesClasses.map(type => renderButtonRow(type))}
+      {buttonTypesClasses.map((type) => renderButtonRow(type))}
     </div>
   );
 };
