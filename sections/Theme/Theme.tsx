@@ -367,7 +367,9 @@ export function Preview(props: Props) {
         `}
       </style>
       <Section {...props} />
-      <div className={`flex flex-col gap-4 text-base w-full ${adminColorMode}`}>
+      <div
+        className={`flex flex-col gap-2 p-1 text-base w-full ${adminColorMode}`}
+      >
         <div className="admin-font-family">
           Components and styles
         </div>
