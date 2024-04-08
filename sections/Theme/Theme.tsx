@@ -287,6 +287,8 @@ export function Preview(props: Props) {
       }
       <style>
         {`
+          @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&display=swap');
+
           :root {
             --admin-color-dark-bg: #0d1717;
             --admin-color-light-bg: #ffffff;
@@ -297,6 +299,7 @@ export function Preview(props: Props) {
             --admin-border-hover-color-light: #819292;
             --admin-border-hover-color-dark: #949e9e;
             --admin-hover-bg-color: #fafafa;
+            --admin-font-family: 'Albert Sans', sans-serif;
           }
 
           .dark {
@@ -361,7 +364,9 @@ export function Preview(props: Props) {
       </style>
       <Section {...props} />
       <div className={`flex flex-col gap-4 text-base w-full ${adminColorMode}`}>
-        <div>Components and styles</div>
+        <div className="font-[var(--admin-font-family)]">
+          Components and styles
+        </div>
         <div className="flex flex-col w-full gap-2">
           <PreviewContainer
             title="Text colors"
@@ -543,7 +548,7 @@ const PreviewContainer = (
       <div
         className={`border p-4 flex flex-col gap-2 grow relative ${borderClass} rounded-lg`}
       >
-        <div>
+        <div className="font-[var(--admin-font-family)]">
           <div className="my-1">{title}</div>
           <div>
             <input type="checkbox" id={checkboxId} className="sr-only" />
