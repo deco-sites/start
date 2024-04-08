@@ -447,17 +447,19 @@ const ButtonSizesPreview = () => {
 const ButtonColorsPreview = () => {
   const buttonTypesClasses = ["btn", "btn-outline", "btn-ghost", "btn-link"];
   const buttonColorsClasses = [
-    "",
-    "btn-primary",
-    "btn-secondary",
-    "btn-accent",
+    { class: "", label: "Button" },
+    { class: "btn-primary", label: "Primary" },
+    { class: "btn-secondary", label: "Secondary" },
+    { class: "btn-accent", label: "Accent" }
   ];
 
   const renderButtonRow = (type: string) => (
     <div className="flex flex-row gap-2">
-      {buttonColorsClasses.map((color) => (
-        <button className={`btn btn-xs md:btn-sm capitalize ${color} ${type}`}>
-          {color ? color.split("-")[1] : "Button"}
+      {buttonColorsClasses.map(({ class: colorClass, label }) => (
+        <button
+          className={`btn btn-xs md:btn-sm capitalize ${colorClass} ${type} ${type === 'btn-ghost' ? 'text-[initial]' : ''}`}
+        >
+          {label}
         </button>
       ))}
     </div>
@@ -471,13 +473,18 @@ const ButtonColorsPreview = () => {
 };
 
 const ButtonStylesPreview = () => {
-  const buttonStylesClasses = ["", "btn-outline", "btn-ghost", "btn-link"];
+  const buttons = [
+    { class: "btn", label: "Button" },
+    { class: "btn-outline", label: "Outline" },
+    { class: "btn-ghost text-[initial]", label: "Ghost" },
+    { class: "btn-link", label: "Link" }
+  ];
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2">
-      {buttonStylesClasses.map((style) => (
-        <button className={`btn btn-xs md:btn-sm capitalize ${style}`}>
-          {style ? style.split("-")[1] : "Button"}
+      {buttons.map(button => (
+        <button className={`btn btn-xs md:btn-sm capitalize ${button.class}`}>
+          {button.label}
         </button>
       ))}
     </div>
@@ -486,7 +493,7 @@ const ButtonStylesPreview = () => {
 
 const TextColorsPreview = () => {
   const textColorsClasses = [
-    "",
+    "text-[initial]",
     "text-primary",
     "text-secondary",
     "text-accent",
@@ -494,9 +501,9 @@ const TextColorsPreview = () => {
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2 text-sm md:text-base">
-      {textColorsClasses.map((color) => (
+      {textColorsClasses.map((color, index) => (
         <div className={`${color} capitalize`}>
-          {color ? color.split("-")[1] : "Content"}
+          {index === 0 ? "Content" : color.split("-")[1]}
         </div>
       ))}
     </div>
