@@ -1,6 +1,5 @@
 import { ImageWidget } from "apps/admin/widgets.ts";
 import Image from "apps/website/components/Image.tsx";
-import { JSX } from "preact";
 
 interface Props {
   href?: string;
@@ -19,7 +18,7 @@ function Footer({
   alt = "Made with deco.cx",
   height = 20,
   width = 50,
-}: Props): JSX.Element | null {
+}: Props) {
   return (
     <div class="py-8 lg:px-0 px-6 fixed bottom-0 w-full mx-auto">
       <a

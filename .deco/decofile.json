@@ -188,10 +188,6 @@
       ]
     }
   },
-  "app-decohub%2Fapps%2Fhtmx.ts": {
-    "__resolveType": "decohub/apps/htmx.ts",
-    "version": "1.9.11"
-  },
   "decohub": {
     "__resolveType": "site/apps/decohub.ts"
   },
@@ -242,5 +238,11 @@
     "theme": {
       "__resolveType": "Neutral"
     }
+  },
+  "Preview /sections/Footer.tsx": {
+    "__resolveType": "site/sections/Footer.tsx"
+  },
+  "htmx": {
+    "__resolveType": "decohub/apps/htmx.ts"
   }
 }
