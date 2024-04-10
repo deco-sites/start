@@ -73,6 +73,9 @@
       ]
     }
   },
+  "Preview /sections/Footer.tsx": {
+    "__resolveType": "site/sections/Footer.tsx"
+  },
   "Preview /sections/ItWorks.tsx": {
     "__resolveType": "site/sections/ItWorks.tsx",
     "name": "<p>It Works!</p>"
@@ -191,6 +194,9 @@
   "decohub": {
     "__resolveType": "site/apps/decohub.ts"
   },
+  "htmx": {
+    "__resolveType": "decohub/apps/htmx.ts"
+  },
   "pages-Start-15553": {
     "name": "Home",
     "path": "/",
@@ -238,11 +244,5 @@
     "theme": {
       "__resolveType": "Neutral"
     }
-  },
-  "Preview /sections/Footer.tsx": {
-    "__resolveType": "site/sections/Footer.tsx"
-  },
-  "htmx": {
-    "__resolveType": "decohub/apps/htmx.ts"
   }
 }
