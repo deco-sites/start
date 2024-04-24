@@ -206,7 +206,7 @@
         "name": "It Works!"
       },
       {
-        "__resolveType": "site/sections/Footer.tsx"
+        "__resolveType": "Footer"
       }
     ],
     "__resolveType": "website/pages/Page.tsx"
@@ -244,5 +244,8 @@
     "theme": {
       "__resolveType": "Neutral"
     }
+  },
+  "Footer": {
+    "__resolveType": "site/sections/Footer.tsx"
   }
 }
