@@ -11,7 +11,8 @@
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "std/": "https://deno.land/std@0.190.0/",
     "partytown/": "https://denopkg.com/deco-cx/partytown@0.4.8/",
-    "daisyui": "npm:daisyui@4.4.19"
+    "daisyui": "npm:daisyui@4.4.19",
+    "@deco/htmx": "https://denopkg.com/deco-cx/apps@0.43.2/htmx/mod.ts"
   },
   "tasks": {
     "start": "deno task bundle && deno run -A --env --config=deno.json $(deno eval 'console.log(import.meta.resolve(\"deco/hypervisor/main.ts\"))') --build-cmd 'deno task build' -- deno task dev",
@@ -48,7 +49,7 @@
       ]
     }
   },
-  "nodeModulesDir": true,
+  "nodeModulesDir": false,
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "preact",
