@@ -450,14 +450,16 @@ const ButtonColorsPreview = () => {
     { class: "", label: "Button" },
     { class: "btn-primary", label: "Primary" },
     { class: "btn-secondary", label: "Secondary" },
-    { class: "btn-accent", label: "Accent" }
+    { class: "btn-accent", label: "Accent" },
   ];
 
   const renderButtonRow = (type: string) => (
     <div className="flex flex-row gap-2">
       {buttonColorsClasses.map(({ class: colorClass, label }) => (
         <button
-          className={`btn btn-xs md:btn-sm capitalize ${colorClass} ${type} ${type === 'btn-ghost' ? 'text-[initial]' : ''}`}
+          className={`btn btn-xs md:btn-sm capitalize ${colorClass} ${type} ${
+            type === "btn-ghost" ? "text-[initial]" : ""
+          }`}
         >
           {label}
         </button>
@@ -477,12 +479,12 @@ const ButtonStylesPreview = () => {
     { class: "btn", label: "Button" },
     { class: "btn-outline", label: "Outline" },
     { class: "btn-ghost text-[initial]", label: "Ghost" },
-    { class: "btn-link", label: "Link" }
+    { class: "btn-link", label: "Link" },
   ];
 
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2">
-      {buttons.map(button => (
+      {buttons.map((button) => (
         <button className={`btn btn-xs md:btn-sm capitalize ${button.class}`}>
           {button.label}
         </button>
