@@ -20,7 +20,10 @@ export default function Site(
     state,
     manifest,
     dependencies: [
-      website(state),
+      website({
+        ...state,
+        global: state.theme ? [...(state.global ?? []), state.theme] : state.global,
+      }),
     ],
   };
 }
