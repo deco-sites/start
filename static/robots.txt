@@ -1,5 +1,49 @@
-User-agent: *
-Disallow: /
+# =============================================================
+# Deco Commerce — robots.txt (Deco Universal)
+# Platform-agnostic rules for all Deco storefronts.
+# =============================================================
 
-User-agent: Googlebot
+User-agent: *
+
+# --- Deco framework internals ---
+Disallow: /deco/render
+Disallow: /live/invoke
+Disallow: /live/invoke/
+
+# --- Backend API proxies ---
+Disallow: /api/
+Disallow: /no-cache/
+Disallow: /proxy/
+Disallow: /graphql/
+
+# --- Authentication / checkout / account ---
+Disallow: /checkout
+Disallow: /checkout/
+Disallow: /login
+Disallow: /login/
+Disallow: /account
+Disallow: /account/
+Disallow: /_secure/
+Disallow: /admin/
+
+# --- Tracking / click ID params (duplicate content) ---
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?utm_content=
+Disallow: /*?utm_term=
+Disallow: /*?utmi_cp=
+Disallow: /*?utmi_p=
+Disallow: /*?utmi_pc=
+Disallow: /*?gclid=
+Disallow: /*?fbclid=
+Disallow: /*?srsltid=
+Disallow: /*?gbraid=
+Disallow: /*?wbraid=
+Disallow: /*?msclkid=
+Disallow: /*?li_fat_id=
+
+# --- Cloudflare infra ---
+Disallow: /cdn-cgi/
+
 Allow: /
