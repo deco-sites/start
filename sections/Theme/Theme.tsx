@@ -427,6 +427,7 @@ const ButtonSizesPreview = () => {
     <div className="flex flex-row gap-2 items-center">
       {Object.entries(buttonSizes).map(([sizeCode, sizeText]) => (
         <button
+          type="button"
           className={`btn capitalize btn-${sizeCode} ${
             style ? `btn-${style}` : ""
           }`}
@@ -457,6 +458,7 @@ const ButtonColorsPreview = () => {
     <div className="flex flex-row gap-2">
       {buttonColorsClasses.map(({ class: colorClass, label }) => (
         <button
+          type="button"
           className={`btn btn-xs md:btn-sm capitalize ${colorClass} ${type} ${
             type === "btn-ghost" ? "text-[initial]" : ""
           }`}
@@ -485,7 +487,10 @@ const ButtonStylesPreview = () => {
   return (
     <div className="bg-base-100 overflow-x-auto rounded-lg flex flex-row p-2 gap-2">
       {buttons.map((button) => (
-        <button className={`btn btn-xs md:btn-sm capitalize ${button.class}`}>
+        <button
+          type="button"
+          className={`btn btn-xs md:btn-sm capitalize ${button.class}`}
+        >
           {button.label}
         </button>
       ))}

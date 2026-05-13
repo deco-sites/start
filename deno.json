@@ -5,7 +5,7 @@
     "@core/asyncutil": "jsr:@core/asyncutil@^1.0.2",
     "@deco/codemod-toolkit": "jsr:@deco/codemod-toolkit@0.3.4",
     "@deco/durable": "jsr:@deco/durable@0.5.3",
-    "@deco/warp": "jsr:@deco/warp@0.3.8",
+    "@deco/warp": "jsr:@deco/warp@0.3.12",
     "@hono/hono": "jsr:@hono/hono@^4.5.4",
     "@std/assert": "jsr:@std/assert@^1.0.2",
     "@std/async": "jsr:@std/async@^0.224.1",
@@ -32,15 +32,15 @@
     "simple-git": "npm:simple-git@^3.25.0",
     "std/": "https://deno.land/std@0.190.0/",
     "site/": "./",
-    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.116.0/",
-    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.84.2/",
+    "deco/": "https://cdn.jsdelivr.net/gh/deco-cx/deco@1.197.0/",
+    "apps/": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.150.0/",
     "@preact/signals": "https://esm.sh/*@preact/signals@1.2.2",
     "@preact/signals-core": "https://esm.sh/*@preact/signals-core@1.5.1",
     "daisyui": "npm:daisyui@4.4.19",
-    "@deco/htmx": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.84.2/htmx/mod.ts",
+    "@deco/htmx": "https://cdn.jsdelivr.net/gh/deco-cx/apps@0.150.0/htmx/mod.ts",
     "https://esm.sh/*preact-render-to-string@6.3.1": "npm:preact-render-to-string@6.4.2",
-    "@deco/deco": "jsr:@deco/deco@1.116.0",
-    "@deco/dev": "jsr:@deco/dev@1.116.0"
+    "@deco/deco": "jsr:@deco/deco@1.197.0",
+    "@deco/dev": "jsr:@deco/dev@1.197.0"
   },
   "tasks": {
     "start": "deno run -A --unstable-http --env https://deco.cx/run -- deno task dev",
@@ -57,7 +57,8 @@
     "build": "deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
     "dev": "deno run -A --env --unstable-kv --unstable-hmr dev.ts",
-    "reload": "deno cache -r https://deco.cx/run"
+    "reload": "deno cache -r https://deco.cx/run",
+    "validate": "deno run -A https://deco.cx/validate"
   },
   "githooks": {
     "pre-commit": "check"
