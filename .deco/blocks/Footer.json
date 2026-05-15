@@ -1,1 +1,8 @@
-{"__resolveType":"site/sections/Footer.tsx"}
+{
+  "__resolveType": "site/sections/Footer.tsx",
+  "image": "https://decoims.com/decocms/2d0a9317-86a0-49f6-8c9c-b52b2bcef095/deco-dark.svg",
+  "alt": "Deco CMS Logo",
+  "href": "https://deco.cx/",
+  "width": 50,
+  "height": 20
+}
