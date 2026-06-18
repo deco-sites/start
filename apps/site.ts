@@ -6,7 +6,7 @@ type WebsiteApp = ReturnType<typeof website>;
  * @title Site
  * @description Start your site from a template or from scratch.
  * @category Tool
- * @logo https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1/0ac02239-61e6-4289-8a36-e78c0975bcc8
+ * @logo https://decoims.com/als-storefront/ffa568bf-e5a3-49ed-961d-eeaa958f51b9/0ac02239-61e6-4289-8a36-e78c0975bcc8
  */
 export default function Site(state: Props): App<Manifest, Props, [
   WebsiteApp,

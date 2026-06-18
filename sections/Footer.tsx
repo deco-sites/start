@@ -12,7 +12,7 @@ interface Props {
 
 function Footer({
   image =
-    "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/4959/d7aa9290-074f-417c-99c3-5b0587c8c2ee",
+    "https://decoims.com/frigidaire-pr/62afbd4a-fdad-425c-a46b-772b418611d8/d7aa9290-074f-417c-99c3-5b0587c8c2ee.svg",
   href = "https://deco.cx/",
   text = "Made with",
   alt = "Made with deco.cx",
